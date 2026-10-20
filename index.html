@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GH Sales Lumber &amp; Flooring | Japanese Sugi Cedar &amp; Flooring in Nampa, Idaho</title>
-<meta name="description" content="GH Sales Lumber & Flooring in Nampa, Idaho: Japanese Sugi cedar tongue and groove and decking, plus LVP, waterproof laminate, hardwood and carpet. Shop in-stock flooring at our best prices or special order the style your project needs. Installation available.">
+<title>GH Sales Lumber &amp; Flooring | Building Materials, Lumber &amp; Flooring in Nampa, Idaho</title>
+<meta name="description" content="GH Sales Lumber &amp; Flooring in Nampa, Idaho: quality building materials and flooring without the big-box price. Lumber, Japanese Sugi cedar, decking, LVP, waterproof laminate, hardwood, carpet, tile and more. Flooring installation available.">
 <!--brand:head--><meta property="og:site_name" content="GH Sales Lumber &amp; Flooring"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta property="og:image" content="https://ghsalesllc.com/logo-512.png"><meta property="og:image:width" content="512"><meta property="og:image:height" content="512"><meta name="theme-color" content="#1d2c38"><!--/brand:head-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,6 +151,42 @@ footer a{color:#fff}
   .contact-grid{grid-template-columns:1fr}
   .contact-grid .btn{width:auto;flex:1}
 }
+
+/* Batch 2: featured row + category tiles on home */
+.featsec{padding:clamp(28px,4vw,40px) 0 6px}
+.feat{margin:0;padding:0}
+.feat-h{display:flex;align-items:baseline;gap:10px;margin:0 0 10px}
+.feat-h h2{font-family:Inter,system-ui,sans-serif;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--wood);margin:0}
+.feat-h span{font-size:.85rem;color:var(--muted)}
+.feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fcard{display:grid;grid-template-columns:120px 1fr;min-height:280px;background:#fff;color:var(--ink);border-radius:14px;overflow:hidden;text-decoration:none;border:1px solid var(--line);border-top:3px solid var(--teal);box-shadow:0 6px 18px rgba(60,40,20,.10);transition:transform .15s}
+.fcard:hover{transform:translateY(-2px)}
+.fmedia{position:relative;background:var(--ink);overflow:hidden}
+.fmedia img,.fmedia video{width:100%;height:100%;object-fit:cover;display:block}
+.fmedia .cap{position:absolute;left:6px;bottom:6px;background:rgba(29,44,56,.78);color:#fff;font-size:.66rem;font-weight:600;letter-spacing:.04em;padding:2px 6px;border-radius:6px}
+.fbody{padding:11px 13px;display:flex;flex-direction:column;min-width:0}
+.ftag{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-dark)}
+.fbody h3{font-family:"Playfair Display",Georgia,serif;font-size:1.05rem;line-height:1.2;margin:2px 0 6px}
+.fbody ul{margin:0;padding:0 0 0 14px;font-size:.78rem;line-height:1.3;color:var(--muted)}
+.fbody li{margin:0 0 2px}
+.fprice{margin-top:auto;display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 8px}
+.fprice b{font-size:1.2rem;color:var(--wood-dark)}
+.fprice small{font-size:.74rem;color:var(--muted)}
+.fprice s{color:#8a929a}
+.fmore{font-size:.78rem;font-weight:700;color:var(--teal-dark);margin-top:3px}
+.cats{padding:clamp(22px,3vw,30px) 0 clamp(40px,6vw,64px)}
+.cats h2{margin-bottom:.6em}
+.cat-tiles{max-width:none;margin:0 0 1.6rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.cat-tiles .cnote{display:block;font-style:normal;font-size:.78rem;font-weight:600;color:#f0c58f;margin-top:2px}
+@media (max-width:860px){
+.feat-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;gap:10px;padding-bottom:8px;margin:0 -20px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.feat-row::-webkit-scrollbar{display:none}
+.fcard{flex:0 0 84%;max-width:330px;scroll-snap-align:start;height:auto;min-height:210px;grid-template-columns:100px 1fr}.fmore{display:none}.fprice small{flex-basis:100%}
+.fbody{padding:9px 11px}.fbody h3{font-size:.98rem}.fbody ul{font-size:.76rem}}
+@media (max-width:600px){.cat-tiles{grid-template-columns:1fr 1fr}.cats .cta-row .btn{width:100%}}
+.tb-info{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:2px 0;text-align:right}.tb-info a{white-space:nowrap}.tb-sep{padding:0 8px}
+@media (max-width:640px){.topbar .wrap{justify-content:center;gap:6px 12px}.tb-info{width:100%;justify-content:center;gap:2px 14px;font-size:.82rem}.tb-sep{display:none}}
+@media (min-width:861px){.feat-row{grid-template-columns:repeat(4,1fr)}.fcard{grid-template-columns:1fr;grid-template-rows:150px auto;min-height:0}.fmedia{height:150px}}
 </style>
 </head>
 <body>
@@ -158,7 +194,7 @@ footer a{color:#fff}
 <div class="topbar">
   <div class="wrap">
     <!--brand:mark--><a class="brand" href="#top"><picture><source type="image/webp" srcset="logo-96.webp 1x, logo-192.webp 2x"><img src="logo-96.png" alt="GH Sales logo" class="" width="96" height="96"></picture><span>GH Sales Lumber &amp; Flooring</span></a><!--/brand:mark-->
-    <span><a class="tel" href="catalog.html">Inventory</a> &middot; <span class="hide-sm">Nampa, Idaho &middot; Call or text </span><a class="tel" href="tel:+12086060899">208-606-0899</a></span>
+    <span class="tb-info"><a class="tel" href="https://www.google.com/maps/search/?api=1&amp;query=1113+N+39th+St%2C+Nampa%2C+ID" target="_blank" rel="noopener">1113 N 39th St, Nampa, ID</a><span class="tb-sep"> &middot; </span><a class="tel" href="tel:+12086060899">Call or text 208-606-0899</a></span>
   </div>
 </div>
 
@@ -167,8 +203,8 @@ footer a{color:#fff}
     <!--brand:hero--><picture><source type="image/webp" srcset="logo-320.webp"><img src="logo-320.png" alt="GH Sales LLC logo" class="hero-logo" width="320" height="320"></picture><!--/brand:hero-->
     <div class="eyebrow" style="color:#f0c58f">Nampa, Idaho</div>
     <h1>GH Sales Lumber &amp; Flooring</h1>
-    <p class="tag">Japanese Sugi cedar and quality, low-cost flooring in Nampa: LVP, waterproof laminate, hardwood and carpet, with installation available.</p>
-    <p class="pill">Shop in-stock deals or special order the floor you want</p>
+    <p class="tag">Quality building materials and flooring without the big-box price. Lumber, Japanese cedar, decking, flooring, tile and more, with flooring installation available.</p>
+    <p class="pill">Shop in-stock deals or special order what you need.</p>
     <div class="cta-row">
       <a class="btn btn-wood" href="catalog.html">Browse everything for sale</a>
       <a class="btn btn-ghost" href="sms:+12086060899">Text 208-606-0899</a>
@@ -178,116 +214,16 @@ footer a{color:#fff}
 </header>
 
 <main>
-<section id="sugi">
-  <div class="wrap">
-    <div class="eyebrow">In stock in Nampa</div>
-    <h2>Japanese Sugi Cedar</h2>
-    <p class="intro">Sugi is a Japanese cedar with a straight, tight grain and warm color. Great for ceilings, accent walls, soffits, sauna interiors and decks. Whole units available. Lengths in stock can change, so call or text to check what's on hand.</p>
-
-    <div class="grid2">
-      <div class="card feature">
-        <div class="eyebrow">Featured</div>
-        <h3>1x6 Sugi Tongue &amp; Groove</h3>
-        <div>
-          <span class="badge">Nickel gap one side</span><span class="badge">V-groove other side</span><span class="badge">95%+ clear</span>
-        </div>
-        <ul class="specs">
-          <li>Planed smooth on both faces</li>
-          <li>5" reveal</li>
-          <li>Sold in 6-piece bundles at <strong>$1.95 per linear foot</strong></li>
-        </ul>
-        <table>
-          <thead><tr><th>Bundle (6 pcs)</th><th>Covers</th><th>Price</th></tr></thead>
-          <tbody>
-            <tr><td>8 ft</td><td>20 sq ft</td><td class="price">$93.60</td></tr>
-            <tr><td>10 ft</td><td>25 sq ft</td><td class="price">$117.00</td></tr>
-          </tbody>
-        </table>
-        <div class="unit">12 ft available by special order. <strong>$0.10 off per linear foot</strong> when buying a whole unit.</div>
-      </div>
-
-      <div class="gallery">
-        <figure><img src="1x6x10-7.jpg" alt="Close-up of Sugi cedar grain" loading="lazy"><figcaption>Tight, straight grain</figcaption></figure>
-        <figure class="tall"><img src="1x6x10-9.jpg" alt="End view of stacked Sugi tongue and groove boards showing the profile" loading="lazy"><figcaption>T&amp;G profile</figcaption></figure>
-        <figure><img src="1x6x10-10.jpg" alt="Bundles of Sugi cedar in stock" loading="lazy"><figcaption>Bundled and ready</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="products">
-      <div class="card">
-        <h3>Sugi 5/4x6 Decking</h3>
-        <div class="price">$2.00 <span class="sub">/ lin ft</span></div>
-        <p class="sub">True 1" thick. Available in 8, 10 and 12 ft lengths. $0.10 off per linear foot when buying a whole unit.</p>
-      </div>
-      <div class="card">
-        <h3>Sugi 2x6 Decking</h3>
-        <div class="price">$2.65 <span class="sub">/ lin ft</span></div>
-        <p class="sub">In stock in 8, 12 and 16 ft lengths (16 ft is the longest). Whole units available.</p>
-      </div>
-      <div class="card">
-        <h3>Sugi 2x4x8</h3>
-        <div class="price">$1.69 <span class="sub">/ lin ft</span></div>
-        <p class="sub">8 ft lengths only. $12.95 per piece when buying a whole unit (192 pieces per unit).</p>
-      </div>
-    </div>
-
-    <div class="notes" style="grid-template-columns:1fr">
-      <div class="card">
-        <h3>Other lumber &amp; building materials</h3>
-        <p>Some other lumber and building materials are available too. Inventory varies, and we're not a full-service lumberyard, so <a href="catalog.html#lumber-beams">browse what's for sale now</a> or call or text <a href="tel:+12086060899">208-606-0899</a> to check what's in stock.</p>
-      </div>
-    </div>
-  </div>
+<section class="featsec" aria-label="Featured items">
+  <div class="wrap"><!--home:featured--><section class="feat" aria-label="Featured items"><div class="feat-h"><h2>Featured</h2><span>Hand-picked deals</span></div><div class="feat-row"><a class="fcard" href="catalog.html#item-854407534322320"><div class="fmedia"><video src="feat-gazebo-intro.mp4" poster="feat-gazebo-intro.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sunjoy 10x22 Cedar Carport / Gazebo video"></video><span class="cap">Rendering</span></div><div class="fbody"><span class="ftag">In stock &middot; New in box</span><h3>Sunjoy 10x22 Cedar Carport / Gazebo</h3><ul><li>Cedar frame and privacy wall, steel roof with gutter</li><li>4,000 lb snow / 50 mph wind rating</li><li>Easy to set on elevated footings for more clearance</li><li>Ships as two boxes on one pallet, about 942 lb total</li></ul><div class="fprice"><b>$1,985</b><small>Compare at Home Depot <s>$2,379</s></small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="catalog.html#item-3681162998701759"><div class="fmedia"><img src="feat-sugi.jpg" alt="Japanese Sugi cedar tongue and groove boards showing grain and color variation" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock</span><h3>Japanese Sugi Cedar T&amp;G</h3><ul><li>1x6 in 8 ft and 10 ft (in stock), 12 ft by special order</li><li>$0.10 off per linear foot when buying a whole unit</li><li>Walls, ceilings, soffits, saunas</li></ul><div class="fprice"><b>$1.95</b><small>per lin ft &middot; 6-piece bundles</small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="catalog.html#item-1013439314987875"><div class="fmedia"><img src="1013439314987875-1.jpg" alt="Monticello rigid core vinyl plank with attached pad" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock &middot; Great value</span><h3>Monticello Rigid Core LVP</h3><ul><li>28 mil wear layer, 8 mm with pad</li><li>Oversized 9" x 60" planks</li><li>About 8,400 sq ft in stock</li></ul><div class="fprice"><b>$2.95</b><small>per sq ft &middot; $67.70/box</small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="catalog.html#item-1825788118406928"><div class="fmedia"><img src="1825788118406928-2.jpg" alt="Unfinished Hevea butcher block countertops stacked on a pallet" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock &middot; New</span><h3>Hevea Butcher Block Countertops</h3><ul><li>Solid Hevea wood butcher block countertops, unfinished, 25 in deep.</li><li>8 ft $199, 10 ft $249, 12 ft $299.</li></ul><div class="fprice"><b>From $199</b><small>25 in deep &middot; 8, 10 &amp; 12 ft</small></div><span class="fmore">See details &rarr;</span></div></a></div></section><!--/home:featured--></div>
 </section>
 
-<section class="flooring" id="flooring">
+<section class="cats" id="categories">
   <div class="wrap">
-    <div class="eyebrow">Flooring</div>
-    <h2>Low-cost, high-quality flooring</h2>
-    <p class="intro">Two ways to get a great floor for less. Grab a ready-to-go deal from our current stock, or special order exactly what your project needs.</p>
-    <div class="options">
-      <div class="card option">
-        <div class="eyebrow">Option 1</div>
-        <h3>In stock now</h3>
-        <p>Ready-to-go flooring at our best prices. Quantities are limited, so check each listing for the square footage available. If it covers your project, it's usually the best deal.</p>
-        <ul class="specs">
-          <li>No waiting on an order</li>
-          <li>Available square footage shown on every listing</li>
-          <li><strong>Truckload deals:</strong> watch for large lots on select flooring, often in limited colors, while supplies last</li>
-        </ul>
-        <a class="btn btn-wood" href="catalog.html?show=in_stock#flooring">See in-stock flooring</a>
-      </div>
-      <div class="card option feature">
-        <div class="eyebrow">Option 2</div>
-        <h3>Special order</h3>
-        <p>Don't see the right style, or need more than what's in stock? Choose from a wide selection of LVP, waterproof laminate and hardwood, ordered in the amount your project needs.</p>
-        <ul class="specs">
-          <li>Matching transitions, stair nosing and trim</li>
-          <li>Prices well below typical flooring stores</li>
-          <li>Tell us your square footage and the look you want</li>
-        </ul>
-        <div class="btn-pair"><a class="btn btn-wood" href="sms:+12086060899">Text 208-606-0899</a><a class="btn btn-outline" href="tel:+12086060899">Call</a></div>
-      </div>
-    </div>
-    <div class="floor-grid">
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v6M15 9v6M9 15v6"/></svg></div><h3>LVP</h3><p class="sub">Luxury vinyl plank</p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v9M7 12v9M17 12v9"/></svg></div><h3>Waterproof laminate</h3><p class="sub">Durable and budget friendly</p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 12h16M4 16h16"/></svg></div><h3>Hardwood</h3><p class="sub">Real wood floors</p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M6 10v4M9 10v4M12 10v4M15 10v4M18 10v4"/></svg></div><h3>Carpet</h3><p class="sub">Carpet available too</p></div>
-    </div>
-    <div class="install">
-      <p><strong>Installation available.</strong> Call or text to talk about your project.</p>
-      <a class="btn btn-wood" href="tel:+12086060899">Call 208-606-0899</a>
-    </div>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <h2>See everything for sale right now</h2>
-    <p><!--copy:band-p-->Inventory changes often. Browse every current lumber, flooring and building material listing, with photos and prices, right here.<!--/copy:band-p--></p>
-    <!--catalog:cats--><div class="cat-tiles"><a href="catalog.html#japanese-sugi-cedar"><img src="cat-japanese-sugi-cedar-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Japanese Sugi Cedar<small>6 items</small></span></a><a href="catalog.html#flooring"><img src="cat-flooring.jpg" alt="" loading="lazy" width="400" height="300"><span>Flooring<small>59 items</small></span></a><a href="catalog.html#lumber-beams"><img src="cat-lumber-beams.jpg" alt="" loading="lazy" width="400" height="300"><span>Lumber &amp; Beams<small>37 items</small></span></a><a href="catalog.html#decking"><img src="cat-decking.jpg" alt="" loading="lazy" width="400" height="300"><span>Decking<small>8 items</small></span></a><a href="catalog.html#outdoor-structures"><img src="cat-outdoor-structures.jpg" alt="" loading="lazy" width="400" height="300"><span>Outdoor Structures<small>1 item</small></span></a><a href="catalog.html#siding-roofing-trim"><img src="cat-siding-roofing-trim.jpg" alt="" loading="lazy" width="400" height="300"><span>Siding, Roofing &amp; Trim<small>9 items</small></span></a><a href="catalog.html#tile-stone"><img src="cat-tile-stone.jpg" alt="" loading="lazy" width="400" height="300"><span>Tile &amp; Stone<small>8 items</small></span></a><a href="catalog.html#live-edge-slabs"><img src="cat-live-edge-slabs.jpg" alt="" loading="lazy" width="400" height="300"><span>Live Edge Slabs<small>15 items</small></span></a><a href="catalog.html#doors-windows-fixtures"><img src="cat-doors-windows-fixtures.jpg" alt="" loading="lazy" width="400" height="300"><span>Doors, Windows &amp; Fixtures<small>5 items</small></span></a><a href="catalog.html#wooden-buckets"><img src="cat-wooden-buckets.jpg" alt="" loading="lazy" width="400" height="300"><span>Wooden Buckets<small>21 items</small></span></a></div><!--/catalog:cats-->
-    <div class="cta-row"><!--copy:band-cta--><a class="btn btn-wood" href="catalog.html" style="background:#fff;color:var(--wood-dark)">Browse our inventory</a><p style="margin:10px 0 0;font-size:.85rem;opacity:.8;width:100%">Many items are also listed on <a href="https://www.facebook.com/marketplace/profile/100083354002706/?ref=permalink&amp;tab=listings&amp;mibextid=dXMIcH" target="_blank" rel="noopener" style="color:#fff">Facebook Marketplace</a>.</p><!--/copy:band-cta--></div>
+    <div class="eyebrow">Shop by category</div>
+    <h2>What we carry</h2>
+    <!--catalog:cats--><div class="cat-tiles"><a href="catalog.html#japanese-sugi-cedar"><img src="cat-japanese-sugi-cedar-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Japanese Sugi Cedar<small>6 items</small></span></a><a href="catalog.html#flooring"><img src="cat-flooring-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Flooring<small>59 items</small><em class="cnote">Installation available</em></span></a><a href="catalog.html#lumber-beams"><img src="cat-lumber-beams-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Lumber &amp; Beams<small>36 items</small></span></a><a href="catalog.html#decking"><img src="cat-decking-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Decking<small>8 items</small></span></a><a href="catalog.html#outdoor-structures"><img src="cat-outdoor-structures.jpg" alt="" loading="lazy" width="400" height="300"><span>Outdoor Structures<small>1 item</small></span></a><a href="catalog.html#siding-roofing-trim"><img src="cat-siding-roofing-trim-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Siding, Roofing &amp; Trim<small>9 items</small></span></a><a href="catalog.html#insulation"><img src="cat-insulation-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Insulation<small>1 item</small></span></a><a href="catalog.html#tile-stone"><img src="cat-tile-stone-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Tile &amp; Stone<small>8 items</small></span></a><a href="catalog.html#live-edge-slabs"><img src="cat-live-edge-slabs-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Live Edge Slabs<small>15 items</small></span></a><a href="catalog.html#general-building-materials"><img src="cat-general-building-materials-own.jpg" alt="" loading="lazy" width="400" height="300"><span>General Building Materials<small>7 items</small></span></a><a href="catalog.html#wooden-buckets"><img src="cat-wooden-buckets.jpg" alt="" loading="lazy" width="400" height="300"><span>Wooden Buckets<small>15 items</small></span></a><a href="catalog.html#miscellaneous"><img src="cat-miscellaneous-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Miscellaneous<small>6 items</small></span></a></div><!--/catalog:cats-->
+    <div class="cta-row"><a class="btn btn-wood" href="catalog.html">Browse everything for sale</a></div>
   </div>
 </section>
 
@@ -310,6 +246,7 @@ footer a{color:#fff}
         <h3>Address</h3>
         <div class="big">1113 N 39th St<br>Nampa, ID</div>
         <div class="btns"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=1113+N+39th+St%2C+Nampa%2C+ID" target="_blank" rel="noopener">Get directions</a></div>
+        <p class="hours-note" style="margin-top:14px"><strong>Payment:</strong> cash, Venmo, Zelle or credit card. Credit card payments have a 3% processing fee added.</p>
       </div>
       <div class="card c-hours">
         <h3>Hours</h3>
