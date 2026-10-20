@@ -27,11 +27,14 @@ h1,h2{font-family:"Playfair Display",Georgia,serif;line-height:1.15;margin:0 0 .
 .seg{display:flex;border:1.5px solid var(--wood-dark);border-radius:10px;overflow:hidden}
 .seg button{font:inherit;font-weight:600;font-size:.9rem;border:0;background:#fff;color:var(--wood-dark);padding:10px 14px;cursor:pointer}
 .seg button.on{background:var(--wood-dark);color:#fff}
-.jump{display:flex;gap:8px;overflow-x:auto;padding:0 18px 10px;max-width:1180px;margin:0 auto;scrollbar-width:none}
-.jump a{flex:none;font-size:.85rem;font-weight:600;text-decoration:none;background:#e3eeee;color:var(--teal-dark);padding:6px 12px;border-radius:999px}
-.jump a span{opacity:.7;font-weight:500}
+.jump{display:flex;flex-wrap:wrap;gap:6px;overflow:visible;padding:0 18px 10px;max-width:1180px;margin:0 auto}
+.jump a{flex:none;font-size:.84rem;font-weight:600;line-height:1.2;text-decoration:none;background:#e3eeee;color:var(--teal-dark);padding:5px 11px;border-radius:999px;white-space:nowrap}
+.jump a .jc{opacity:.7;font-weight:500}.jump .ls{display:none}
+@media (max-width:1100px){.jump .lf{display:none}.jump .ls{display:inline}}
+@media (max-width:600px){.jump{gap:4px 4px;padding:0 10px 7px}.jump a{font-size:13px;padding:4px 8px}.jump .jc{display:none}.controls .wrap{padding-top:7px;padding-bottom:7px;gap:6px}#q{padding:8px 12px}.seg button{padding:7px 6px}}
+.cat{scroll-margin-top:calc(var(--ch,110px) + 8px)}
 .brand{display:inline-flex;align-items:center;gap:10px}.brand img{width:40px;height:40px;object-fit:contain}
-.cat{padding:26px 0 8px;scroll-margin-top:110px}
+.cat{padding:26px 0 8px;scroll-margin-top:calc(var(--ch,110px) + 8px)}
 .banner{position:relative;border-radius:16px;overflow:hidden;height:150px;margin-bottom:14px;background:var(--ink)}
 .banner img{width:100%;height:100%;object-fit:cover}
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,32,42,.88),rgba(18,32,42,.35) 70%,rgba(18,32,42,.1))}
@@ -75,7 +78,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (max-width:360px){.grid{grid-template-columns:1fr}}
 .tag2{position:absolute;left:10px;top:38px;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;color:#fff;background:var(--wood)}
 .ph.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#111}
-.ph.vid .play{position:absolute;right:10px;bottom:10px;display:flex;align-items:center;gap:6px;font:inherit;font-size:.8rem;font-weight:700;color:#fff;background:rgba(29,44,56,.82);border:0;border-radius:999px;padding:6px 12px 6px 8px;cursor:pointer}
+.ph.vid .play{pointer-events:none;position:absolute;right:10px;bottom:10px;display:flex;align-items:center;gap:6px;font:inherit;font-size:.8rem;font-weight:700;color:#fff;background:rgba(29,44,56,.82);border:0;border-radius:999px;padding:6px 12px 6px 8px;cursor:pointer}
 .ph.vid .play span{width:0;height:0;border-left:10px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:4px}
 .ph.vid.on .play{display:none}.ph.vid.on video{object-fit:contain}
 .item.gen{border:2px dashed var(--wood)}.sorow{margin-top:26px;padding-top:16px;border-top:2px solid var(--line)}.subhead{font-family:"Playfair Display",Georgia,serif;font-size:1.35rem;margin:0 0 4px;color:var(--wood-dark)}.sonote{margin:0 0 12px;color:var(--muted);font-size:.92rem}.gcol{margin:0 0 10px;font-size:.88rem}.gcol summary{cursor:pointer;color:var(--teal);font-weight:600}.gcol img{margin-top:6px;border-radius:8px;width:100%;height:auto}.price.gp{font-size:1.05rem}.gspecs{margin:0 0 8px;padding:0 0 0 16px;font-size:.84rem;line-height:1.35;color:var(--ink)}.gspecs li{margin-bottom:2px}.pnote2{margin:-4px 0 14px;max-width:760px;background:#e3eeee;color:var(--ink);border-left:4px solid var(--teal);border-radius:8px;padding:9px 12px;font-size:.92rem}.pnote2 a{color:var(--teal-dark);font-weight:700}.item.gen .gx{display:block}
@@ -163,40 +166,40 @@ body.gm-on{overflow:hidden}
 .tb-info{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:2px 0;text-align:right}.tb-info a{white-space:nowrap}.tb-sep{padding:0 8px}@media (max-width:640px){.topbar .wrap{flex-wrap:wrap!important;justify-content:center;gap:6px 12px}.tb-info{width:100%;justify-content:center;gap:2px 14px;font-size:.82rem}.tb-sep{display:none}}</style></head><body>
 <div class="topbar"><div class="wrap"><a class="brand" href="index.html"><picture><source type="image/webp" srcset="logo-96.webp 1x, logo-192.webp 2x"><img src="logo-96.png" alt="GH Sales logo" class="" width="96" height="96"></picture><span>GH Sales Lumber &amp; Flooring</span></a><span class="tb-info"><a href="https://www.google.com/maps/search/?api=1&amp;query=1113+N+39th+St%2C+Nampa%2C+ID" target="_blank" rel="noopener">1113 N 39th St, Nampa, ID</a><span class="tb-sep"> &middot; </span><a href="tel:+12086060899">Call or text 208-606-0899</a></span></div></div>
 <header class="head"><div class="wrap"><div class="hl"><picture><source type="image/webp" srcset="logo-192.webp 1x, logo-320.webp 2x"><img src="logo-192.png" alt="" class="" width="192" height="192"></picture><div><div class="eyebrow">Nampa, Idaho &middot; 171 items</div><h1>Everything for sale right now</h1></div></div>
-<p>Lumber, Japanese Sugi cedar, flooring and more, ready to pick up in Nampa. Stock changes often, so call or text 208-606-0899 to confirm before you come.</p><p class="fbnote">Many items are also listed on Facebook Marketplace.</p><section class="feat" aria-label="Featured items"><div class="feat-h"><h2>Featured</h2><span>Hand-picked deals</span></div><div class="feat-row"><a class="fcard" href="#item-854407534322320"><div class="fmedia"><video src="feat-gazebo-intro.mp4" poster="feat-gazebo-intro.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sunjoy 10x22 Cedar Carport / Gazebo video"></video><span class="cap">Rendering</span></div><div class="fbody"><span class="ftag">In stock &middot; New in box</span><h3>Sunjoy 10x22 Cedar Carport / Gazebo</h3><ul><li>Cedar frame and privacy wall, steel roof with gutter</li><li>4,000 lb snow / 50 mph wind rating</li><li>Easy to set on elevated footings for more clearance</li><li>Ships as two boxes on one pallet, about 942 lb total</li></ul><div class="fprice"><b>$1,985</b><small>Compare at Home Depot <s>$2,379</s></small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="#item-3681162998701759"><div class="fmedia"><img src="feat-sugi.jpg" alt="Japanese Sugi cedar tongue and groove boards showing grain and color variation" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock</span><h3>Japanese Sugi Cedar T&amp;G</h3><ul><li>1x6 in 8 ft and 10 ft (in stock), 12 ft by special order</li><li>$0.10 off per linear foot when buying a whole unit</li><li>Walls, ceilings, soffits, saunas</li></ul><div class="fprice"><b>$1.95</b><small>per lin ft &middot; 6-piece bundles</small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="#item-1013439314987875"><div class="fmedia"><img src="1013439314987875-1.jpg" alt="Monticello rigid core vinyl plank with attached pad" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock &middot; Great value</span><h3>Monticello Rigid Core LVP</h3><ul><li>28 mil wear layer, 8 mm with pad</li><li>Oversized 9" x 60" planks</li><li>About 8,400 sq ft in stock</li></ul><div class="fprice"><b>$2.95</b><small>per sq ft &middot; $67.70/box</small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="#item-1825788118406928"><div class="fmedia"><img src="1825788118406928-2.jpg" alt="Unfinished Hevea butcher block countertops stacked on a pallet" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock &middot; New</span><h3>Hevea Butcher Block Countertops</h3><ul><li>Solid Hevea wood butcher block countertops, unfinished, 25 in deep.</li><li>8 ft $199, 10 ft $249, 12 ft $299.</li></ul><div class="fprice"><b>From $199</b><small>25 in deep &middot; 8, 10 &amp; 12 ft</small></div><span class="fmore">See details &rarr;</span></div></a></div></section><div class="tiles"><a href="#japanese-sugi-cedar"><img src="cat-japanese-sugi-cedar-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Japanese Sugi Cedar<small>6 items</small></span></a><a href="#flooring"><img src="cat-flooring-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Flooring<small>59 items</small><em class="cnote">Installation available</em></span></a><a href="#lumber-beams"><img src="cat-lumber-beams-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Lumber &amp; Beams<small>45 items</small></span></a><a href="#decking"><img src="cat-decking-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Decking<small>12 items</small></span></a><a href="#outdoor-structures"><img src="cat-outdoor-structures.jpg" alt="" loading="lazy" width="400" height="300"><span>Outdoor Structures<small>1 item</small></span></a><a href="#siding-roofing-trim"><img src="cat-siding-roofing-trim-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Siding, Roofing &amp; Trim<small>9 items</small></span></a><a href="#insulation"><img src="cat-insulation-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Insulation<small>1 item</small></span></a><a href="#tile-stone"><img src="cat-tile-stone-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Tile &amp; Stone<small>8 items</small></span></a><a href="#live-edge-slabs"><img src="cat-live-edge-slabs-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Live Edge Slabs<small>15 items</small></span></a><a href="#general-building-materials"><img src="cat-general-building-materials-own.jpg" alt="" loading="lazy" width="400" height="300"><span>General Building Materials<small>7 items</small></span></a><a href="#wooden-buckets"><img src="cat-wooden-buckets.jpg" alt="" loading="lazy" width="400" height="300"><span>Wooden Buckets<small>15 items</small></span></a><a href="#miscellaneous"><img src="cat-miscellaneous-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Miscellaneous<small>6 items</small></span></a></div></div></header>
+<p>Lumber, Japanese Sugi cedar, flooring and more, ready to pick up in Nampa. Stock changes often, so call or text 208-606-0899 to confirm before you come.</p><p class="fbnote">Many items are also listed on Facebook Marketplace.</p><section class="feat" aria-label="Featured items"><div class="feat-h"><h2>Featured</h2><span>Hand-picked deals</span></div><div class="feat-row"><a class="fcard" href="#item-854407534322320"><div class="fmedia"><video src="feat-gazebo-intro.mp4" poster="feat-gazebo-intro.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sunjoy 10x22 Cedar Carport / Gazebo video"></video><span class="cap">Rendering</span></div><div class="fbody"><span class="ftag">In stock &middot; New in box</span><h3>Sunjoy 10x22 Cedar Carport / Gazebo</h3><ul><li>Cedar frame and privacy wall, steel roof with gutter</li><li>4,000 lb snow / 50 mph wind rating</li><li>Easy to set on elevated footings for more clearance</li><li>Ships as two boxes on one pallet, about 942 lb total</li></ul><div class="fprice"><b>$1,985</b><small>Compare at Home Depot <s>$2,379</s></small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="#item-3681162998701759"><div class="fmedia"><img src="feat-sugi.jpg" alt="Japanese Sugi cedar tongue and groove boards showing grain and color variation" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock</span><h3>Japanese Sugi Cedar T&amp;G</h3><ul><li>1x6 in 8 ft and 10 ft (in stock), 12 ft by special order</li><li>$0.10 off per linear foot when buying a whole unit</li><li>Walls, ceilings, soffits, saunas</li></ul><div class="fprice"><b>$1.95</b><small>per lin ft &middot; 6-piece bundles</small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="#item-1013439314987875"><div class="fmedia"><img src="1013439314987875-1.jpg" alt="Monticello rigid core vinyl plank with attached pad" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock &middot; Great value</span><h3>Monticello Rigid Core LVP</h3><ul><li>28 mil wear layer, 8 mm with pad</li><li>Oversized 9" x 60" planks</li><li>About 8,400 sq ft in stock</li></ul><div class="fprice"><b>$2.95</b><small>per sq ft &middot; $67.70/box</small></div><span class="fmore">See details &rarr;</span></div></a><a class="fcard" href="#item-1825788118406928"><div class="fmedia"><img src="1825788118406928-2.jpg" alt="Unfinished Hevea butcher block countertops stacked on a pallet" loading="lazy" width="400" height="300"></div><div class="fbody"><span class="ftag">In stock &middot; New</span><h3>Hevea Butcher Block Countertops</h3><ul><li>Solid Hevea wood butcher block countertops, unfinished, 25 in deep.</li><li>8 ft $199, 10 ft $249, 12 ft $299.</li></ul><div class="fprice"><b>From $199</b><small>25 in deep &middot; 8, 10 &amp; 12 ft</small></div><span class="fmore">See details &rarr;</span></div></a></div></section><div class="tiles"><a href="#japanese-sugi-cedar"><img src="cat-japanese-sugi-cedar-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Japanese Sugi Cedar<small>6 items</small></span></a><a href="#flooring"><img src="cat-flooring-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Flooring<small>59 items</small><em class="cnote">Installation available</em></span></a><a href="#lumber-beams"><img src="cat-lumber-beams-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Lumber &amp; Beams<small>45 items</small></span></a><a href="#decking"><img src="cat-decking-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Decking<small>12 items</small></span></a><a href="#fencing"><img src="cat-fencing-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Fencing<small>2 items</small></span></a><a href="#outdoor-structures"><img src="cat-outdoor-structures.jpg" alt="" loading="lazy" width="400" height="300"><span>Outdoor Structures<small>1 item</small></span></a><a href="#siding-roofing-trim"><img src="cat-siding-roofing-trim-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Siding, Roofing &amp; Trim<small>9 items</small></span></a><a href="#insulation"><img src="cat-insulation-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Insulation<small>1 item</small></span></a><a href="#tile-stone"><img src="cat-tile-stone-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Tile &amp; Stone<small>8 items</small></span></a><a href="#live-edge-slabs"><img src="cat-live-edge-slabs-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Live Edge Slabs<small>15 items</small></span></a><a href="#general-building-materials"><img src="cat-general-building-materials-own.jpg" alt="" loading="lazy" width="400" height="300"><span>General Building Materials<small>7 items</small></span></a><a href="#wooden-buckets-decor"><img src="cat-wooden-buckets.jpg" alt="" loading="lazy" width="400" height="300"><span>Wooden Buckets &amp; Decor<small>15 items</small></span></a><a href="#miscellaneous"><img src="cat-miscellaneous-own.jpg" alt="" loading="lazy" width="400" height="300"><span>Miscellaneous<small>6 items</small></span></a></div></div></header>
 <div class="controls"><div class="wrap"><input id="q" type="search" placeholder="Search (e.g. 2x6, redwood, LVP)" aria-label="Search inventory">
 <div class="seg" role="group" aria-label="Availability"><button type="button" class="on" data-av="all">All</button><button type="button" data-av="in_stock">In stock</button><button type="button" data-av="special_order">Special order</button></div></div>
-<nav class="jump" aria-label="Categories"><a href="#japanese-sugi-cedar">Japanese Sugi Cedar <span>6</span></a><a href="#flooring">Flooring <span>59</span></a><a href="#lumber-beams">Lumber &amp; Beams <span>45</span></a><a href="#decking">Decking <span>12</span></a><a href="#outdoor-structures">Outdoor Structures <span>1</span></a><a href="#siding-roofing-trim">Siding, Roofing &amp; Trim <span>9</span></a><a href="#insulation">Insulation <span>1</span></a><a href="#tile-stone">Tile &amp; Stone <span>8</span></a><a href="#live-edge-slabs">Live Edge Slabs <span>15</span></a><a href="#general-building-materials">General Building Materials <span>7</span></a><a href="#wooden-buckets">Wooden Buckets <span>15</span></a><a href="#miscellaneous">Miscellaneous <span>6</span></a></nav></div>
-<main><section class="cat" id="japanese-sugi-cedar"><div class="wrap"><div class="banner"><img src="cat-japanese-sugi-cedar-own.jpg" alt="" loading="lazy"><h2>Japanese Sugi Cedar<small>6 items</small></h2></div><p class="blurb">Tight, straight-grained Japanese cedar for ceilings, walls, saunas and decks. Whole units available. Lengths in stock can change, so call or text to check what's on hand.</p><div class="grid"><article class="item" id="item-1571495154466256" data-av="in_stock" data-ph="1571495154466256-1.jpg,1571495154466256-2.jpg,1571495154466256-3.jpg,1571495154466256-4.jpg" data-v="v-1571495154466256.mp4" data-s="2x6x16 japanese sugi cedar decking ($2.65/lin ft), no minimums japanese sugi cedar $2.65 per linear foot. no minimum purchase. whole units available.
+<nav class="jump" aria-label="Categories"><a href="#japanese-sugi-cedar" title="Japanese Sugi Cedar"><span class="lf">Japanese Sugi Cedar</span><span class="ls">Sugi Cedar</span> <span class="jc">6</span></a><a href="#flooring" title="Flooring"><span class="lf">Flooring</span><span class="ls">Flooring</span> <span class="jc">59</span></a><a href="#lumber-beams" title="Lumber &amp; Beams"><span class="lf">Lumber &amp; Beams</span><span class="ls">Lumber</span> <span class="jc">45</span></a><a href="#decking" title="Decking"><span class="lf">Decking</span><span class="ls">Decking</span> <span class="jc">12</span></a><a href="#fencing" title="Fencing"><span class="lf">Fencing</span><span class="ls">Fencing</span> <span class="jc">2</span></a><a href="#outdoor-structures" title="Outdoor Structures"><span class="lf">Outdoor Structures</span><span class="ls">Outdoor</span> <span class="jc">1</span></a><a href="#siding-roofing-trim" title="Siding, Roofing &amp; Trim"><span class="lf">Siding, Roofing &amp; Trim</span><span class="ls">Siding</span> <span class="jc">9</span></a><a href="#insulation" title="Insulation"><span class="lf">Insulation</span><span class="ls">Insulation</span> <span class="jc">1</span></a><a href="#tile-stone" title="Tile &amp; Stone"><span class="lf">Tile &amp; Stone</span><span class="ls">Tile</span> <span class="jc">8</span></a><a href="#live-edge-slabs" title="Live Edge Slabs"><span class="lf">Live Edge Slabs</span><span class="ls">Live Edge</span> <span class="jc">15</span></a><a href="#general-building-materials" title="General Building Materials"><span class="lf">General Building Materials</span><span class="ls">General</span> <span class="jc">7</span></a><a href="#wooden-buckets-decor" title="Wooden Buckets &amp; Decor"><span class="lf">Wooden Buckets &amp; Decor</span><span class="ls">Buckets &amp; Decor</span> <span class="jc">15</span></a><a href="#miscellaneous" title="Miscellaneous"><span class="lf">Miscellaneous</span><span class="ls">Misc.</span> <span class="jc">6</span></a></nav></div>
+<main><section class="cat" id="japanese-sugi-cedar"><div class="wrap"><div class="banner"><img src="cat-japanese-sugi-cedar-own.jpg" alt="" loading="lazy"><h2>Japanese Sugi Cedar<small>6 items</small></h2></div><p class="blurb">Tight, straight-grained Japanese cedar for ceilings, walls, saunas and decks. Whole units available. Lengths in stock can change, so call or text to check what's on hand.</p><div class="grid"><article class="item" id="item-1571495154466256" data-av="in_stock" data-ph="1571495154466256-1.jpg,1571495154466256-2.jpg,1571495154466256-3.jpg,1571495154466256-4.jpg" data-v="v-1571495154466256.mp4" data-s="japanese sugi cedar 2x6x16 decking ($2.65/lin ft, $42.40 per board), no minimums japanese sugi cedar $2.65 per linear foot, $42.40 per 16 ft board. no minimum purchase. whole units available.
 
-in stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 kiln dried. also available: sugi 1x6 tongue and groove, 5/4x6 and 2x4. ">
-<div class="ph vid"><video preload="none" playsinline poster="1571495154466256-1t.jpg" src="v-1571495154466256.mp4" aria-label="Video: 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft), No Minimums"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft), No Minimums</h3>
+<a class="ph vid" href="#item-1571495154466256" aria-label="See video, photos and details"><img src="1571495154466256-1t.jpg" alt="Japanese Sugi Cedar 2x6x16 Decking ($2.65/lin ft, $42.40 per board), No Minimums" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 2x6x16 Decking ($2.65/lin ft, $42.40 per board), No Minimums</h3>
 <div class="price">$2.65 <span class="u">/ lin ft</span></div>
-<p class="ex">$2.65 per linear foot. No minimum purchase. Whole units available. · In stock in 8, 12 and 16 ft lengths (16 ft is the longest). · Lengths in stock…</p>
-<details><summary>More details</summary><div class="full">$2.65 per linear foot. No minimum purchase. Whole units available.
+<p class="ex">$2.65 per linear foot, $42.40 per 16 ft board. No minimum purchase. Whole units available. · Available in 8, 12 and 16 ft lengths. 8 ft is also in…</p>
+<details><summary>More details</summary><div class="full">$2.65 per linear foot, $42.40 per 16 ft board. No minimum purchase. Whole units available.
 
-In stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+Available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 Kiln dried. Also available: Sugi 1x6 tongue and groove, 5/4x6 and 2x4.</div><div class="more"><a href="#item-1571495154466256" data-i="0"><img src="1571495154466256-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1571495154466256" data-i="1"><img src="1571495154466256-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1571495154466256" data-i="2"><img src="1571495154466256-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1571495154466256" data-i="3"><img src="1571495154466256-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1571495154466256/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1053680454173165" data-av="in_stock" data-ph="1053680454173165-1.jpg,1053680454173165-2.jpg,1053680454173165-3.jpg,1053680454173165-4.jpg" data-v="v-1053680454173165.mp4" data-s="2x6x12 &amp; 2x6x16 japanese sugi cedar decking ($2.65/lin ft) japanese sugi cedar $2.65 per linear foot. whole units available.
+</div></article><article class="item" id="item-1053680454173165" data-av="in_stock" data-ph="1053680454173165-1.jpg,1053680454173165-2.jpg,1053680454173165-3.jpg,1053680454173165-4.jpg" data-v="v-1053680454173165.mp4" data-s="japanese sugi cedar 2x6x12 decking ($2.65/lin ft, $31.80 per board) japanese sugi cedar $2.65 per linear foot, $31.80 per 12 ft board. whole units available.
 
-in stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 kiln dried. also available: sugi 1x6 tongue and groove, 5/4x6 and 2x4. ">
-<div class="ph vid"><video preload="none" playsinline poster="1053680454173165-1t.jpg" src="v-1053680454173165.mp4" aria-label="Video: 2x6x12 &amp; 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">2x6x12 &amp; 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft)</h3>
+<a class="ph vid" href="#item-1053680454173165" aria-label="See video, photos and details"><img src="1053680454173165-1t.jpg" alt="Japanese Sugi Cedar 2x6x12 Decking ($2.65/lin ft, $31.80 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 2x6x12 Decking ($2.65/lin ft, $31.80 per board)</h3>
 <div class="price">$2.65 <span class="u">/ lin ft</span></div>
-<p class="ex">$2.65 per linear foot. Whole units available. · In stock in 8, 12 and 16 ft lengths (16 ft is the longest). · Lengths in stock can change; call or…</p>
-<details><summary>More details</summary><div class="full">$2.65 per linear foot. Whole units available.
+<p class="ex">$2.65 per linear foot, $31.80 per 12 ft board. Whole units available. · Available in 8, 12 and 16 ft lengths. 8 ft is also in stock. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2.65 per linear foot, $31.80 per 12 ft board. Whole units available.
 
-In stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+Available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 Kiln dried. Also available: Sugi 1x6 tongue and groove, 5/4x6 and 2x4.</div><div class="more"><a href="#item-1053680454173165" data-i="0"><img src="1053680454173165-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1053680454173165" data-i="1"><img src="1053680454173165-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1053680454173165" data-i="2"><img src="1053680454173165-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1053680454173165" data-i="3"><img src="1053680454173165-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
@@ -218,18 +221,18 @@ $12.95 per piece when buying a whole unit (192 pieces per unit).
 
 Great for saunas, fencing, trim and projects. Also available: Sugi 1x6 tongue and groove, 5/4x6 and 2x6.</div><div class="more"><a href="#item-1469850318311095" data-i="0"><img src="1469850318311095-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1469850318311095" data-i="1"><img src="1469850318311095-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1469850318311095" data-i="2"><img src="1469850318311095-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1469850318311095" data-i="3"><img src="1469850318311095-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1469850318311095/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-996616480064854" data-av="in_stock" data-ph="996616480064854-1.jpg,996616480064854-2.jpg,996616480064854-3.jpg,996616480064854-4.jpg" data-v="v-996616480064854.mp4" data-s="5/4x6x8 &amp; 5/4x6x12 japanese sugi cedar decking ($2/lin ft) japanese sugi cedar $2 per linear foot.
+</div></article><article class="item" id="item-996616480064854" data-av="in_stock" data-ph="996616480064854-1.jpg,996616480064854-2.jpg,996616480064854-3.jpg,996616480064854-4.jpg" data-v="v-996616480064854.mp4" data-s="japanese sugi cedar 5/4x6x8 decking ($2/lin ft, $16 per board) japanese sugi cedar $2 per linear foot, $16 per 8 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 available in 8, 10 and 12 ft lengths.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. lightweight, durable and naturally rot- and insect-resistant, with a reddish-golden grain. kiln dried. great for decks, garden beds, fences, benches and accent walls. ">
-<div class="ph vid"><video preload="none" playsinline poster="996616480064854-1t.jpg" src="v-996616480064854.mp4" aria-label="Video: 5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Decking ($2/lin ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Decking ($2/lin ft)</h3>
+<a class="ph vid" href="#item-996616480064854" aria-label="See video, photos and details"><img src="996616480064854-1t.jpg" alt="Japanese Sugi Cedar 5/4x6x8 Decking ($2/lin ft, $16 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 5/4x6x8 Decking ($2/lin ft, $16 per board)</h3>
 <div class="price">$2 <span class="u">/ lin ft</span></div>
-<p class="ex">$2 per linear foot. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in stock can change; call…</p>
-<details><summary>More details</summary><div class="full">$2 per linear foot.
+<p class="ex">$2 per linear foot, $16 per 8 ft board. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2 per linear foot, $16 per 8 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 Available in 8, 10 and 12 ft lengths.
@@ -244,7 +247,7 @@ typically in stock in 8 ft and 10 ft lengths. 12 ft available by special order.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 v-groove on one side, square-edge nickel-gap on the other, planed smooth on both faces. great for walls, ceilings, soffits and saunas, inside or out. looks great natural, oiled, stained or painted. 12 ft special order">
-<div class="ph vid"><video preload="none" playsinline poster="3681162998701759-1t.jpg" src="v-3681162998701759.mp4" aria-label="Video: 1x6x8 &amp; 1x6x10 Japanese Sugi Cedar Tongue &amp; Groove ($1.95/lin ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span><span class="tag2">12 ft special order</span></div>
+<a class="ph vid" href="#item-3681162998701759" aria-label="See video, photos and details"><img src="3681162998701759-1t.jpg" alt="1x6x8 &amp; 1x6x10 Japanese Sugi Cedar Tongue &amp; Groove ($1.95/lin ft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span><span class="tag2">12 ft special order</span></a>
 <div class="body"><h3 class="gopen">1x6x8 &amp; 1x6x10 Japanese Sugi Cedar Tongue &amp; Groove ($1.95/lin ft)</h3>
 <div class="price">$1.95 <span class="u">/ lin ft</span></div>
 <p class="ex">$1.95 per linear foot, sold in 6-piece bundles. · $0.10 off per linear foot when buying a whole unit. · Typically in stock in 8 ft and 10 ft lengths.…</p>
@@ -256,18 +259,18 @@ Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 V-groove on one side, square-edge nickel-gap on the other, planed smooth on both faces. Great for walls, ceilings, soffits and saunas, inside or out. Looks great natural, oiled, stained or painted.</div><div class="more"><a href="#item-3681162998701759" data-i="0"><img src="3681162998701759-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-3681162998701759" data-i="1"><img src="3681162998701759-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-3681162998701759" data-i="2"><img src="3681162998701759-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-3681162998701759" data-i="3"><img src="3681162998701759-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/3681162998701759/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-926560593857525" data-av="in_stock" data-ph="926560593857525-1.jpg,926560593857525-2.jpg,926560593857525-3.jpg,926560593857525-4.jpg" data-v="v-926560593857525.mp4" data-s="5/4x6x8 &amp; 5/4x6x12 japanese sugi cedar boards ($16 per 8 ft, $24 per 12 ft board) japanese sugi cedar $2 per linear foot.
+</div></article><article class="item" id="item-926560593857525" data-av="in_stock" data-ph="926560593857525-1.jpg,926560593857525-2.jpg,926560593857525-3.jpg,926560593857525-4.jpg" data-v="v-926560593857525.mp4" data-s="japanese sugi cedar 5/4x6x12 decking boards ($2/lin ft, $24 per board) japanese sugi cedar $2 per linear foot, $24 per 12 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 available in 8, 10 and 12 ft lengths.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. kiln dried. ">
-<div class="ph vid"><video preload="none" playsinline poster="926560593857525-1t.jpg" src="v-926560593857525.mp4" aria-label="Video: 5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Boards ($16 per 8 ft, $24 per 12 ft board)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Boards ($16 per 8 ft, $24 per 12 ft board)</h3>
+<a class="ph vid" href="#item-926560593857525" aria-label="See video, photos and details"><img src="926560593857525-1t.jpg" alt="Japanese Sugi Cedar 5/4x6x12 Decking Boards ($2/lin ft, $24 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 5/4x6x12 Decking Boards ($2/lin ft, $24 per board)</h3>
 <div class="price">$2 <span class="u">/ lin ft</span></div>
-<p class="ex">$2 per linear foot. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in stock can change; call…</p>
-<details><summary>More details</summary><div class="full">$2 per linear foot.
+<p class="ex">$2 per linear foot, $24 per 12 ft board. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2 per linear foot, $24 per 12 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 Available in 8, 10 and 12 ft lengths.
@@ -296,7 +299,7 @@ waterproof rigid core
 painted bevel
 
 good for kitchens, baths, pets, and everyday traffic. ">
-<div class="ph vid"><video preload="none" playsinline poster="1633672991743856-1t.jpg" src="v-1633672991743856.mp4" aria-label="Video: &quot;Worn Gray&quot; ($2.95/sqft) Mohawk Founder’s Trace - 7″x48″ 6mm/20mil LVP – Waterproof Flooring"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1633672991743856" aria-label="See video, photos and details"><img src="1633672991743856-1t.jpg" alt="&quot;Worn Gray&quot; ($2.95/sqft) Mohawk Founder’s Trace - 7″x48″ 6mm/20mil LVP – Waterproof Flooring" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">&quot;Worn Gray&quot; ($2.95/sqft) Mohawk Founder’s Trace - 7″x48″ 6mm/20mil LVP – Waterproof Flooring</h3>
 <div class="price">$2.95 <span class="u">/ sq ft</span></div><div class="qb lim">Limited stock: 35 boxes / 835 sq ft available</div>
 <p class="ex">$2.95/sqft, 23.86sqft/box, $70.39/box · 35 boxes / 835sqft available · Mohawk SolidTech Select Founder’s Trace - &quot;Worn Gray&quot; · Size: 7.01″ x 49″ ·…</p>
@@ -343,7 +346,7 @@ waterproof rigid core
 painted bevel
 
 good for kitchens, baths, pets, and everyday traffic. ">
-<div class="ph vid"><video preload="none" playsinline poster="2237665743471485-2t.jpg" src="v-2237665743471485.mp4" aria-label="Video: &quot;Iced Chardonnay&quot; ($2.95/sqft) Mohawk Founder’s Trace - 7″x48″ 6mm/20mil LVP – Waterproof Flooring"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-2237665743471485" aria-label="See video, photos and details"><img src="2237665743471485-2t.jpg" alt="&quot;Iced Chardonnay&quot; ($2.95/sqft) Mohawk Founder’s Trace - 7″x48″ 6mm/20mil LVP – Waterproof Flooring" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">&quot;Iced Chardonnay&quot; ($2.95/sqft) Mohawk Founder’s Trace - 7″x48″ 6mm/20mil LVP – Waterproof Flooring</h3>
 <div class="price">$2.95 <span class="u">/ sq ft</span></div><div class="qb lim">Limited stock: 143 boxes / 3,412 sq ft available</div>
 <p class="ex">$2.95/sqft, 23.86sqft/box, $70.39/box · 143 boxes / 3412sqft available · Mohawk SolidTech Select Founder’s Trace in Iced Chardonnay (FTS21.102).…</p>
@@ -408,7 +411,7 @@ other lumber and flooring available.
 
 text or call 208-606-0899
 gh sales lumber &amp; flooring  ">
-<div class="ph vid"><video preload="none" playsinline poster="1417034280311825-1t.jpg" src="v-1417034280311825.mp4" aria-label="Video: Mohawk 6mm 12mil 7.5&quot;x48&quot; Dover LVP/LVT Flooring ($1.95/sqft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1417034280311825" aria-label="See video, photos and details"><img src="1417034280311825-1t.jpg" alt="Mohawk 6mm 12mil 7.5&quot;x48&quot; Dover LVP/LVT Flooring ($1.95/sqft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Mohawk 6mm 12mil 7.5&quot;x48&quot; Dover LVP/LVT Flooring ($1.95/sqft)</h3>
 <div class="price">$1.95 <span class="u">/ sq ft</span></div><div class="qb lim">Limited stock: 18 boxes, 311 sq ft available</div>
 <p class="ex">$1.95/sqft, 17.32 sqft/box, $33.77/box · 18 boxes - 311sqft available · 6mm/20mil 7.5&quot;x48&quot; plank · Other lumber and flooring available.</p>
@@ -433,7 +436,7 @@ other lumber and flooring available.
 
 text or call 208-606-0899
 gh sales lumber &amp; flooring ">
-<div class="ph vid"><video preload="none" playsinline poster="1573395567584236-1t.jpg" src="v-1573395567584236.mp4" aria-label="Video: Mohawk 6mm 12mil 7.5&quot;x48&quot; Barnsdale Meadow LVP/LVT +Pad Flooring ($1.95/sqft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1573395567584236" aria-label="See video, photos and details"><img src="1573395567584236-1t.jpg" alt="Mohawk 6mm 12mil 7.5&quot;x48&quot; Barnsdale Meadow LVP/LVT +Pad Flooring ($1.95/sqft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Mohawk 6mm 12mil 7.5&quot;x48&quot; Barnsdale Meadow LVP/LVT +Pad Flooring ($1.95/sqft)</h3>
 <div class="price">$1.95 <span class="u">/ sq ft</span></div><div class="qb lim">Limited stock: 20 boxes, 346 sq ft available</div>
 <p class="ex">$1.95/sqft, 17.32 sqft/box, $33.77/box · 20 boxes - 346sqft available · 6mm/20mil 7.5&quot;x48&quot; plank +Pad · Other lumber and flooring available.</p>
@@ -458,7 +461,7 @@ other lumber and flooring available.
 
 text or call 208-606-0899
 gh sales lumber &amp; flooring ">
-<div class="ph vid"><video preload="none" playsinline poster="2153016438894796-1t.jpg" src="v-2153016438894796.mp4" aria-label="Video: Mohawk 6mm 20mil 7&quot;x72&quot; Maple Syrup LVP/LVT +Pad Flooring ($1.95/sqft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-2153016438894796" aria-label="See video, photos and details"><img src="2153016438894796-1t.jpg" alt="Mohawk 6mm 20mil 7&quot;x72&quot; Maple Syrup LVP/LVT +Pad Flooring ($1.95/sqft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Mohawk 6mm 20mil 7&quot;x72&quot; Maple Syrup LVP/LVT +Pad Flooring ($1.95/sqft)</h3>
 <div class="price">$1.95 <span class="u">/ sq ft</span></div><div class="qb lim">Limited stock: 33 boxes, about 705 sq ft available</div>
 <p class="ex">$1.95/sqft, 21.39 sqft/box, $41.71/box · 33 boxes ~705 sqft available · 6mm/20mil 7&quot;x72&quot; oversize plank +Pad · Other lumber and flooring available.</p>
@@ -742,7 +745,7 @@ check ahead for hours
 text or call 208-606-0899
 
 delivery available. ">
-<div class="ph vid"><video preload="none" playsinline poster="1296018499095876-1t.jpg" src="v-1296018499095876.mp4" aria-label="Video: Driftwood Acacia Engineered Hardwood Flooring ($2.49/sqft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1296018499095876" aria-label="See video, photos and details"><img src="1296018499095876-1t.jpg" alt="Driftwood Acacia Engineered Hardwood Flooring ($2.49/sqft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Driftwood Acacia Engineered Hardwood Flooring ($2.49/sqft)</h3>
 <div class="price">$2.49 <span class="u">/ sq ft</span></div><div class="qb lim">Limited stock: 144 boxes, about 3,780 sq ft in stock</div>
 <p class="ex">$2.49/sqft, 26.25sqft/box, $65.36/box · 144 boxes~3780sqft in stock, more available by pre-order. · 3/8in x 5in x random length up to 48in. · Exotic…</p>
@@ -767,7 +770,7 @@ Delivery available.</div><div class="more"><a href="#item-1296018499095876" data
 1/2 in thick, 7in wide x random length
 
 mohawk castlerock maple engineered hardwood flooring - a grade /first quality ">
-<div class="ph vid"><video preload="none" playsinline poster="1047062384970454-1t.jpg" src="v-1047062384970454.mp4" aria-label="Video: Castlerock Maple 1/2in Engineered Hardwood Flooring - Mohawk ($2.49/sqft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1047062384970454" aria-label="See video, photos and details"><img src="1047062384970454-1t.jpg" alt="Castlerock Maple 1/2in Engineered Hardwood Flooring - Mohawk ($2.49/sqft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Castlerock Maple 1/2in Engineered Hardwood Flooring - Mohawk ($2.49/sqft)</h3>
 <div class="price">$2.49 <span class="u">/ sq ft</span></div><div class="qb lim">Limited stock: 53 boxes, about 1,855 sq ft</div>
 <p class="ex">$2.49/sqft - 35sqft/box - $87/box · 53 boxes available, ~1855 sqft · 1/2 in thick, 7in wide x random length · Mohawk Castlerock Maple Engineered…</p>
@@ -1364,7 +1367,7 @@ sold in the following micro bundles:
 1x4 t&amp;g flooring
 unfinished – stain or seal to match
 good for floors, walls, and ceilings. message for lengths on hand and quantity. ">
-<div class="ph vid"><video preload="none" playsinline poster="1068571409255282-1t.jpg" src="v-1068571409255282.mp4" aria-label="Video: $.98/LF ($3.76/sqft) – Clear Vertical Grain Douglas Fir 1x4 Unfinished Wood Flooring Walls Celling"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1068571409255282" aria-label="See video, photos and details"><img src="1068571409255282-1t.jpg" alt="$.98/LF ($3.76/sqft) – Clear Vertical Grain Douglas Fir 1x4 Unfinished Wood Flooring Walls Celling" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">$.98/LF ($3.76/sqft) – Clear Vertical Grain Douglas Fir 1x4 Unfinished Wood Flooring Walls Celling</h3>
 <div class="price">$0.98 <span class="u">/ lin ft</span></div><div class="qb lim">Limited stock, see details for quantity</div>
 <p class="ex">$.98/lin ft, $3.76/sqft · 1x4 fir flooring (SF x 3.84 = LF) · True dimensions 3/4&quot; x 3-1/8&quot; · Clear Douglas Fir, vertical grain, unstained. Tight…</p>
@@ -1687,7 +1690,7 @@ trim, stairnose &amp; transitions available.
 
 other styles/colors available
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="1775549963466707-1t.jpg" src="v-1775549963466707.mp4" aria-label="Video: &quot;Modern Oak&quot; 5mm/22mil ($2.85/sqft) 9&quot;x60&quot; SPC LVP +Pad Attached Flooring Luxury Vinyl"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+<a class="ph vid" href="#item-1775549963466707" aria-label="See video, photos and details"><img src="1775549963466707-1t.jpg" alt="&quot;Modern Oak&quot; 5mm/22mil ($2.85/sqft) 9&quot;x60&quot; SPC LVP +Pad Attached Flooring Luxury Vinyl" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">&quot;Modern Oak&quot; 5mm/22mil ($2.85/sqft) 9&quot;x60&quot; SPC LVP +Pad Attached Flooring Luxury Vinyl</h3>
 <div class="price">$2.85 <span class="u">/ sq ft</span></div><div class="qb so">Special order, 3,000+ sq ft available</div>
 <p class="ex">$2.85/sqft, greater than 3000sqft available · Stonewood Floors - Makoto 22 - Modern Oak · 9&quot;x60&quot;, 5mm thick, 22mil wearlayer, attached IXPE pad,…</p>
@@ -1711,7 +1714,7 @@ trim, stairnose &amp; transitions available.
 text or call 208-606-0899 to arrange a time to see samples
 
 gh sales lumber and flooring ">
-<div class="ph vid"><video preload="none" playsinline poster="2182401435646883-1t.jpg" src="v-2182401435646883.mp4" aria-label="Video: &quot;Ryder&quot; Everlife LVP Flooring - Pad Attached - $2.59/sqft - MSI Cyrus Luxury Vinyl Plank"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+<a class="ph vid" href="#item-2182401435646883" aria-label="See video, photos and details"><img src="2182401435646883-1t.jpg" alt="&quot;Ryder&quot; Everlife LVP Flooring - Pad Attached - $2.59/sqft - MSI Cyrus Luxury Vinyl Plank" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">&quot;Ryder&quot; Everlife LVP Flooring - Pad Attached - $2.59/sqft - MSI Cyrus Luxury Vinyl Plank</h3>
 <div class="price">$2.59 <span class="u">/ sq ft</span></div><div class="qb so">Special order, 3,000+ sq ft available</div>
 <p class="ex">$2.59/sqft, greater than 3000sqft available · Cyrus &quot;Ryder&quot; · 7&quot;x48&quot;, 5mm thick, 12mil wearlayer (6.5mm/20mil available), attached IXPE pad, stone…</p>
@@ -1795,7 +1798,7 @@ gh sales lumber and flooring
 nampa
 check ahead for hours
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="1087156237107500-1t.jpg" src="v-1087156237107500.mp4" aria-label="Video: LVP Flooring 22mil/20mil/12mil SPC Options - Starting from $2.59/sqft - Pad Attached w/ Warranty"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+<a class="ph vid" href="#item-1087156237107500" aria-label="See video, photos and details"><img src="1087156237107500-1t.jpg" alt="LVP Flooring 22mil/20mil/12mil SPC Options - Starting from $2.59/sqft - Pad Attached w/ Warranty" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">LVP Flooring 22mil/20mil/12mil SPC Options - Starting from $2.59/sqft - Pad Attached w/ Warranty</h3>
 <div class="price">$2.59 <span class="u">/ sq ft</span></div><div class="qb so">Special order, 3,000+ sq ft available</div>
 <p class="ex">Large selection of colors/styles. · Owner/Operator: LOW OVERHEAD = GREAT PRICES! · Greater than 3000sqft available. All are Waterproof💦 Kid Proof🧒…</p>
@@ -1854,7 +1857,7 @@ check ahead for hours
 text or call 208-606-0899
 
 delivery available. ">
-<div class="ph vid"><video preload="none" playsinline poster="1725865535300365-1t.jpg" src="v-1725865535300365.mp4" aria-label="Video: Everlife Worry-Proof Luxury Vinyl Flooring 7x48 5mm/12mil Cyrus Collection LVP LVT ($2.59/sqft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+<a class="ph vid" href="#item-1725865535300365" aria-label="See video, photos and details"><img src="1725865535300365-1t.jpg" alt="Everlife Worry-Proof Luxury Vinyl Flooring 7x48 5mm/12mil Cyrus Collection LVP LVT ($2.59/sqft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">Everlife Worry-Proof Luxury Vinyl Flooring 7x48 5mm/12mil Cyrus Collection LVP LVT ($2.59/sqft)</h3>
 <div class="price">$2.59 <span class="u">/ sq ft</span></div><div class="qb so">Special order, large quantities available</div>
 <p class="ex">$2.59/sqft for 5mm/12mil · $2.85/sqft for 6.5mm/20mil · Direct from manufacturer&#x27;s warehouse. Includes warranty. · Steps, trim, transitions and other…</p>
@@ -1986,7 +1989,7 @@ compared to luxury vinyl plank (lvp), smithcliffs offers a more rigid core, enha
 
 gh sales lumber and flooring
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="902517525942546-1t.jpg" src="v-902517525942546.mp4" aria-label="Video: &quot;Delray&quot; Smithcliffs 10mm Hybrid Laminate Flooring ($2.99/sqft) 100% Waterproof - Super Durable lvp"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+<a class="ph vid" href="#item-902517525942546" aria-label="See video, photos and details"><img src="902517525942546-1t.jpg" alt="&quot;Delray&quot; Smithcliffs 10mm Hybrid Laminate Flooring ($2.99/sqft) 100% Waterproof - Super Durable lvp" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">&quot;Delray&quot; Smithcliffs 10mm Hybrid Laminate Flooring ($2.99/sqft) 100% Waterproof - Super Durable lvp</h3>
 <div class="price">$2.99 <span class="u">/ sq ft</span></div><div class="qb so">Special order, 3,000+ sq ft available</div>
 <p class="ex">$2.99/sqft, 3000+ sqft available. 100% waterproof! · Direct from manufacturer warehouse. · Smithcliffs Hybrid Rigid Core flooring in Delray has a…</p>
@@ -2006,7 +2009,7 @@ smithcliffs hybrid rigid core flooring in brockton features a durable polymerize
 
 gh sales lumber and flooring
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="1083766204153980-1t.jpg" src="v-1083766204153980.mp4" aria-label="Video: Smithcliffs &quot;Brockton&quot; 10mm Laminate Flooring ($2.99/sqft) 100% Waterproof Super Durable 7.7&quot;x48&quot;"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+<a class="ph vid" href="#item-1083766204153980" aria-label="See video, photos and details"><img src="1083766204153980-1t.jpg" alt="Smithcliffs &quot;Brockton&quot; 10mm Laminate Flooring ($2.99/sqft) 100% Waterproof Super Durable 7.7&quot;x48&quot;" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">Smithcliffs &quot;Brockton&quot; 10mm Laminate Flooring ($2.99/sqft) 100% Waterproof Super Durable 7.7&quot;x48&quot;</h3>
 <div class="price">$2.99 <span class="u">/ sq ft</span></div><div class="qb so">Special order, 3,000+ sq ft available</div>
 <p class="ex">$2.99/sqft 3000+ sqft available, direct from manufacturer&#x27;s warehouse! · Smithcliffs Hybrid Rigid Core flooring in Brockton features a durable…</p>
@@ -2025,7 +2028,7 @@ $2.99/sqft - lanston oak (other colors available)
 
 gh sales lumber and flooring 
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="2021424428536740-1t.jpg" src="v-2021424428536740.mp4" aria-label="Video: Smithcliffs 10mm Laminate Flooring ($2.99/sqft) 100% Waterproof 7.7&quot;x48&quot; Plank - Lanston Oak"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+<a class="ph vid" href="#item-2021424428536740" aria-label="See video, photos and details"><img src="2021424428536740-1t.jpg" alt="Smithcliffs 10mm Laminate Flooring ($2.99/sqft) 100% Waterproof 7.7&quot;x48&quot; Plank - Lanston Oak" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">Smithcliffs 10mm Laminate Flooring ($2.99/sqft) 100% Waterproof 7.7&quot;x48&quot; Plank - Lanston Oak</h3>
 <div class="price">$2.99 <span class="u">/ sq ft</span></div><div class="qb so">Special order, 3,000+ sq ft available</div>
 <p class="ex">$2.99/sqft, 3000+ sqft available, direct from manufacturer&#x27;s warehouse. · Upgrade your space with Smithcliffs Hybrid Rigid Core Laminate Flooring in…</p>
@@ -2038,7 +2041,7 @@ $2.99/sqft - Lanston Oak (other colors available)
 GH Sales Lumber and Flooring 
 Text or call 208-606-0899</div><div class="more"><a href="#item-2021424428536740" data-i="0"><img src="2021424428536740-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-2021424428536740" data-i="1"><img src="2021424428536740-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-2021424428536740" data-i="2"><img src="2021424428536740-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-2021424428536740" data-i="3"><img src="2021424428536740-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/2021424428536740/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-2498800280604217" data-av="special_order" data-q="so" data-p="1.33" data-t="5" data-ph="2498800280604217-1.jpg,2498800280604217-2.jpg,2498800280604217-3.jpg,2498800280604217-4.jpg" data-v="v-2498800280604217.mp4" data-s="premium northstar carpet – soft tonal texture for effortless style ($11.95/sq-yd) flooring $11.95/sq-yd ($1.33/sqft)
+</div></article><article class="item" id="item-2498800280604217" data-av="special_order" data-q="so" data-p="1.33" data-t="5" data-ph="2498800280604217-1.jpg,2498800280604217-2.jpg,2498800280604217-3.jpg,2498800280604217-4.jpg,carpet-swatches.jpg" data-v="v-2498800280604217.mp4" data-s="premium northstar carpet – soft tonal texture for effortless style ($11.95/sq-yd) flooring $11.95/sq-yd ($1.33/sqft)
 installation available. 
 
 text or call 208-606-0899 
@@ -2048,8 +2051,10 @@ made from 100% bcf solution dyed polyester fiber for built-in fade-resistant col
 outstanding warranties:
 lifetime abrasive wear &amp; stain resistance
 lifetime fade resistance
-10 years texture retention &amp; manufacturing defects ">
-<div class="ph vid"><video preload="none" playsinline poster="2498800280604217-1t.jpg" src="v-2498800280604217.mp4" aria-label="Video: Premium Northstar Carpet – Soft Tonal Texture for Effortless Style ($11.95/sq-yd)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+10 years texture retention &amp; manufacturing defects
+
+other colors and styles of carpet available. check with us for features and pricing. ">
+<a class="ph vid" href="#item-2498800280604217" aria-label="See video, photos and details"><img src="2498800280604217-1t.jpg" alt="Premium Northstar Carpet – Soft Tonal Texture for Effortless Style ($11.95/sq-yd)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">Premium Northstar Carpet – Soft Tonal Texture for Effortless Style ($11.95/sq-yd)</h3>
 <div class="price">$11.95 <span class="u">/ sq yd</span><span class="pnote">$1.33/sq ft</span></div><div class="qb so">Special order, large quantities available</div>
 <p class="ex">$11.95/sq-yd ($1.33/sqft) · Installation available. · Premium Northstar Carpet – Soft Tonal Texture for Effortless Style! · Made from 100% BCF…</p>
@@ -2063,9 +2068,11 @@ Made from 100% BCF Solution Dyed Polyester fiber for built-in fade-resistant col
 Outstanding Warranties:
 Lifetime Abrasive Wear &amp; Stain Resistance
 Lifetime Fade Resistance
-10 Years Texture Retention &amp; Manufacturing Defects</div><div class="more"><a href="#item-2498800280604217" data-i="0"><img src="2498800280604217-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-2498800280604217" data-i="1"><img src="2498800280604217-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-2498800280604217" data-i="2"><img src="2498800280604217-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-2498800280604217" data-i="3"><img src="2498800280604217-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
+10 Years Texture Retention &amp; Manufacturing Defects
+
+Other colors and styles of carpet available. Check with us for features and pricing.</div><div class="more"><a href="#item-2498800280604217" data-i="0"><img src="2498800280604217-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-2498800280604217" data-i="1"><img src="2498800280604217-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-2498800280604217" data-i="2"><img src="2498800280604217-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-2498800280604217" data-i="3"><img src="2498800280604217-4.jpg" alt="Photo 4" loading="lazy"></a><a href="#item-2498800280604217" data-i="4"><img src="carpet-swatches.jpg" alt="Photo 5" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/2498800280604217/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-28220599964269182" data-av="special_order" data-q="so" data-p="2.33" data-t="5" data-ph="28220599964269182-1.jpg,28220599964269182-2.jpg,28220599964269182-3.jpg,28220599964269182-4.jpg" data-v="v-28220599964269182.mp4" data-s="luxury yellowstone carpet – locally stocked, lifetime warranty - $20.95/sq-yd flooring $20.95/sq-yd ($2.33/sqft)
+</div></article><article class="item" id="item-28220599964269182" data-av="special_order" data-q="so" data-p="2.33" data-t="5" data-ph="28220599964269182-1.jpg,28220599964269182-2.jpg,28220599964269182-3.jpg,28220599964269182-4.jpg,carpet-swatches.jpg" data-v="v-28220599964269182.mp4" data-s="luxury yellowstone carpet – locally stocked, lifetime warranty - $20.95/sq-yd flooring $20.95/sq-yd ($2.33/sqft)
 premium yellowstone carpet with dreamback ab – soft tonal texture for ultimate comfort!
 made from 100% bcf solution dyed polyester fiber for superior fade-resistant color and easy cleaning. features a hefty 60 oz/sy face weight, 1/10 gauge cut pile construction, and 3091 density for plush durability. polypropylene secondary back enhances stability – perfect for high-traffic homes!
 outstanding warranties:
@@ -2075,8 +2082,10 @@ lifetime stain protection
 locally stocked.
 
 installation available! 
-text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="28220599964269182-1t.jpg" src="v-28220599964269182.mp4" aria-label="Video: Luxury Yellowstone Carpet – Locally Stocked, Lifetime Warranty - $20.95/sq-yd"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag special_order">Special order</span></div>
+text or call 208-606-0899
+
+other colors and styles of carpet available. check with us for features and pricing. ">
+<a class="ph vid" href="#item-28220599964269182" aria-label="See video, photos and details"><img src="28220599964269182-1t.jpg" alt="Luxury Yellowstone Carpet – Locally Stocked, Lifetime Warranty - $20.95/sq-yd" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag special_order">Special order</span></a>
 <div class="body"><h3 class="gopen">Luxury Yellowstone Carpet – Locally Stocked, Lifetime Warranty - $20.95/sq-yd</h3>
 <div class="price">$20.95 <span class="u">/ sq yd</span><span class="pnote">$2.33/sq ft</span></div><div class="qb so">Special order, large quantities available</div>
 <p class="ex">$20.95/sq-yd ($2.33/sqft) · Premium Yellowstone Carpet with DreamBack AB – Soft Tonal Texture for Ultimate Comfort! · Made from 100% BCF Solution…</p>
@@ -2090,26 +2099,28 @@ Lifetime Stain Protection
 Locally stocked.
 
 Installation available! 
-Text or call 208-606-0899</div><div class="more"><a href="#item-28220599964269182" data-i="0"><img src="28220599964269182-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-28220599964269182" data-i="1"><img src="28220599964269182-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-28220599964269182" data-i="2"><img src="28220599964269182-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-28220599964269182" data-i="3"><img src="28220599964269182-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
+Text or call 208-606-0899
+
+Other colors and styles of carpet available. Check with us for features and pricing.</div><div class="more"><a href="#item-28220599964269182" data-i="0"><img src="28220599964269182-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-28220599964269182" data-i="1"><img src="28220599964269182-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-28220599964269182" data-i="2"><img src="28220599964269182-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-28220599964269182" data-i="3"><img src="28220599964269182-4.jpg" alt="Photo 4" loading="lazy"></a><a href="#item-28220599964269182" data-i="4"><img src="carpet-swatches.jpg" alt="Photo 5" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/28220599964269182/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article></div><div class="sorow"><h3 class="subhead">More flooring by special order</h3><p class="sonote">Installation available. <strong>Tell us about your project:</strong> text <a href="sms:+12086060899">208-606-0899</a> with the room, rough square footage and the look you want, and we'll send a few options.</p><div class="grid sogrid"><article class="item gen" data-av="special_order" data-t="1" data-s="lvp vinyl plank spc rigid core special order everlife cyrus prescott xl samples colors everlife lvp collections by special order">
-<div class="ph"><img src="gen-everlife-display-web.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></div>
-<div class="body"><h3>Everlife LVP collections by special order</h3><div class="price gp">Starting at $2.59/sq ft</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>Cyrus: 7&quot;x48&quot;, 5 mm, 12 mil</li><li>XL Cyrus: 9&quot;x60&quot;, 5 mm, 12 mil</li><li>Cyrus 2.0: 7&quot;x48&quot;, 5 mm, 20 mil</li><li>Prescott: 7&quot;x48&quot;, 6.5 mm, 20 mil, dent warranty</li><li>XL Prescott: 9&quot;x60&quot;, 6.5 mm, 20 mil, dent warranty</li></ul><p class="ex gx">All SPC rigid core. Stop by to see samples, or text us what you&#x27;re looking for and we&#x27;ll send options. Installation available.</p>
-<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" data-av="special_order" data-t="1" data-s="laurel reserve lvp vinyl plank 9x48 bayside buff cabana coastal cottage flaxen larkin special order laurel &amp; laurel reserve lvp">
-<div class="ph"><img src="gen-collage-laurel.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></div>
-<div class="body"><h3>Laurel &amp; Laurel Reserve LVP</h3><div class="price gp">Contact us for availability and pricing</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>Laurel: 9&quot;x48&quot;, 5 mm, 20 mil, attached pad</li><li>Laurel Reserve: 9&quot;x48&quot;, 8 mm, 22 mil, attached pad</li></ul><p class="ex gx">Extra-wide planks in blonde and light brown tones. Click-together floating install. Installation available.</p><details class="gcol"><summary>See more colors</summary><img src="gen-colors-collage-laurel.jpg" alt="Laurel colors: Bayside Buff, Cabana, Coastal Cottage, Flaxen, Hatboro Hills, Honey Hollow, Larkin, Saddle Wood" loading="lazy"></details>
-<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" data-av="special_order" data-t="1" data-s="kallum loose lay lvp vinyl plank 9x48 akadia sandino shasta grove special order kallum loose lay lvp">
-<div class="ph"><img src="gen-collage-kallum.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></div>
-<div class="body"><h3>Kallum loose lay LVP</h3><div class="price gp">Contact us for colors and pricing</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>9&quot;x48&quot; planks, 5 mm, 20 mil</li><li>Loose lay: no clicking, quick install</li><li>100% waterproof</li></ul><p class="ex gx">Beige, blonde and brown wood tones. Stop by to see samples. Installation available.</p>
-<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" data-av="special_order" data-t="2" data-s="hybrid rigid core smithcliffs shorecliffs waterproof special order samples hybrid rigid core">
-<div class="ph"><img src="gen-hybrid-rigid-core-web.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></div>
-<div class="body"><h3>Hybrid rigid core</h3><div class="price gp">Starting at $2.99/sq ft</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>Smithcliffs: 7.7&quot;x48&quot;, 10 mm, 100% waterproof</li><li>Shorecliffs: bigger 9&quot;x87&quot; planks, 12 mm, 30 mil wear layer, waterproof</li></ul><p class="ex gx">Stop by to see samples, or text us what you&#x27;re looking for and we&#x27;ll send options. Installation available.</p>
-<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" data-av="special_order" data-t="3" data-s="mccarran engineered hardwood european white oak wayland whitlock bramlett special order mccarran engineered hardwood">
-<div class="ph"><img src="gen-mccarran-samples.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></div>
-<div class="body"><h3>McCarran engineered hardwood</h3><div class="price gp">Contact us for colors and pricing</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>9.5&quot;x86&quot; random-length planks</li><li>5/8&quot; thick, 4 mm European white oak top layer</li><li>Ultra matte finish, beveled edges</li></ul><p class="ex gx">Genuine hardwood with natural knots and character. Stop by to see samples. Installation available.</p><details class="gcol"><summary>See some of the colors</summary><img src="gen-colors-collage-mccarran.jpg" alt="McCarran colors: Wayland, Whitlock, Bramlett, Adriel Oak, Leander Oak, Mable, Scarborough Buff, Northcutt" loading="lazy"></details>
-<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" data-av="special_order" data-t="5" data-s="carpet special order colors styles types samples northstar yellowstone installation more carpet by special order">
-<div class="ph"><img src="gen-carpet-collage.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></div>
-<div class="body"><h3>More carpet by special order</h3><div class="price gp">Ask for options</div><div class="qb so">Special order, large quantities available</div><p class="ex gx">Many more carpet colors, styles and types available by special order, with many styles available fast. Stop by to see samples, or text us what you&#x27;re looking for and we&#x27;ll send options. Installation available.</p>
+</div></article></div><div class="sorow"><h3 class="subhead">More flooring by special order</h3><p class="sonote">Installation available. <strong>Tell us about your project:</strong> text <a href="sms:+12086060899">208-606-0899</a> with the room, rough square footage and the look you want, and we'll send a few options.</p><div class="grid sogrid"><article class="item gen" id="item-so-flooring-everlife-lvp-collections-by-special-order" data-ph="gen-everlife-display-web.jpg" data-av="special_order" data-t="1" data-s="lvp vinyl plank spc rigid core special order everlife cyrus prescott xl samples colors everlife lvp collections by special order">
+<a class="ph" href="#item-so-flooring-everlife-lvp-collections-by-special-order" aria-label="See photos and details"><img src="gen-everlife-display-web.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></a>
+<div class="body"><h3 class="gopen">Everlife LVP collections by special order</h3><div class="price gp">Starting at $2.59/sq ft</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>Cyrus: 7&quot;x48&quot;, 5 mm, 12 mil</li><li>XL Cyrus: 9&quot;x60&quot;, 5 mm, 12 mil</li><li>Cyrus 2.0: 7&quot;x48&quot;, 5 mm, 20 mil</li><li>Prescott: 7&quot;x48&quot;, 6.5 mm, 20 mil, dent warranty</li><li>XL Prescott: 9&quot;x60&quot;, 6.5 mm, 20 mil, dent warranty</li></ul><p class="ex gx">All SPC rigid core. Stop by to see samples, or text us what you&#x27;re looking for and we&#x27;ll send options. Installation available.</p>
+<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" id="item-so-flooring-laurel-laurel-reserve-lvp" data-ph="gen-collage-laurel.jpg,gen-colors-collage-laurel.jpg" data-av="special_order" data-t="1" data-s="laurel reserve lvp vinyl plank 9x48 bayside buff cabana coastal cottage flaxen larkin special order laurel &amp; laurel reserve lvp">
+<a class="ph" href="#item-so-flooring-laurel-laurel-reserve-lvp" aria-label="See photos and details"><img src="gen-collage-laurel.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span><span class="pcount">2 photos</span></a>
+<div class="body"><h3 class="gopen">Laurel &amp; Laurel Reserve LVP</h3><div class="price gp">Contact us for availability and pricing</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>Laurel: 9&quot;x48&quot;, 5 mm, 20 mil, attached pad</li><li>Laurel Reserve: 9&quot;x48&quot;, 8 mm, 22 mil, attached pad</li></ul><p class="ex gx">Extra-wide planks in blonde and light brown tones. Click-together floating install. Installation available.</p><details class="gcol"><summary>See more colors</summary><img src="gen-colors-collage-laurel.jpg" alt="Laurel colors: Bayside Buff, Cabana, Coastal Cottage, Flaxen, Hatboro Hills, Honey Hollow, Larkin, Saddle Wood" loading="lazy"></details>
+<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" id="item-so-flooring-kallum-loose-lay-lvp" data-ph="gen-collage-kallum.jpg" data-av="special_order" data-t="1" data-s="kallum loose lay lvp vinyl plank 9x48 akadia sandino shasta grove special order kallum loose lay lvp">
+<a class="ph" href="#item-so-flooring-kallum-loose-lay-lvp" aria-label="See photos and details"><img src="gen-collage-kallum.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></a>
+<div class="body"><h3 class="gopen">Kallum loose lay LVP</h3><div class="price gp">Contact us for colors and pricing</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>9&quot;x48&quot; planks, 5 mm, 20 mil</li><li>Loose lay: no clicking, quick install</li><li>100% waterproof</li></ul><p class="ex gx">Beige, blonde and brown wood tones. Stop by to see samples. Installation available.</p>
+<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" id="item-so-flooring-hybrid-rigid-core" data-ph="gen-hybrid-rigid-core-web.jpg" data-av="special_order" data-t="2" data-s="hybrid rigid core smithcliffs shorecliffs waterproof special order samples hybrid rigid core">
+<a class="ph" href="#item-so-flooring-hybrid-rigid-core" aria-label="See photos and details"><img src="gen-hybrid-rigid-core-web.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span></a>
+<div class="body"><h3 class="gopen">Hybrid rigid core</h3><div class="price gp">Starting at $2.99/sq ft</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>Smithcliffs: 7.7&quot;x48&quot;, 10 mm, 100% waterproof</li><li>Shorecliffs: bigger 9&quot;x87&quot; planks, 12 mm, 30 mil wear layer, waterproof</li></ul><p class="ex gx">Stop by to see samples, or text us what you&#x27;re looking for and we&#x27;ll send options. Installation available.</p>
+<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" id="item-so-flooring-mccarran-engineered-hardwood" data-ph="gen-mccarran-samples.jpg,gen-colors-collage-mccarran.jpg" data-av="special_order" data-t="3 4" data-s="mccarran engineered hardwood european white oak wayland whitlock bramlett special order mccarran engineered hardwood">
+<a class="ph" href="#item-so-flooring-mccarran-engineered-hardwood" aria-label="See photos and details"><img src="gen-mccarran-samples.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span><span class="pcount">2 photos</span></a>
+<div class="body"><h3 class="gopen">McCarran engineered hardwood</h3><div class="price gp">Contact us for colors and pricing</div><div class="qb so">Special order, large quantities available</div><ul class="gspecs"><li>9.5&quot;x86&quot; random-length planks</li><li>5/8&quot; thick, 4 mm European white oak top layer</li><li>Ultra matte finish, beveled edges</li></ul><p class="ex gx">Genuine hardwood with natural knots and character. Stop by to see samples. Installation available.</p><details class="gcol"><summary>See some of the colors</summary><img src="gen-colors-collage-mccarran.jpg" alt="McCarran colors: Wayland, Whitlock, Bramlett, Adriel Oak, Leander Oak, Mable, Scarborough Buff, Northcutt" loading="lazy"></details>
+<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article><article class="item gen" id="item-so-flooring-more-carpet-colors-and-styles-available" data-ph="gen-full-carpet-swatches.jpg,gen-full-carpet-display-rack-1.jpg" data-av="special_order" data-t="5" data-s="carpet special order colors styles tweed patterned cut and loop tonal samples installation more carpet colors and styles available">
+<a class="ph" href="#item-so-flooring-more-carpet-colors-and-styles-available" aria-label="See photos and details"><img src="gen-carpet-swatches.jpg" alt="" loading="lazy" width="400" height="300"><span class="tag special_order">Special order</span><span class="pcount">2 photos</span></a>
+<div class="body"><h3 class="gopen">More carpet colors and styles available</h3><div class="price gp">Ask for options</div><div class="qb so">Special order, large quantities available</div><p class="ex gx">Looking for something beyond the carpets shown here? We can special order many more carpet styles and colors, from soft solids and tonal textures to tweeds and patterned cut-and-loop. Come see the full sample display at our Nampa location and ask about features and pricing. Installation available. Call or text 208-606-0899.</p>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a></div></div></article></div></div></div></section><section class="cat" id="lumber-beams"><div class="wrap"><div class="banner"><img src="cat-lumber-beams-own.jpg" alt="" loading="lazy"><h2>Lumber &amp; Beams<small>45 items</small></h2></div><div class="grid"><article class="item" id="item-1039176305822303--lumber-beams" data-av="in_stock" data-ph="1039176305822303-1.jpg,1039176305822303-2.jpg,1039176305822303-3.jpg,1039176305822303-4.jpg" data-v="v-1039176305822303.mp4" data-s="$1.69/lf – 5/4x6x12 redwood decking boards, true 1&quot; x 5.5&quot;, 12ft (8ft &amp; 10ft coming soon) decking $1.69/lin ft, $20.28 ea 5/4x6x12  board
 
 true 1&quot; thick x 5.5&quot; actual width
@@ -2124,7 +2135,7 @@ delivery available
 alpine select redwood. s4see, eased edges. unstained. sold by the piece.
 
 bug and rot resistant like cedar, but stronger. good for decks, benches and outdoor builds. ">
-<div class="ph vid"><video preload="none" playsinline poster="1039176305822303-1t.jpg" src="v-1039176305822303.mp4" aria-label="Video: $1.69/LF – 5/4x6x12 Redwood Decking Boards, True 1&quot; x 5.5&quot;, 12ft (8ft &amp; 10ft coming soon)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1039176305822303--lumber-beams" aria-label="See video, photos and details"><img src="1039176305822303-1t.jpg" alt="$1.69/LF – 5/4x6x12 Redwood Decking Boards, True 1&quot; x 5.5&quot;, 12ft (8ft &amp; 10ft coming soon)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">$1.69/LF – 5/4x6x12 Redwood Decking Boards, True 1&quot; x 5.5&quot;, 12ft (8ft &amp; 10ft coming soon)</h3>
 <div class="price">$1.69 <span class="u">/ lin ft</span></div>
 <p class="ex">$1.69/lin ft, $20.28 ea 5/4x6x12  board · True 1&quot; thick x 5.5&quot; actual width · 8s and 10s will be in stock soon · Alpine Select redwood. S4SEE, eased…</p>
@@ -2302,7 +2313,7 @@ check ahead for hours
 text or call 208-606-0899
 
 delivery available. ">
-<div class="ph vid"><video preload="none" playsinline poster="1395655319298373-1t.jpg" src="v-1395655319298373.mp4" aria-label="Video: ($1.85/picket) 1x4 6ft Redwood Dog-Eared Fence Pickets - 3/4&quot; x 3-1/2&quot; x 6&#x27; True"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1395655319298373" aria-label="See video, photos and details"><img src="1395655319298373-1t.jpg" alt="($1.85/picket) 1x4 6ft Redwood Dog-Eared Fence Pickets - 3/4&quot; x 3-1/2&quot; x 6&#x27; True" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">($1.85/picket) 1x4 6ft Redwood Dog-Eared Fence Pickets - 3/4&quot; x 3-1/2&quot; x 6&#x27; True</h3>
 <div class="price">$1.85 <span class="u">/ picket</span></div>
 <p class="ex">Clean dry stock. · $1.85 ea · True dimensions: 3/4&quot; x 3-1/2&quot; x 6&#x27; · 5% discount for whole unit. 650 pcs per unit.</p>
@@ -2334,7 +2345,7 @@ $1.29/linear ft
 delivery available.
 other lumber available
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="1080808891172247-1t.jpg" src="v-1080808891172247.mp4" aria-label="Video: 1x6 Redwood T&amp;G ($1.29/lin ft) 8&#x27;, 10&#x27;, 12&#x27;, 14&#x27; &amp; 16&#x27; Wall Paneling Soffit Wood Lumber Cedar TNG"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1080808891172247" aria-label="See video, photos and details"><img src="1080808891172247-1t.jpg" alt="1x6 Redwood T&amp;G ($1.29/lin ft) 8&#x27;, 10&#x27;, 12&#x27;, 14&#x27; &amp; 16&#x27; Wall Paneling Soffit Wood Lumber Cedar TNG" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">1x6 Redwood T&amp;G ($1.29/lin ft) 8&#x27;, 10&#x27;, 12&#x27;, 14&#x27; &amp; 16&#x27; Wall Paneling Soffit Wood Lumber Cedar TNG</h3>
 <div class="price">$1.29 <span class="u">/ lin ft</span></div>
 <p class="ex">Redwood offers the same bug and rot resistance as Cedar. · Sold in micro bundles of 6 · $1.29/linear ft · 8&#x27; $61.92/bundle - 20sqft (81) available ·…</p>
@@ -2353,18 +2364,18 @@ Delivery available.
 Other lumber available
 Text or call 208-606-0899</div><div class="more"><a href="#item-1080808891172247" data-i="0"><img src="1080808891172247-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1080808891172247" data-i="1"><img src="1080808891172247-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1080808891172247" data-i="2"><img src="1080808891172247-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1080808891172247" data-i="3"><img src="1080808891172247-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1080808891172247/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-996616480064854--lumber-beams" data-av="in_stock" data-ph="996616480064854-1.jpg,996616480064854-2.jpg,996616480064854-3.jpg,996616480064854-4.jpg" data-v="v-996616480064854.mp4" data-s="5/4x6x8 &amp; 5/4x6x12 japanese sugi cedar decking ($2/lin ft) japanese sugi cedar $2 per linear foot.
+</div></article><article class="item" id="item-996616480064854--lumber-beams" data-av="in_stock" data-ph="996616480064854-1.jpg,996616480064854-2.jpg,996616480064854-3.jpg,996616480064854-4.jpg" data-v="v-996616480064854.mp4" data-s="japanese sugi cedar 5/4x6x8 decking ($2/lin ft, $16 per board) japanese sugi cedar $2 per linear foot, $16 per 8 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 available in 8, 10 and 12 ft lengths.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. lightweight, durable and naturally rot- and insect-resistant, with a reddish-golden grain. kiln dried. great for decks, garden beds, fences, benches and accent walls. ">
-<div class="ph vid"><video preload="none" playsinline poster="996616480064854-1t.jpg" src="v-996616480064854.mp4" aria-label="Video: 5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Decking ($2/lin ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Decking ($2/lin ft)</h3>
+<a class="ph vid" href="#item-996616480064854--lumber-beams" aria-label="See video, photos and details"><img src="996616480064854-1t.jpg" alt="Japanese Sugi Cedar 5/4x6x8 Decking ($2/lin ft, $16 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 5/4x6x8 Decking ($2/lin ft, $16 per board)</h3>
 <div class="price">$2 <span class="u">/ lin ft</span></div>
-<p class="ex">$2 per linear foot. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in stock can change; call…</p>
-<details><summary>More details</summary><div class="full">$2 per linear foot.
+<p class="ex">$2 per linear foot, $16 per 8 ft board. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2 per linear foot, $16 per 8 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 Available in 8, 10 and 12 ft lengths.
@@ -2372,18 +2383,18 @@ Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. Lightweight, durable and naturally rot- and insect-resistant, with a reddish-golden grain. Kiln dried. Great for decks, garden beds, fences, benches and accent walls.</div><div class="more"><a href="#item-996616480064854--lumber-beams" data-i="0"><img src="996616480064854-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-996616480064854--lumber-beams" data-i="1"><img src="996616480064854-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-996616480064854--lumber-beams" data-i="2"><img src="996616480064854-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-996616480064854--lumber-beams" data-i="3"><img src="996616480064854-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/996616480064854/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-926560593857525--lumber-beams" data-av="in_stock" data-ph="926560593857525-1.jpg,926560593857525-2.jpg,926560593857525-3.jpg,926560593857525-4.jpg" data-v="v-926560593857525.mp4" data-s="5/4x6x8 &amp; 5/4x6x12 japanese sugi cedar boards ($16 per 8 ft, $24 per 12 ft board) japanese sugi cedar $2 per linear foot.
+</div></article><article class="item" id="item-926560593857525--lumber-beams" data-av="in_stock" data-ph="926560593857525-1.jpg,926560593857525-2.jpg,926560593857525-3.jpg,926560593857525-4.jpg" data-v="v-926560593857525.mp4" data-s="japanese sugi cedar 5/4x6x12 decking boards ($2/lin ft, $24 per board) japanese sugi cedar $2 per linear foot, $24 per 12 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 available in 8, 10 and 12 ft lengths.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. kiln dried. ">
-<div class="ph vid"><video preload="none" playsinline poster="926560593857525-1t.jpg" src="v-926560593857525.mp4" aria-label="Video: 5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Boards ($16 per 8 ft, $24 per 12 ft board)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Boards ($16 per 8 ft, $24 per 12 ft board)</h3>
+<a class="ph vid" href="#item-926560593857525--lumber-beams" aria-label="See video, photos and details"><img src="926560593857525-1t.jpg" alt="Japanese Sugi Cedar 5/4x6x12 Decking Boards ($2/lin ft, $24 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 5/4x6x12 Decking Boards ($2/lin ft, $24 per board)</h3>
 <div class="price">$2 <span class="u">/ lin ft</span></div>
-<p class="ex">$2 per linear foot. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in stock can change; call…</p>
-<details><summary>More details</summary><div class="full">$2 per linear foot.
+<p class="ex">$2 per linear foot, $24 per 12 ft board. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2 per linear foot, $24 per 12 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 Available in 8, 10 and 12 ft lengths.
@@ -2391,36 +2402,36 @@ Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. Kiln dried.</div><div class="more"><a href="#item-926560593857525--lumber-beams" data-i="0"><img src="926560593857525-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-926560593857525--lumber-beams" data-i="1"><img src="926560593857525-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-926560593857525--lumber-beams" data-i="2"><img src="926560593857525-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-926560593857525--lumber-beams" data-i="3"><img src="926560593857525-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/926560593857525/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1571495154466256--lumber-beams" data-av="in_stock" data-ph="1571495154466256-1.jpg,1571495154466256-2.jpg,1571495154466256-3.jpg,1571495154466256-4.jpg" data-v="v-1571495154466256.mp4" data-s="2x6x16 japanese sugi cedar decking ($2.65/lin ft), no minimums japanese sugi cedar $2.65 per linear foot. no minimum purchase. whole units available.
+</div></article><article class="item" id="item-1571495154466256--lumber-beams" data-av="in_stock" data-ph="1571495154466256-1.jpg,1571495154466256-2.jpg,1571495154466256-3.jpg,1571495154466256-4.jpg" data-v="v-1571495154466256.mp4" data-s="japanese sugi cedar 2x6x16 decking ($2.65/lin ft, $42.40 per board), no minimums japanese sugi cedar $2.65 per linear foot, $42.40 per 16 ft board. no minimum purchase. whole units available.
 
-in stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 kiln dried. also available: sugi 1x6 tongue and groove, 5/4x6 and 2x4. ">
-<div class="ph vid"><video preload="none" playsinline poster="1571495154466256-1t.jpg" src="v-1571495154466256.mp4" aria-label="Video: 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft), No Minimums"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft), No Minimums</h3>
+<a class="ph vid" href="#item-1571495154466256--lumber-beams" aria-label="See video, photos and details"><img src="1571495154466256-1t.jpg" alt="Japanese Sugi Cedar 2x6x16 Decking ($2.65/lin ft, $42.40 per board), No Minimums" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 2x6x16 Decking ($2.65/lin ft, $42.40 per board), No Minimums</h3>
 <div class="price">$2.65 <span class="u">/ lin ft</span></div>
-<p class="ex">$2.65 per linear foot. No minimum purchase. Whole units available. · In stock in 8, 12 and 16 ft lengths (16 ft is the longest). · Lengths in stock…</p>
-<details><summary>More details</summary><div class="full">$2.65 per linear foot. No minimum purchase. Whole units available.
+<p class="ex">$2.65 per linear foot, $42.40 per 16 ft board. No minimum purchase. Whole units available. · Available in 8, 12 and 16 ft lengths. 8 ft is also in…</p>
+<details><summary>More details</summary><div class="full">$2.65 per linear foot, $42.40 per 16 ft board. No minimum purchase. Whole units available.
 
-In stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+Available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 Kiln dried. Also available: Sugi 1x6 tongue and groove, 5/4x6 and 2x4.</div><div class="more"><a href="#item-1571495154466256--lumber-beams" data-i="0"><img src="1571495154466256-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1571495154466256--lumber-beams" data-i="1"><img src="1571495154466256-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1571495154466256--lumber-beams" data-i="2"><img src="1571495154466256-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1571495154466256--lumber-beams" data-i="3"><img src="1571495154466256-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1571495154466256/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1053680454173165--lumber-beams" data-av="in_stock" data-ph="1053680454173165-1.jpg,1053680454173165-2.jpg,1053680454173165-3.jpg,1053680454173165-4.jpg" data-v="v-1053680454173165.mp4" data-s="2x6x12 &amp; 2x6x16 japanese sugi cedar decking ($2.65/lin ft) japanese sugi cedar $2.65 per linear foot. whole units available.
+</div></article><article class="item" id="item-1053680454173165--lumber-beams" data-av="in_stock" data-ph="1053680454173165-1.jpg,1053680454173165-2.jpg,1053680454173165-3.jpg,1053680454173165-4.jpg" data-v="v-1053680454173165.mp4" data-s="japanese sugi cedar 2x6x12 decking ($2.65/lin ft, $31.80 per board) japanese sugi cedar $2.65 per linear foot, $31.80 per 12 ft board. whole units available.
 
-in stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 kiln dried. also available: sugi 1x6 tongue and groove, 5/4x6 and 2x4. ">
-<div class="ph vid"><video preload="none" playsinline poster="1053680454173165-1t.jpg" src="v-1053680454173165.mp4" aria-label="Video: 2x6x12 &amp; 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">2x6x12 &amp; 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft)</h3>
+<a class="ph vid" href="#item-1053680454173165--lumber-beams" aria-label="See video, photos and details"><img src="1053680454173165-1t.jpg" alt="Japanese Sugi Cedar 2x6x12 Decking ($2.65/lin ft, $31.80 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 2x6x12 Decking ($2.65/lin ft, $31.80 per board)</h3>
 <div class="price">$2.65 <span class="u">/ lin ft</span></div>
-<p class="ex">$2.65 per linear foot. Whole units available. · In stock in 8, 12 and 16 ft lengths (16 ft is the longest). · Lengths in stock can change; call or…</p>
-<details><summary>More details</summary><div class="full">$2.65 per linear foot. Whole units available.
+<p class="ex">$2.65 per linear foot, $31.80 per 12 ft board. Whole units available. · Available in 8, 12 and 16 ft lengths. 8 ft is also in stock. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2.65 per linear foot, $31.80 per 12 ft board. Whole units available.
 
-In stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+Available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 Kiln dried. Also available: Sugi 1x6 tongue and groove, 5/4x6 and 2x4.</div><div class="more"><a href="#item-1053680454173165--lumber-beams" data-i="0"><img src="1053680454173165-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1053680454173165--lumber-beams" data-i="1"><img src="1053680454173165-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1053680454173165--lumber-beams" data-i="2"><img src="1053680454173165-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1053680454173165--lumber-beams" data-i="3"><img src="1053680454173165-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
@@ -2465,7 +2476,7 @@ text or call 208-606-0899
 
 other lumber available
 delivery available ">
-<div class="ph vid"><video preload="none" playsinline poster="1748064666430758-1t.jpg" src="v-1748064666430758.mp4" aria-label="Video: NEW STOCK 2x6x16 Cedar Rough Sawn Boards Lumber Wood - Planter/Flower Beds True 6in wide, 7/4 thick"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1748064666430758" aria-label="See video, photos and details"><img src="1748064666430758-1t.jpg" alt="NEW STOCK 2x6x16 Cedar Rough Sawn Boards Lumber Wood - Planter/Flower Beds True 6in wide, 7/4 thick" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">NEW STOCK 2x6x16 Cedar Rough Sawn Boards Lumber Wood - Planter/Flower Beds True 6in wide, 7/4 thick</h3>
 <div class="price">$20 <span class="u">each</span></div>
 <p class="ex">$20/ea True 6in wide, 7/4 in thick · Cedar is great for planter and flower beds. Naturally bug and rot resistance with no added chemicals. · Rustic…</p>
@@ -2572,7 +2583,7 @@ delivery available.
 other lumber available.
 
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="1711588189947033-1t.jpg" src="v-1711588189947033.mp4" aria-label="Video: ($3.25 ea) 2x6x8 Rustic Blue Stain Pine Pre-milled Boards Wood Lumber Trim"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1711588189947033" aria-label="See video, photos and details"><img src="1711588189947033-1t.jpg" alt="($3.25 ea) 2x6x8 Rustic Blue Stain Pine Pre-milled Boards Wood Lumber Trim" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">($3.25 ea) 2x6x8 Rustic Blue Stain Pine Pre-milled Boards Wood Lumber Trim</h3>
 <div class="price">$3.25 <span class="u">each</span></div>
 <p class="ex">Approx 1-1/2 x 6-1/4 x 8&#x27;3&quot; · $3.25 ea. Whole units (175 pcs) available @ $3.10/board. · Other lumber available.</p>
@@ -2816,7 +2827,7 @@ text or call 208-606-0899
 delivery available.
 
 solid glued laminated timber beam is constructed from multiple layers of dimensional lumber bonded together with moisture-resistant adhesives.  ">
-<div class="ph vid"><video preload="none" playsinline poster="1420340346900640-1t.jpg" src="v-1420340346900640.mp4" aria-label="Video: 6-3/4&quot; x 13-3/8&quot; x 22&#x27;5&quot; Glulam Structural Timber Engineered Beam Wood Lumber"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1420340346900640" aria-label="See video, photos and details"><img src="1420340346900640-1t.jpg" alt="6-3/4&quot; x 13-3/8&quot; x 22&#x27;5&quot; Glulam Structural Timber Engineered Beam Wood Lumber" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">6-3/4&quot; x 13-3/8&quot; x 22&#x27;5&quot; Glulam Structural Timber Engineered Beam Wood Lumber</h3>
 <div class="price">$550 <span class="u"></span></div>
 <p class="ex">Solid glued laminated timber beam is constructed from multiple layers of dimensional lumber bonded together with moisture-resistant adhesives.</p>
@@ -2947,7 +2958,7 @@ check ahead for hours
 text or call 208-606-0899
 
 delivery available. ">
-<div class="ph vid"><video preload="none" playsinline poster="1109648831718513-1t.jpg" src="v-1109648831718513.mp4" aria-label="Video: 8x12x12 Rough Sawn Beam Lumber Wood"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1109648831718513" aria-label="See video, photos and details"><img src="1109648831718513-1t.jpg" alt="8x12x12 Rough Sawn Beam Lumber Wood" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">8x12x12 Rough Sawn Beam Lumber Wood</h3>
 <div class="price">$190 <span class="u"></span></div>
 <p class="ex">8x12x12 rough sawn beam.</p>
@@ -3109,7 +3120,7 @@ Text or call 208-606-0899</div><div class="more"><a href="#item-2526823717783950
 </div></article><article class="item" id="item-1093253106560871" data-av="in_stock" data-ph="1093253106560871-1.jpg,1093253106560871-2.jpg,1093253106560871-3.jpg,1093253106560871-4.jpg" data-v="v-1093253106560871.mp4" data-s="8x12x20 rough cut beam lumber wood building materials lumber &amp; beams delivery available.
 other lumber available.
 text or call 208-606-0899  ">
-<div class="ph vid"><video preload="none" playsinline poster="1093253106560871-1t.jpg" src="v-1093253106560871.mp4" aria-label="Video: 8x12x20 Rough Cut Beam Lumber Wood Building Materials"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1093253106560871" aria-label="See video, photos and details"><img src="1093253106560871-1t.jpg" alt="8x12x20 Rough Cut Beam Lumber Wood Building Materials" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">8x12x20 Rough Cut Beam Lumber Wood Building Materials</h3>
 <div class="price">$480 <span class="u"></span></div>
 <p class="ex">Other lumber available.</p>
@@ -3177,7 +3188,7 @@ delivery available
 alpine select redwood. s4see, eased edges. unstained. sold by the piece.
 
 bug and rot resistant like cedar, but stronger. good for decks, benches and outdoor builds. ">
-<div class="ph vid"><video preload="none" playsinline poster="1039176305822303-1t.jpg" src="v-1039176305822303.mp4" aria-label="Video: $1.69/LF – 5/4x6x12 Redwood Decking Boards, True 1&quot; x 5.5&quot;, 12ft (8ft &amp; 10ft coming soon)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1039176305822303" aria-label="See video, photos and details"><img src="1039176305822303-1t.jpg" alt="$1.69/LF – 5/4x6x12 Redwood Decking Boards, True 1&quot; x 5.5&quot;, 12ft (8ft &amp; 10ft coming soon)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">$1.69/LF – 5/4x6x12 Redwood Decking Boards, True 1&quot; x 5.5&quot;, 12ft (8ft &amp; 10ft coming soon)</h3>
 <div class="price">$1.69 <span class="u">/ lin ft</span></div>
 <p class="ex">$1.69/lin ft, $20.28 ea 5/4x6x12  board · True 1&quot; thick x 5.5&quot; actual width · 8s and 10s will be in stock soon · Alpine Select redwood. S4SEE, eased…</p>
@@ -3309,18 +3320,18 @@ Delivery available.
 Check ahead for hours 
 Text or call 208-606-0899</div><div class="more"><a href="#item-1048832384210939" data-i="0"><img src="1048832384210939-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1048832384210939" data-i="1"><img src="1048832384210939-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1048832384210939" data-i="2"><img src="1048832384210939-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1048832384210939" data-i="3"><img src="1048832384210939-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1048832384210939/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-996616480064854--decking" data-av="in_stock" data-ph="996616480064854-1.jpg,996616480064854-2.jpg,996616480064854-3.jpg,996616480064854-4.jpg" data-v="v-996616480064854.mp4" data-s="5/4x6x8 &amp; 5/4x6x12 japanese sugi cedar decking ($2/lin ft) japanese sugi cedar $2 per linear foot.
+</div></article><article class="item" id="item-996616480064854--decking" data-av="in_stock" data-ph="996616480064854-1.jpg,996616480064854-2.jpg,996616480064854-3.jpg,996616480064854-4.jpg" data-v="v-996616480064854.mp4" data-s="japanese sugi cedar 5/4x6x8 decking ($2/lin ft, $16 per board) japanese sugi cedar $2 per linear foot, $16 per 8 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 available in 8, 10 and 12 ft lengths.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. lightweight, durable and naturally rot- and insect-resistant, with a reddish-golden grain. kiln dried. great for decks, garden beds, fences, benches and accent walls. ">
-<div class="ph vid"><video preload="none" playsinline poster="996616480064854-1t.jpg" src="v-996616480064854.mp4" aria-label="Video: 5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Decking ($2/lin ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Decking ($2/lin ft)</h3>
+<a class="ph vid" href="#item-996616480064854--decking" aria-label="See video, photos and details"><img src="996616480064854-1t.jpg" alt="Japanese Sugi Cedar 5/4x6x8 Decking ($2/lin ft, $16 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 5/4x6x8 Decking ($2/lin ft, $16 per board)</h3>
 <div class="price">$2 <span class="u">/ lin ft</span></div>
-<p class="ex">$2 per linear foot. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in stock can change; call…</p>
-<details><summary>More details</summary><div class="full">$2 per linear foot.
+<p class="ex">$2 per linear foot, $16 per 8 ft board. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2 per linear foot, $16 per 8 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 Available in 8, 10 and 12 ft lengths.
@@ -3328,18 +3339,18 @@ Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. Lightweight, durable and naturally rot- and insect-resistant, with a reddish-golden grain. Kiln dried. Great for decks, garden beds, fences, benches and accent walls.</div><div class="more"><a href="#item-996616480064854--decking" data-i="0"><img src="996616480064854-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-996616480064854--decking" data-i="1"><img src="996616480064854-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-996616480064854--decking" data-i="2"><img src="996616480064854-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-996616480064854--decking" data-i="3"><img src="996616480064854-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/996616480064854/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-926560593857525--decking" data-av="in_stock" data-ph="926560593857525-1.jpg,926560593857525-2.jpg,926560593857525-3.jpg,926560593857525-4.jpg" data-v="v-926560593857525.mp4" data-s="5/4x6x8 &amp; 5/4x6x12 japanese sugi cedar boards ($16 per 8 ft, $24 per 12 ft board) japanese sugi cedar $2 per linear foot.
+</div></article><article class="item" id="item-926560593857525--decking" data-av="in_stock" data-ph="926560593857525-1.jpg,926560593857525-2.jpg,926560593857525-3.jpg,926560593857525-4.jpg" data-v="v-926560593857525.mp4" data-s="japanese sugi cedar 5/4x6x12 decking boards ($2/lin ft, $24 per board) japanese sugi cedar $2 per linear foot, $24 per 12 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 available in 8, 10 and 12 ft lengths.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. kiln dried. ">
-<div class="ph vid"><video preload="none" playsinline poster="926560593857525-1t.jpg" src="v-926560593857525.mp4" aria-label="Video: 5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Boards ($16 per 8 ft, $24 per 12 ft board)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">5/4x6x8 &amp; 5/4x6x12 Japanese Sugi Cedar Boards ($16 per 8 ft, $24 per 12 ft board)</h3>
+<a class="ph vid" href="#item-926560593857525--decking" aria-label="See video, photos and details"><img src="926560593857525-1t.jpg" alt="Japanese Sugi Cedar 5/4x6x12 Decking Boards ($2/lin ft, $24 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 5/4x6x12 Decking Boards ($2/lin ft, $24 per board)</h3>
 <div class="price">$2 <span class="u">/ lin ft</span></div>
-<p class="ex">$2 per linear foot. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in stock can change; call…</p>
-<details><summary>More details</summary><div class="full">$2 per linear foot.
+<p class="ex">$2 per linear foot, $24 per 12 ft board. · $0.10 off per linear foot when buying a whole unit. · Available in 8, 10 and 12 ft lengths. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2 per linear foot, $24 per 12 ft board.
 $0.10 off per linear foot when buying a whole unit.
 
 Available in 8, 10 and 12 ft lengths.
@@ -3347,36 +3358,36 @@ Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 5/4 is a true 1 in. thick. Kiln dried.</div><div class="more"><a href="#item-926560593857525--decking" data-i="0"><img src="926560593857525-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-926560593857525--decking" data-i="1"><img src="926560593857525-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-926560593857525--decking" data-i="2"><img src="926560593857525-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-926560593857525--decking" data-i="3"><img src="926560593857525-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/926560593857525/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1571495154466256--decking" data-av="in_stock" data-ph="1571495154466256-1.jpg,1571495154466256-2.jpg,1571495154466256-3.jpg,1571495154466256-4.jpg" data-v="v-1571495154466256.mp4" data-s="2x6x16 japanese sugi cedar decking ($2.65/lin ft), no minimums japanese sugi cedar $2.65 per linear foot. no minimum purchase. whole units available.
+</div></article><article class="item" id="item-1571495154466256--decking" data-av="in_stock" data-ph="1571495154466256-1.jpg,1571495154466256-2.jpg,1571495154466256-3.jpg,1571495154466256-4.jpg" data-v="v-1571495154466256.mp4" data-s="japanese sugi cedar 2x6x16 decking ($2.65/lin ft, $42.40 per board), no minimums japanese sugi cedar $2.65 per linear foot, $42.40 per 16 ft board. no minimum purchase. whole units available.
 
-in stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 kiln dried. also available: sugi 1x6 tongue and groove, 5/4x6 and 2x4. ">
-<div class="ph vid"><video preload="none" playsinline poster="1571495154466256-1t.jpg" src="v-1571495154466256.mp4" aria-label="Video: 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft), No Minimums"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft), No Minimums</h3>
+<a class="ph vid" href="#item-1571495154466256--decking" aria-label="See video, photos and details"><img src="1571495154466256-1t.jpg" alt="Japanese Sugi Cedar 2x6x16 Decking ($2.65/lin ft, $42.40 per board), No Minimums" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 2x6x16 Decking ($2.65/lin ft, $42.40 per board), No Minimums</h3>
 <div class="price">$2.65 <span class="u">/ lin ft</span></div>
-<p class="ex">$2.65 per linear foot. No minimum purchase. Whole units available. · In stock in 8, 12 and 16 ft lengths (16 ft is the longest). · Lengths in stock…</p>
-<details><summary>More details</summary><div class="full">$2.65 per linear foot. No minimum purchase. Whole units available.
+<p class="ex">$2.65 per linear foot, $42.40 per 16 ft board. No minimum purchase. Whole units available. · Available in 8, 12 and 16 ft lengths. 8 ft is also in…</p>
+<details><summary>More details</summary><div class="full">$2.65 per linear foot, $42.40 per 16 ft board. No minimum purchase. Whole units available.
 
-In stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+Available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 Kiln dried. Also available: Sugi 1x6 tongue and groove, 5/4x6 and 2x4.</div><div class="more"><a href="#item-1571495154466256--decking" data-i="0"><img src="1571495154466256-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1571495154466256--decking" data-i="1"><img src="1571495154466256-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1571495154466256--decking" data-i="2"><img src="1571495154466256-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1571495154466256--decking" data-i="3"><img src="1571495154466256-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1571495154466256/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1053680454173165--decking" data-av="in_stock" data-ph="1053680454173165-1.jpg,1053680454173165-2.jpg,1053680454173165-3.jpg,1053680454173165-4.jpg" data-v="v-1053680454173165.mp4" data-s="2x6x12 &amp; 2x6x16 japanese sugi cedar decking ($2.65/lin ft) japanese sugi cedar $2.65 per linear foot. whole units available.
+</div></article><article class="item" id="item-1053680454173165--decking" data-av="in_stock" data-ph="1053680454173165-1.jpg,1053680454173165-2.jpg,1053680454173165-3.jpg,1053680454173165-4.jpg" data-v="v-1053680454173165.mp4" data-s="japanese sugi cedar 2x6x12 decking ($2.65/lin ft, $31.80 per board) japanese sugi cedar $2.65 per linear foot, $31.80 per 12 ft board. whole units available.
 
-in stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 lengths in stock can change; call or text to check what&#x27;s on hand.
 
 kiln dried. also available: sugi 1x6 tongue and groove, 5/4x6 and 2x4. ">
-<div class="ph vid"><video preload="none" playsinline poster="1053680454173165-1t.jpg" src="v-1053680454173165.mp4" aria-label="Video: 2x6x12 &amp; 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
-<div class="body"><h3 class="gopen">2x6x12 &amp; 2x6x16 Japanese Sugi Cedar Decking ($2.65/lin ft)</h3>
+<a class="ph vid" href="#item-1053680454173165--decking" aria-label="See video, photos and details"><img src="1053680454173165-1t.jpg" alt="Japanese Sugi Cedar 2x6x12 Decking ($2.65/lin ft, $31.80 per board)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">Japanese Sugi Cedar 2x6x12 Decking ($2.65/lin ft, $31.80 per board)</h3>
 <div class="price">$2.65 <span class="u">/ lin ft</span></div>
-<p class="ex">$2.65 per linear foot. Whole units available. · In stock in 8, 12 and 16 ft lengths (16 ft is the longest). · Lengths in stock can change; call or…</p>
-<details><summary>More details</summary><div class="full">$2.65 per linear foot. Whole units available.
+<p class="ex">$2.65 per linear foot, $31.80 per 12 ft board. Whole units available. · Available in 8, 12 and 16 ft lengths. 8 ft is also in stock. · Lengths in…</p>
+<details><summary>More details</summary><div class="full">$2.65 per linear foot, $31.80 per 12 ft board. Whole units available.
 
-In stock in 8, 12 and 16 ft lengths (16 ft is the longest).
+Available in 8, 12 and 16 ft lengths. 8 ft is also in stock.
 Lengths in stock can change; call or text to check what&#x27;s on hand.
 
 Kiln dried. Also available: Sugi 1x6 tongue and groove, 5/4x6 and 2x4.</div><div class="more"><a href="#item-1053680454173165--decking" data-i="0"><img src="1053680454173165-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1053680454173165--decking" data-i="1"><img src="1053680454173165-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1053680454173165--decking" data-i="2"><img src="1053680454173165-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1053680454173165--decking" data-i="3"><img src="1053680454173165-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
@@ -3489,6 +3500,68 @@ Delivery available.
 
 Text or call 208-606-0899.</div><div class="more"><a href="#item-1036220329402663" data-i="0"><img src="1036220329402663-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1036220329402663" data-i="1"><img src="1036220329402663-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1036220329402663" data-i="2"><img src="1036220329402663-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1036220329402663" data-i="3"><img src="1036220329402663-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1036220329402663/" target="_blank" rel="noopener">View on Facebook</a></div>
+</div></article></div></div></section><section class="cat" id="fencing"><div class="wrap"><div class="banner"><img src="cat-fencing-own.jpg" alt="" loading="lazy"><h2>Fencing<small>2 items</small></h2></div><div class="grid"><article class="item" id="item-1395655319298373--fencing" data-av="in_stock" data-ph="1395655319298373-1.jpg,1395655319298373-2.jpg,1395655319298373-3.jpg,1395655319298373-4.jpg" data-v="v-1395655319298373.mp4" data-s="($1.85/picket) 1x4 6ft redwood dog-eared fence pickets - 3/4&quot; x 3-1/2&quot; x 6&#x27; true lumber &amp; beams clean dry stock. 
+$1.85 ea
+true dimensions: 3/4&quot; x 3-1/2&quot; x 6&#x27;
+
+5% discount for whole unit. 650 pcs per unit.
+
+gh sales lumber &amp; flooring
+1113 n 39th st
+nampa
+check ahead for hours
+text or call 208-606-0899
+
+delivery available. ">
+<a class="ph vid" href="#item-1395655319298373--fencing" aria-label="See video, photos and details"><img src="1395655319298373-1t.jpg" alt="($1.85/picket) 1x4 6ft Redwood Dog-Eared Fence Pickets - 3/4&quot; x 3-1/2&quot; x 6&#x27; True" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">($1.85/picket) 1x4 6ft Redwood Dog-Eared Fence Pickets - 3/4&quot; x 3-1/2&quot; x 6&#x27; True</h3>
+<div class="price">$1.85 <span class="u">/ picket</span></div>
+<p class="ex">Clean dry stock. · $1.85 ea · True dimensions: 3/4&quot; x 3-1/2&quot; x 6&#x27; · 5% discount for whole unit. 650 pcs per unit.</p>
+<details><summary>More details</summary><div class="full">Clean dry stock. 
+$1.85 ea
+True dimensions: 3/4&quot; x 3-1/2&quot; x 6&#x27;
+
+5% discount for whole unit. 650 pcs per unit.
+
+GH Sales Lumber &amp; Flooring
+1113 N 39th St
+Nampa
+Check ahead for hours
+Text or call 208-606-0899
+
+Delivery available.</div><div class="more"><a href="#item-1395655319298373--fencing" data-i="0"><img src="1395655319298373-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1395655319298373--fencing" data-i="1"><img src="1395655319298373-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1395655319298373--fencing" data-i="2"><img src="1395655319298373-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1395655319298373--fencing" data-i="3"><img src="1395655319298373-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
+<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1395655319298373/" target="_blank" rel="noopener">View on Facebook</a></div>
+</div></article><article class="item" id="item-1598293855320856--fencing" data-av="in_stock" data-ph="1598293855320856-1.jpg,1598293855320856-2.jpg,1598293855320856-3.jpg,1598293855320856-4.jpg" data-s="($3.95 ea) 1x6x5 cedar square edge wrc boards (5/8x5-1/2x5 true) decking, fence, trim, sauna, wood lumber &amp; beams beautiful high elevation slow growth western red cedar boards.
+5/8 x 5-1/2 x 5 true 
+$3.95 ea
+
+great for saunas, fencing, decking, trim, walls, projects!
+
+gh sales 
+1113 n 39th st
+nampa
+check ahead for hours
+text or call 208-606-0899
+
+delivery available. ">
+<a class="ph" href="#item-1598293855320856--fencing" aria-label="See photos and details"><img src="1598293855320856-1t.jpg" alt="($3.95 ea) 1x6x5 Cedar Square Edge WRC Boards (5/8x5-1/2x5 true) Decking, Fence, Trim, Sauna, Wood" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
+<div class="body"><h3 class="gopen">($3.95 ea) 1x6x5 Cedar Square Edge WRC Boards (5/8x5-1/2x5 true) Decking, Fence, Trim, Sauna, Wood</h3>
+<div class="price">$3.95 <span class="u">each</span></div>
+<p class="ex">Beautiful high elevation slow growth western red cedar boards. · 5/8 x 5-1/2 x 5 true · $3.95 ea · Great for saunas, fencing, decking, trim, walls,…</p>
+<details><summary>More details</summary><div class="full">Beautiful high elevation slow growth western red cedar boards.
+5/8 x 5-1/2 x 5 true 
+$3.95 ea
+
+Great for saunas, fencing, decking, trim, walls, projects!
+
+GH Sales 
+1113 N 39th St
+Nampa
+Check ahead for hours
+Text or call 208-606-0899
+
+Delivery available.</div><div class="more"><a href="#item-1598293855320856--fencing" data-i="0"><img src="1598293855320856-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1598293855320856--fencing" data-i="1"><img src="1598293855320856-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1598293855320856--fencing" data-i="2"><img src="1598293855320856-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1598293855320856--fencing" data-i="3"><img src="1598293855320856-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
+<div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1598293855320856/" target="_blank" rel="noopener">View on Facebook</a></div>
 </div></article></div></div></section><section class="cat" id="outdoor-structures"><div class="wrap"><div class="banner"><img src="cat-outdoor-structures.jpg" alt="" loading="lazy"><h2>Outdoor Structures<small>1 item</small></h2></div><p class="blurb">Carports, gazebos and other outdoor structures. Brand new kits in stock, ready to pick up.</p><div class="grid"><article class="item" id="item-854407534322320" data-av="in_stock" data-ph="854407534322320-14.jpg,854407534322320-1.jpg,854407534322320-11.jpg,854407534322320-12.jpg,854407534322320-13.jpg,854407534322320-2.jpg,854407534322320-3.jpg,854407534322320-4.jpg,854407534322320-5.jpg,854407534322320-6.jpg,854407534322320-7.jpg,854407534322320-8.jpg,854407534322320-9.jpg,854407534322320-10.jpg" data-v="v-904712032405825.mp4" data-s="sunjoy newville 10x22 cedar carport / gazebo with privacy wall, steel roof &amp; gutter outdoor structures sunjoy newville 10 x 22 ft cedar carport / gazebo (model a110001120). brand new in the box, in stock now.
 
 - fsc-certified cedar frame with six 5.5&quot; x 5.5&quot; posts
@@ -3505,7 +3578,7 @@ use it as a carport, patio pavilion, equipment shelter or outdoor dining space.
 pre-cut and pre-drilled kit; 3-4 people can typically assemble it in about a day. ships as two boxes on one pallet, about 942 lb total. 2-year manufacturer warranty.
 
 compare at home depot $2,379. delivery available. ">
-<div class="ph vid"><video preload="none" playsinline poster="854407534322320-14t.jpg" src="v-904712032405825.mp4" aria-label="Video: Sunjoy Newville 10x22 Cedar Carport / Gazebo with Privacy Wall, Steel Roof &amp; Gutter"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-854407534322320" aria-label="See video, photos and details"><img src="854407534322320-14t.jpg" alt="Sunjoy Newville 10x22 Cedar Carport / Gazebo with Privacy Wall, Steel Roof &amp; Gutter" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Sunjoy Newville 10x22 Cedar Carport / Gazebo with Privacy Wall, Steel Roof &amp; Gutter</h3>
 <div class="price">$1,985 <span class="u"></span><span class="pnote">Compare at Home Depot $2,379</span></div>
 <p class="ex">Brand new in the box. FSC cedar frame and privacy wall, steel roof with gutter, rated 4,000 lb snow / 50 mph wind. Pre-cut, pre-drilled kit.</p>
@@ -3527,6 +3600,7 @@ Pre-cut and pre-drilled kit; 3-4 people can typically assemble it in about a day
 Compare at Home Depot $2,379. Delivery available.</div><div class="more"><a href="#item-854407534322320" data-i="0"><img src="854407534322320-14.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-854407534322320" data-i="1"><img src="854407534322320-1.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-854407534322320" data-i="2"><img src="854407534322320-11.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-854407534322320" data-i="3"><img src="854407534322320-12.jpg" alt="Photo 4" loading="lazy"></a><a href="#item-854407534322320" data-i="4"><img src="854407534322320-13.jpg" alt="Photo 5" loading="lazy"></a><a href="#item-854407534322320" data-i="5"><img src="854407534322320-2.jpg" alt="Photo 6" loading="lazy"></a><a href="#item-854407534322320" data-i="6"><img src="854407534322320-3.jpg" alt="Photo 7" loading="lazy"></a><a href="#item-854407534322320" data-i="7"><img src="854407534322320-4.jpg" alt="Photo 8" loading="lazy"></a><a href="#item-854407534322320" data-i="8"><img src="854407534322320-5.jpg" alt="Photo 9" loading="lazy"></a><a href="#item-854407534322320" data-i="9"><img src="854407534322320-6.jpg" alt="Photo 10" loading="lazy"></a><a href="#item-854407534322320" data-i="10"><img src="854407534322320-7.jpg" alt="Photo 11" loading="lazy"></a><a href="#item-854407534322320" data-i="11"><img src="854407534322320-8.jpg" alt="Photo 12" loading="lazy"></a><a href="#item-854407534322320" data-i="12"><img src="854407534322320-9.jpg" alt="Photo 13" loading="lazy"></a><a href="#item-854407534322320" data-i="13"><img src="854407534322320-10.jpg" alt="Photo 14" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/854407534322320/" target="_blank" rel="noopener">View on Facebook</a></div>
 </div></article></div></div></section><section class="cat" id="siding-roofing-trim"><div class="wrap"><div class="banner"><img src="cat-siding-roofing-trim-own.jpg" alt="" loading="lazy"><h2>Siding, Roofing &amp; Trim<small>9 items</small></h2></div><div class="grid"><article class="item" id="item-1807703397074616" data-av="in_stock" data-ph="1807703397074616-1.jpg,1807703397074616-2.jpg,1807703397074616-3.jpg,1807703397074616-4.jpg" data-s="7-1/4&quot;x12&#x27; hardie artisan lap siding 5/8&quot; thick siding, roofing &amp; trim $12 ea
+75 pieces available, covering about 450 sq ft of wall (6 sq ft per piece at the standard 6&quot; exposure).
 
 gh sales 
 1113 n 39th st
@@ -3539,9 +3613,10 @@ delivery available.
 attractive and durable fiber cement siding planks from the artisan collection by james hardie. these planks have a smooth, primed surface with a wood-grain texture and a thick profile. ">
 <a class="ph" href="#item-1807703397074616" aria-label="See photos and details"><img src="1807703397074616-1t.jpg" alt="7-1/4&quot;x12&#x27; Hardie Artisan Lap Siding 5/8&quot; Thick" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">7-1/4&quot;x12&#x27; Hardie Artisan Lap Siding 5/8&quot; Thick</h3>
-<div class="price">$12 <span class="u">each</span></div>
-<p class="ex">$12 ea · Attractive and durable fiber cement siding planks from the Artisan collection by James Hardie. These planks have a smooth, primed surface…</p>
+<div class="price">$12 <span class="u">each</span></div><div class="qb lim">Limited stock: 75 pieces (about 450 sq ft)</div>
+<p class="ex">$12 ea · 75 pieces available, covering about 450 sq ft of wall (6 sq ft per piece at the standard 6&quot; exposure). · Attractive and durable fiber cement…</p>
 <details><summary>More details</summary><div class="full">$12 ea
+75 pieces available, covering about 450 sq ft of wall (6 sq ft per piece at the standard 6&quot; exposure).
 
 GH Sales 
 1113 N 39th St
@@ -3566,7 +3641,7 @@ nampa
 delivery available.
 check ahead for hours 
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="1433686995534049-1t.jpg" src="v-1433686995534049.mp4" aria-label="Video: Laminated Architectural Roofing Shingles &quot;Wood Black/Harvard Slate&quot;"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1433686995534049" aria-label="See video, photos and details"><img src="1433686995534049-1t.jpg" alt="Laminated Architectural Roofing Shingles &quot;Wood Black/Harvard Slate&quot;" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Laminated Architectural Roofing Shingles &quot;Wood Black/Harvard Slate&quot;</h3>
 <div class="price">$34 <span class="u">/ bundle</span></div>
 <p class="ex">$34/bundle (33.3sqft/bundle) · $102/square · 315 bundles ~ 105 square available. · Color: Wood Black/Harvard Slate</p>
@@ -3634,6 +3709,7 @@ Benefits: Minimal expansion/contraction; long lengths reduce seams/waste; low ma
 Sustainability: Diverts landfill waste; eco-friendly alternative to wood/PVC/fiber cement.</div><div class="more"><a href="#item-2168707543686704" data-i="0"><img src="2168707543686704-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-2168707543686704" data-i="1"><img src="2168707543686704-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-2168707543686704" data-i="2"><img src="2168707543686704-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-2168707543686704" data-i="3"><img src="2168707543686704-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/2168707543686704/" target="_blank" rel="noopener">View on Facebook</a></div>
 </div></article><article class="item" id="item-2122556561633486" data-av="in_stock" data-ph="2122556561633486-1.jpg,2122556561633486-2.jpg,2122556561633486-3.jpg,2122556561633486-4.jpg" data-s="james hardie 8&quot;x12&#x27; colonial smooth fiber cement board lap siding siding, roofing &amp; trim $12 ea
+103 pieces available, covering about 721 sq ft of wall (7 sq ft per piece at the standard 7&quot; exposure).
 
 james hardie colonial smooth lap siding cement board. 8.25&quot;x12&#x27; 5/16 in thick
 
@@ -3642,9 +3718,10 @@ delivery available
 text or call 208-606-0899  ">
 <a class="ph" href="#item-2122556561633486" aria-label="See photos and details"><img src="2122556561633486-1t.jpg" alt="James Hardie 8&quot;x12&#x27; Colonial Smooth Fiber Cement Board Lap Siding" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">James Hardie 8&quot;x12&#x27; Colonial Smooth Fiber Cement Board Lap Siding</h3>
-<div class="price">$12 <span class="u">each</span></div>
-<p class="ex">$12 ea · James Hardie Colonial smooth lap siding cement board. 8.25&quot;x12&#x27; 5/16 in thick · Other lumber available</p>
+<div class="price">$12 <span class="u">each</span></div><div class="qb lim">Limited stock: 103 pieces (about 721 sq ft)</div>
+<p class="ex">$12 ea · 103 pieces available, covering about 721 sq ft of wall (7 sq ft per piece at the standard 7&quot; exposure). · James Hardie Colonial smooth lap…</p>
 <details><summary>More details</summary><div class="full">$12 ea
+103 pieces available, covering about 721 sq ft of wall (7 sq ft per piece at the standard 7&quot; exposure).
 
 James Hardie Colonial smooth lap siding cement board. 8.25&quot;x12&#x27; 5/16 in thick
 
@@ -3670,7 +3747,7 @@ check ahead for hours
 text or call 208-606-0899
 
 delivery available. ">
-<div class="ph vid"><video preload="none" playsinline poster="2502592776916661-1t.jpg" src="v-2502592776916661.mp4" aria-label="Video: Red Metal Roofing Panels - 16ft &amp; 20ft ($3.75/ft)"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-2502592776916661" aria-label="See video, photos and details"><img src="2502592776916661-1t.jpg" alt="Red Metal Roofing Panels - 16ft &amp; 20ft ($3.75/ft)" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Red Metal Roofing Panels - 16ft &amp; 20ft ($3.75/ft)</h3>
 <div class="price">$3.75 <span class="u">/ lin ft</span></div>
 <p class="ex">Only RED available · $3.75 per linear ft · 38in wide, 36in coverage when overlapped. · 8ft - currently sold out · 12ft - currently sold out · 16ft -…</p>
@@ -3941,7 +4018,7 @@ text or call 208-606-0899
 
 perfect for kitchen backsplash, bathroom walls, shower tile, or accent walls!
 warm crema marfil marble tumbled brick mosaic tiles. natural stone, elegant beige/cream tones. ">
-<div class="ph vid"><video preload="none" playsinline poster="38620149310916919-1t.jpg" src="v-38620149310916919.mp4" aria-label="Video: Crema Marfil Marble Mosaic Tiles - Kitchen Backsplash Bathroom Wall Spanish Stone"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-38620149310916919" aria-label="See video, photos and details"><img src="38620149310916919-1t.jpg" alt="Crema Marfil Marble Mosaic Tiles - Kitchen Backsplash Bathroom Wall Spanish Stone" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Crema Marfil Marble Mosaic Tiles - Kitchen Backsplash Bathroom Wall Spanish Stone</h3>
 <div class="price">$9 <span class="u"></span></div>
 <p class="ex">12&quot;x12&quot; mesh backed sheets · $9/sheet, $90/box of 10, 10sqft/box, 24 boxes ~ 240 sqft available. · Perfect for kitchen backsplash, bathroom walls,…</p>
@@ -4067,7 +4144,7 @@ delivery available.
 text or call 208-606-0899 
 
 manufactured using proprietary hdp—high definition porcelain® printing technology and with the technical performance of porcelain, the excursionhdp collection is appropriate for most residential and commercial wall, countertop, backsplash, and floor applications. it is made in the usa in a green squared certified®, advanced manufacturing center in lawrenceburg, ky. it includes pre-consumer recycled content and is greenguard® and porcelain tile certified. ">
-<div class="ph vid"><video preload="none" playsinline poster="3301819720005824-1t.jpg" src="v-3301819720005824.mp4" aria-label="Video: 8x36in Porcelain Tile Flooring ($1.50/sqft) Florida Tile Excursion Collection - Denali"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-3301819720005824" aria-label="See video, photos and details"><img src="3301819720005824-1t.jpg" alt="8x36in Porcelain Tile Flooring ($1.50/sqft) Florida Tile Excursion Collection - Denali" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">8x36in Porcelain Tile Flooring ($1.50/sqft) Florida Tile Excursion Collection - Denali</h3>
 <div class="price">$18 <span class="u">/ box</span><span class="pnote">$1.50/sq ft</span></div>
 <p class="ex">$1.50/sqft, 12sqft/box, $18/box · 14 boxes available, 168 sqft. · Other flooring available. · Manufactured using proprietary HDP—High Definition…</p>
@@ -4116,7 +4193,7 @@ other live edge pieces available. see last photo.
 text or call 208-606-0899. 
 
  ">
-<div class="ph vid"><video preload="none" playsinline poster="4068436880120896-1t.jpg" src="v-4068436880120896.mp4" aria-label="Video: Project Wood Slab 2x22x4&#x27;6&quot; Live Edge Lumber"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-4068436880120896" aria-label="See video, photos and details"><img src="4068436880120896-1t.jpg" alt="Project Wood Slab 2x22x4&#x27;6&quot; Live Edge Lumber" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Project Wood Slab 2x22x4&#x27;6&quot; Live Edge Lumber</h3>
 <div class="price">$65 <span class="u"></span></div>
 <p class="ex">2in x 21-22in x 4&#x27;6&quot; live edge slab. · Been drying for 2+ years. In the photos darker color at the bottom is due to the surface being a little wet.…</p>
@@ -4293,7 +4370,7 @@ check ahead for hours
 text or call 208-606-0899
 
 delivery available. ">
-<div class="ph vid"><video preload="none" playsinline poster="1079731327862611-1t.jpg" src="v-1079731327862611.mp4" aria-label="Video: Alside 570 Series Single Hung Vinyl Window 26x75 – New in Wrap – Low-E Argon"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1079731327862611" aria-label="See video, photos and details"><img src="1079731327862611-1t.jpg" alt="Alside 570 Series Single Hung Vinyl Window 26x75 – New in Wrap – Low-E Argon" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Alside 570 Series Single Hung Vinyl Window 26x75 – New in Wrap – Low-E Argon</h3>
 <div class="price">$125 <span class="u"></span></div>
 <p class="ex">Alside 570 Series Single Hung Vinyl Window – New in Factory Wrap · 26.125&quot; wide x 74.875&quot; tall (26⅛ x 74⅞) · Solid vinyl, fusion-welded frame ·…</p>
@@ -4420,7 +4497,7 @@ Text or call 208-606-0899
 
 Delivery available.</div><div class="more"><a href="#item-2262066407531555" data-i="0"><img src="2262066407531555-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-2262066407531555" data-i="1"><img src="2262066407531555-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-2262066407531555" data-i="2"><img src="2262066407531555-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-2262066407531555" data-i="3"><img src="2262066407531555-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/2262066407531555/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article></div></div></section><section class="cat" id="wooden-buckets"><div class="wrap"><div class="banner"><img src="cat-wooden-buckets.jpg" alt="" loading="lazy"><h2>Wooden Buckets<small>15 items</small></h2></div><p class="blurb">Rustic handmade wooden buckets and baskets in lots of styles, great as planters, gifts or decor, plus other decor and miscellaneous finds.</p><div class="subf" role="group" aria-label="Sort"><button type="button" data-sub="all" class="on">All</button><button type="button" data-sub="buckets">Buckets</button><button type="button" data-sub="other">Other decor &amp; misc</button></div><div class="grid"><article class="item" id="item-909431462225213" data-av="in_stock" data-sub="buckets" data-ph="909431462225213-1.jpg,909431462225213-2.jpg,909431462225213-3.jpg,909431462225213-4.jpg" data-v="v-909431462225213.mp4" data-s="cool vintage wooden buckets, rustic baskets, storage boxes, decor, etc wooden buckets cool vintage wooden buckets, baskets and decor.
+</div></article></div></div></section><section class="cat" id="wooden-buckets-decor"><div class="wrap"><div class="banner"><img src="cat-wooden-buckets.jpg" alt="" loading="lazy"><h2>Wooden Buckets &amp; Decor<small>15 items</small></h2></div><p class="blurb">Rustic handmade wooden buckets and baskets in lots of styles, great as planters, gifts or decor, plus other decor and miscellaneous finds.</p><div class="subf" role="group" aria-label="Sort"><button type="button" data-sub="all" class="on">All</button><button type="button" data-sub="buckets">Buckets</button><button type="button" data-sub="other">Other decor &amp; misc</button></div><div class="grid"><article class="item" id="item-909431462225213" data-av="in_stock" data-sub="buckets" data-ph="909431462225213-1.jpg,909431462225213-2.jpg,909431462225213-3.jpg,909431462225213-4.jpg" data-v="v-909431462225213.mp4" data-s="cool vintage wooden buckets, rustic baskets, storage boxes, decor, etc wooden buckets &amp; decor cool vintage wooden buckets, baskets and decor.
 
 prices from $12 and up
 
@@ -4444,7 +4521,7 @@ nampa
 check ahead for hours
 text or call 208-606-0899
  ">
-<div class="ph vid"><video preload="none" playsinline poster="909431462225213-1t.jpg" src="v-909431462225213.mp4" aria-label="Video: Cool Vintage Wooden Buckets, Rustic Baskets, Storage Boxes, Decor, etc"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-909431462225213" aria-label="See video, photos and details"><img src="909431462225213-1t.jpg" alt="Cool Vintage Wooden Buckets, Rustic Baskets, Storage Boxes, Decor, etc" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Cool Vintage Wooden Buckets, Rustic Baskets, Storage Boxes, Decor, etc</h3>
 <div class="price">$12 <span class="u"></span></div>
 <p class="ex">Cool vintage wooden buckets, baskets and decor. · Prices from $12 and up · Small yellow w iron handle - $12 · Short painted round baskets - $15 ·…</p>
@@ -4473,7 +4550,7 @@ Check ahead for hours
 Text or call 208-606-0899
 </div><div class="more"><a href="#item-909431462225213" data-i="0"><img src="909431462225213-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-909431462225213" data-i="1"><img src="909431462225213-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-909431462225213" data-i="2"><img src="909431462225213-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-909431462225213" data-i="3"><img src="909431462225213-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/909431462225213/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1794489865195157" data-av="in_stock" data-sub="buckets" data-ph="1794489865195157-1.jpg,1794489865195157-2.jpg,1794489865195157-3.jpg,1794489865195157-4.jpg" data-v="v-1794489865195157.mp4" data-s="vintage wooden horse pack - cool planter - rustic equestrian home / cabin / barn decor basket bucket wooden buckets approx 27in tall, 21 in wide, 11in deep
+</div></article><article class="item" id="item-1794489865195157" data-av="in_stock" data-sub="buckets" data-ph="1794489865195157-1.jpg,1794489865195157-2.jpg,1794489865195157-3.jpg,1794489865195157-4.jpg" data-v="v-1794489865195157.mp4" data-s="vintage wooden horse pack - cool planter - rustic equestrian home / cabin / barn decor basket bucket wooden buckets &amp; decor approx 27in tall, 21 in wide, 11in deep
 $87 each
 
 back middle of three is sold 
@@ -4481,7 +4558,7 @@ back middle of three is sold
 vintage wooden horse pack - rustic equestrian home / cabin / barn decor
 
 other similar decor available. ">
-<div class="ph vid"><video preload="none" playsinline poster="1794489865195157-1t.jpg" src="v-1794489865195157.mp4" aria-label="Video: Vintage Wooden Horse Pack - Cool Planter - Rustic Equestrian Home / Cabin / Barn Decor Basket Bucket"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1794489865195157" aria-label="See video, photos and details"><img src="1794489865195157-1t.jpg" alt="Vintage Wooden Horse Pack - Cool Planter - Rustic Equestrian Home / Cabin / Barn Decor Basket Bucket" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Vintage Wooden Horse Pack - Cool Planter - Rustic Equestrian Home / Cabin / Barn Decor Basket Bucket</h3>
 <div class="price">$87 <span class="u">each</span></div>
 <p class="ex">Approx 27in tall, 21 in wide, 11in deep · $87 each · Back middle of three is SOLD · Vintage Wooden Horse Pack - Rustic Equestrian Home / Cabin / Barn…</p>
@@ -4494,12 +4571,12 @@ Vintage Wooden Horse Pack - Rustic Equestrian Home / Cabin / Barn Decor
 
 Other similar decor available.</div><div class="more"><a href="#item-1794489865195157" data-i="0"><img src="1794489865195157-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1794489865195157" data-i="1"><img src="1794489865195157-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1794489865195157" data-i="2"><img src="1794489865195157-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1794489865195157" data-i="3"><img src="1794489865195157-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1794489865195157/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1573695267557100" data-av="in_stock" data-sub="buckets" data-ph="1573695267557100-1.jpg,1573695267557100-2.jpg,1573695267557100-3.jpg,1573695267557100-4.jpg" data-v="v-1573695267557100.mp4" data-s="rustic replica horse pack basket/bucket - western equestrian decor wooden buckets 26in h 18in w 17in d
+</div></article><article class="item" id="item-1573695267557100" data-av="in_stock" data-sub="buckets" data-ph="1573695267557100-1.jpg,1573695267557100-2.jpg,1573695267557100-3.jpg,1573695267557100-4.jpg" data-v="v-1573695267557100.mp4" data-s="rustic replica horse pack basket/bucket - western equestrian decor wooden buckets &amp; decor 26in h 18in w 17in d
 
 other styles available
 
 text or call 208-606-0899. ">
-<div class="ph vid"><video preload="none" playsinline poster="1573695267557100-1t.jpg" src="v-1573695267557100.mp4" aria-label="Video: Rustic Replica Horse Pack Basket/Bucket - Western Equestrian Decor"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1573695267557100" aria-label="See video, photos and details"><img src="1573695267557100-1t.jpg" alt="Rustic Replica Horse Pack Basket/Bucket - Western Equestrian Decor" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Rustic Replica Horse Pack Basket/Bucket - Western Equestrian Decor</h3>
 <div class="price">$125 <span class="u"></span></div>
 <p class="ex">26in H 18in W 17in D · Other styles available</p>
@@ -4509,7 +4586,7 @@ Other styles available
 
 Text or call 208-606-0899.</div><div class="more"><a href="#item-1573695267557100" data-i="0"><img src="1573695267557100-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1573695267557100" data-i="1"><img src="1573695267557100-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1573695267557100" data-i="2"><img src="1573695267557100-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1573695267557100" data-i="3"><img src="1573695267557100-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1573695267557100/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-2000576377268223" data-av="in_stock" data-sub="buckets" data-ph="2000576377268223-1.jpg,2000576377268223-2.jpg,2000576377268223-3.jpg,2000576377268223-4.jpg" data-s="great gift baskets! handmade wooden buckets baskets - rustic wooden buckets each one is unique/different.
+</div></article><article class="item" id="item-2000576377268223" data-av="in_stock" data-sub="buckets" data-ph="2000576377268223-1.jpg,2000576377268223-2.jpg,2000576377268223-3.jpg,2000576377268223-4.jpg" data-s="great gift baskets! handmade wooden buckets baskets - rustic wooden buckets &amp; decor each one is unique/different.
 
 dimensions vary, but they are approximately 6in tall, 13-15in diameter.
 
@@ -4532,10 +4609,10 @@ $12 ea.
 
 Text or call 208-606-0899</div><div class="more"><a href="#item-2000576377268223" data-i="0"><img src="2000576377268223-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-2000576377268223" data-i="1"><img src="2000576377268223-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-2000576377268223" data-i="2"><img src="2000576377268223-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-2000576377268223" data-i="3"><img src="2000576377268223-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/2000576377268223/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1645650180255259" data-av="in_stock" data-sub="buckets" data-ph="1645650180255259-1.jpg,1645650180255259-2.jpg,1645650180255259-3.jpg,1645650180255259-4.jpg" data-v="v-1645650180255259.mp4" data-s="great planters or vintage home decor baskets - rustic wood handled bucket farm barn cabin western wooden buckets each one is unique/different. approx 24in to top of bucket handle, 12in diameter, 12in to rim. other styles available. $35 each.
+</div></article><article class="item" id="item-1645650180255259" data-av="in_stock" data-sub="buckets" data-ph="1645650180255259-1.jpg,1645650180255259-2.jpg,1645650180255259-3.jpg,1645650180255259-4.jpg" data-v="v-1645650180255259.mp4" data-s="great planters or vintage home decor baskets - rustic wood handled bucket farm barn cabin western wooden buckets &amp; decor each one is unique/different. approx 24in to top of bucket handle, 12in diameter, 12in to rim. other styles available. $35 each.
 
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="1645650180255259-1t.jpg" src="v-1645650180255259.mp4" aria-label="Video: Great Planters or Vintage Home Decor Baskets - Rustic Wood Handled Bucket Farm Barn Cabin Western"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1645650180255259" aria-label="See video, photos and details"><img src="1645650180255259-1t.jpg" alt="Great Planters or Vintage Home Decor Baskets - Rustic Wood Handled Bucket Farm Barn Cabin Western" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Great Planters or Vintage Home Decor Baskets - Rustic Wood Handled Bucket Farm Barn Cabin Western</h3>
 <div class="price">$35 <span class="u">each</span></div>
 <p class="ex">Each one is unique/different. Approx 24in to top of bucket handle, 12in diameter, 12in to rim. Other styles available. $35 each.</p>
@@ -4543,7 +4620,7 @@ text or call 208-606-0899 ">
 
 Text or call 208-606-0899</div><div class="more"><a href="#item-1645650180255259" data-i="0"><img src="1645650180255259-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1645650180255259" data-i="1"><img src="1645650180255259-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1645650180255259" data-i="2"><img src="1645650180255259-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1645650180255259" data-i="3"><img src="1645650180255259-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1645650180255259/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-4015477428587729" data-av="in_stock" data-sub="buckets" data-ph="4015477428587729-1.jpg,4015477428587729-2.jpg,4015477428587729-3.jpg,4015477428587729-4.jpg" data-s="decor baskets/planters - rustic handmade wooden buckets baskets - great gifts wooden buckets $38 each. other styles available. 
+</div></article><article class="item" id="item-4015477428587729" data-av="in_stock" data-sub="buckets" data-ph="4015477428587729-1.jpg,4015477428587729-2.jpg,4015477428587729-3.jpg,4015477428587729-4.jpg" data-s="decor baskets/planters - rustic handmade wooden buckets baskets - great gifts wooden buckets &amp; decor $38 each. other styles available. 
 
 approx 12in tall, 15in diameter. each one is unique/different. ">
 <a class="ph" href="#item-4015477428587729" aria-label="See photos and details"><img src="4015477428587729-1t.jpg" alt="Decor Baskets/Planters - Rustic Handmade Wooden Buckets Baskets - Great Gifts" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
@@ -4554,7 +4631,7 @@ approx 12in tall, 15in diameter. each one is unique/different. ">
 
 Approx 12in tall, 15in diameter. Each one is unique/different.</div><div class="more"><a href="#item-4015477428587729" data-i="0"><img src="4015477428587729-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-4015477428587729" data-i="1"><img src="4015477428587729-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-4015477428587729" data-i="2"><img src="4015477428587729-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-4015477428587729" data-i="3"><img src="4015477428587729-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/4015477428587729/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-2350065638857249" data-av="in_stock" data-sub="other" data-ph="2350065638857249-1.jpg,2350065638857249-2.jpg,2350065638857249-3.jpg,2350065638857249-4.jpg" data-v="v-2350065638857249.mp4" data-s="vintage wooden trays coffee table decor wooden buckets 3&quot;x16&quot;x29&quot; trays, $20ea
+</div></article><article class="item" id="item-2350065638857249" data-av="in_stock" data-sub="other" data-ph="2350065638857249-1.jpg,2350065638857249-2.jpg,2350065638857249-3.jpg,2350065638857249-4.jpg" data-v="v-2350065638857249.mp4" data-s="vintage wooden trays coffee table decor wooden buckets &amp; decor 3&quot;x16&quot;x29&quot; trays, $20ea
 other styles available
 
 gh sales 
@@ -4562,7 +4639,7 @@ gh sales
 nampa
 check ahead for hours
 text or call 208-606-0899 ">
-<div class="ph vid"><video preload="none" playsinline poster="2350065638857249-1t.jpg" src="v-2350065638857249.mp4" aria-label="Video: Vintage Wooden Trays Coffee Table Decor"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-2350065638857249" aria-label="See video, photos and details"><img src="2350065638857249-1t.jpg" alt="Vintage Wooden Trays Coffee Table Decor" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Vintage Wooden Trays Coffee Table Decor</h3>
 <div class="price">$20 <span class="u">each</span></div>
 <p class="ex">3&quot;x16&quot;x29&quot; trays, $20ea · Other styles available</p>
@@ -4575,14 +4652,14 @@ Nampa
 Check ahead for hours
 Text or call 208-606-0899</div><div class="more"><a href="#item-2350065638857249" data-i="0"><img src="2350065638857249-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-2350065638857249" data-i="1"><img src="2350065638857249-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-2350065638857249" data-i="2"><img src="2350065638857249-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-2350065638857249" data-i="3"><img src="2350065638857249-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/2350065638857249/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-818208628051152" data-av="in_stock" data-sub="other" data-ph="818208628051152-1.jpg,818208628051152-2.jpg,818208628051152-3.jpg,818208628051152-4.jpg" data-s="hand painted ornamental latched box wooden buckets decorative painted wooden box with latch. ">
+</div></article><article class="item" id="item-818208628051152" data-av="in_stock" data-sub="other" data-ph="818208628051152-1.jpg,818208628051152-2.jpg,818208628051152-3.jpg,818208628051152-4.jpg" data-s="hand painted ornamental latched box wooden buckets &amp; decor decorative painted wooden box with latch. ">
 <a class="ph" href="#item-818208628051152" aria-label="See photos and details"><img src="818208628051152-1t.jpg" alt="Hand Painted Ornamental Latched Box" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Hand Painted Ornamental Latched Box</h3>
 <div class="price">$25 <span class="u"></span></div>
 <p class="ex">Decorative painted wooden box with latch.</p>
 <details><summary>More details</summary><div class="full">Decorative painted wooden box with latch.</div><div class="more"><a href="#item-818208628051152" data-i="0"><img src="818208628051152-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-818208628051152" data-i="1"><img src="818208628051152-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-818208628051152" data-i="2"><img src="818208628051152-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-818208628051152" data-i="3"><img src="818208628051152-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/818208628051152/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1461314252687662" data-av="in_stock" data-sub="other" data-ph="1461314252687662-1.jpg,1461314252687662-2.jpg,1461314252687662-3.jpg,1461314252687662-4.jpg" data-s="vintage saddle equestrian barn decor wooden buckets vintage saddle approx 23 inches long
+</div></article><article class="item" id="item-1461314252687662" data-av="in_stock" data-sub="other" data-ph="1461314252687662-1.jpg,1461314252687662-2.jpg,1461314252687662-3.jpg,1461314252687662-4.jpg" data-s="vintage saddle equestrian barn decor wooden buckets &amp; decor vintage saddle approx 23 inches long
 text or call 208-606-0899 ">
 <a class="ph" href="#item-1461314252687662" aria-label="See photos and details"><img src="1461314252687662-1t.jpg" alt="Vintage Saddle Equestrian Barn Decor" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Vintage Saddle Equestrian Barn Decor</h3>
@@ -4591,7 +4668,7 @@ text or call 208-606-0899 ">
 <details><summary>More details</summary><div class="full">Vintage Saddle approx 23 inches long
 Text or call 208-606-0899</div><div class="more"><a href="#item-1461314252687662" data-i="0"><img src="1461314252687662-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1461314252687662" data-i="1"><img src="1461314252687662-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1461314252687662" data-i="2"><img src="1461314252687662-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1461314252687662" data-i="3"><img src="1461314252687662-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1461314252687662/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1009586368797321" data-av="in_stock" data-sub="other" data-ph="1009586368797321-1.jpg,1009586368797321-2.jpg,1009586368797321-3.jpg,1009586368797321-4.jpg" data-s="decorative rustic latched treasure box case bin basket harvest orange wooden buckets exterior: 8.75&quot;x8.75&quot;x16.5&quot;
+</div></article><article class="item" id="item-1009586368797321" data-av="in_stock" data-sub="other" data-ph="1009586368797321-1.jpg,1009586368797321-2.jpg,1009586368797321-3.jpg,1009586368797321-4.jpg" data-s="decorative rustic latched treasure box case bin basket harvest orange wooden buckets &amp; decor exterior: 8.75&quot;x8.75&quot;x16.5&quot;
 other styles available
 
 text or call 208-606-0899 ">
@@ -4604,7 +4681,7 @@ Other styles available
 
 Text or call 208-606-0899</div><div class="more"><a href="#item-1009586368797321" data-i="0"><img src="1009586368797321-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1009586368797321" data-i="1"><img src="1009586368797321-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1009586368797321" data-i="2"><img src="1009586368797321-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1009586368797321" data-i="3"><img src="1009586368797321-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1009586368797321/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1976745789656626" data-av="in_stock" data-sub="other" data-ph="1976745789656626-1.jpg,1976745789656626-2.jpg,1976745789656626-3.jpg,1976745789656626-4.jpg" data-s="vintage rustic suitcase travel chest trunk decor wooden buckets vintage rustic decor
+</div></article><article class="item" id="item-1976745789656626" data-av="in_stock" data-sub="other" data-ph="1976745789656626-1.jpg,1976745789656626-2.jpg,1976745789656626-3.jpg,1976745789656626-4.jpg" data-s="vintage rustic suitcase travel chest trunk decor wooden buckets &amp; decor vintage rustic decor
 cool gift
 
 15x21x35 inch exterior ">
@@ -4617,28 +4694,28 @@ Cool gift
 
 15x21x35 inch exterior</div><div class="more"><a href="#item-1976745789656626" data-i="0"><img src="1976745789656626-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1976745789656626" data-i="1"><img src="1976745789656626-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1976745789656626" data-i="2"><img src="1976745789656626-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1976745789656626" data-i="3"><img src="1976745789656626-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1976745789656626/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1593582039087769" data-av="in_stock" data-sub="other" data-ph="1593582039087769-1.jpg,1593582039087769-2.jpg,1593582039087769-3.jpg,1593582039087769-4.jpg" data-s="decorative black porcelain jars wooden buckets decorative porcelain jars. see photos for dimensions. priced individually: $39, $39, $45 or $115 for all three. ">
+</div></article><article class="item" id="item-1593582039087769" data-av="in_stock" data-sub="other" data-ph="1593582039087769-1.jpg,1593582039087769-2.jpg,1593582039087769-3.jpg,1593582039087769-4.jpg" data-s="decorative black porcelain jars wooden buckets &amp; decor decorative porcelain jars. see photos for dimensions. priced individually: $39, $39, $45 or $115 for all three. ">
 <a class="ph" href="#item-1593582039087769" aria-label="See photos and details"><img src="1593582039087769-1t.jpg" alt="Decorative Black Porcelain Jars" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Decorative Black Porcelain Jars</h3>
 <div class="price">$39 <span class="u"></span></div>
 <p class="ex">Decorative porcelain jars. See photos for dimensions. Priced individually: $39, $39, $45 or $115 for all three.</p>
 <details><summary>More details</summary><div class="full">Decorative porcelain jars. See photos for dimensions. Priced individually: $39, $39, $45 or $115 for all three.</div><div class="more"><a href="#item-1593582039087769" data-i="0"><img src="1593582039087769-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1593582039087769" data-i="1"><img src="1593582039087769-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1593582039087769" data-i="2"><img src="1593582039087769-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1593582039087769" data-i="3"><img src="1593582039087769-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1593582039087769/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1466572141948916" data-av="in_stock" data-sub="other" data-ph="1466572141948916-1.jpg,1466572141948916-2.jpg,1466572141948916-3.jpg,1466572141948916-4.jpg" data-s="decorative black jar w/ two handles wooden buckets decorative black jar. ">
+</div></article><article class="item" id="item-1466572141948916" data-av="in_stock" data-sub="other" data-ph="1466572141948916-1.jpg,1466572141948916-2.jpg,1466572141948916-3.jpg,1466572141948916-4.jpg" data-s="decorative black jar w/ two handles wooden buckets &amp; decor decorative black jar. ">
 <a class="ph" href="#item-1466572141948916" aria-label="See photos and details"><img src="1466572141948916-1t.jpg" alt="Decorative Black Jar w/ Two Handles" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Decorative Black Jar w/ Two Handles</h3>
 <div class="price">$39 <span class="u"></span></div>
 <p class="ex">Decorative black jar.</p>
 <details><summary>More details</summary><div class="full">Decorative black jar.</div><div class="more"><a href="#item-1466572141948916" data-i="0"><img src="1466572141948916-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1466572141948916" data-i="1"><img src="1466572141948916-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1466572141948916" data-i="2"><img src="1466572141948916-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1466572141948916" data-i="3"><img src="1466572141948916-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1466572141948916/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-1099293002782545" data-av="in_stock" data-sub="other" data-ph="1099293002782545-1.jpg,1099293002782545-2.jpg,1099293002782545-3.jpg,1099293002782545-4.jpg" data-s="hand painted ornamental latched box wooden buckets decorative painted wooden box with latch. ">
+</div></article><article class="item" id="item-1099293002782545" data-av="in_stock" data-sub="other" data-ph="1099293002782545-1.jpg,1099293002782545-2.jpg,1099293002782545-3.jpg,1099293002782545-4.jpg" data-s="hand painted ornamental latched box wooden buckets &amp; decor decorative painted wooden box with latch. ">
 <a class="ph" href="#item-1099293002782545" aria-label="See photos and details"><img src="1099293002782545-1t.jpg" alt="Hand Painted Ornamental Latched Box" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Hand Painted Ornamental Latched Box</h3>
 <div class="price">$42 <span class="u"></span></div>
 <p class="ex">Decorative painted wooden box with latch.</p>
 <details><summary>More details</summary><div class="full">Decorative painted wooden box with latch.</div><div class="more"><a href="#item-1099293002782545" data-i="0"><img src="1099293002782545-1.jpg" alt="Photo 1" loading="lazy"></a><a href="#item-1099293002782545" data-i="1"><img src="1099293002782545-2.jpg" alt="Photo 2" loading="lazy"></a><a href="#item-1099293002782545" data-i="2"><img src="1099293002782545-3.jpg" alt="Photo 3" loading="lazy"></a><a href="#item-1099293002782545" data-i="3"><img src="1099293002782545-4.jpg" alt="Photo 4" loading="lazy"></a></div></details>
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/1099293002782545/" target="_blank" rel="noopener">View on Facebook</a></div>
-</div></article><article class="item" id="item-2903416906711687" data-av="in_stock" data-sub="other" data-ph="2903416906711687-1.jpg,2903416906711687-2.jpg,2903416906711687-3.jpg,2903416906711687-4.jpg" data-s="classic truck willow suitcase wooden buckets truck willow decorative suitcase. rustic vintage decor. ">
+</div></article><article class="item" id="item-2903416906711687" data-av="in_stock" data-sub="other" data-ph="2903416906711687-1.jpg,2903416906711687-2.jpg,2903416906711687-3.jpg,2903416906711687-4.jpg" data-s="classic truck willow suitcase wooden buckets &amp; decor truck willow decorative suitcase. rustic vintage decor. ">
 <a class="ph" href="#item-2903416906711687" aria-label="See photos and details"><img src="2903416906711687-1t.jpg" alt="Classic Truck Willow Suitcase" loading="lazy" width="400" height="300"><span class="pcount">4 photos</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">Classic Truck Willow Suitcase</h3>
 <div class="price">$87 <span class="u"></span></div>
@@ -4686,7 +4763,7 @@ text or call
 -can safely handle up to 500 lbs when both load trolleys are used together
 -additional matching trolleys available aftermarket to increase capacity if needed
 -great condition and ready to hang ">
-<div class="ph vid"><video preload="none" playsinline poster="1565748581219094-1t.jpg" src="v-1565748581219094.mp4" aria-label="Video: 12ft Overhead Hoist Rail Track Monorail w/ Trolleys Crane Zimmermann"></video><button class="play" type="button" aria-label="Play video"><span></span>Video</button><span class="tag in_stock">In stock</span></div>
+<a class="ph vid" href="#item-1565748581219094" aria-label="See video, photos and details"><img src="1565748581219094-1t.jpg" alt="12ft Overhead Hoist Rail Track Monorail w/ Trolleys Crane Zimmermann" loading="lazy" width="400" height="300"><span class="play" aria-hidden="true"><span></span>Video</span><span class="tag in_stock">In stock</span></a>
 <div class="body"><h3 class="gopen">12ft Overhead Hoist Rail Track Monorail w/ Trolleys Crane Zimmermann</h3>
 <div class="price">$750 <span class="u"></span></div>
 <p class="ex">208-606-0899 · -12ft Zimmerman/Ingersoll Rand enclosed overhead rail system with 4 trolleys · -Two 250 lb load trolleys + two blue end trucks…</p>
@@ -4745,6 +4822,7 @@ No damage, works great. A great way to fish wire through conduits, will not kink
 <div class="wrap"><div class="cta"><p><strong>Don't see what you need?</strong> Stock changes often, and flooring can be special ordered. Call or text 208-606-0899.</p><a class="b call" href="sms:+12086060899">Text 208-606-0899</a></div></div></main>
 <footer><div class="wrap"><span>&copy; 2026 GH Sales Lumber &amp; Flooring &middot; 1113 N 39th St, Nampa, ID</span><span>Updated October 20, 2026 &middot; <a href="tel:+12086060899">208-606-0899</a> &middot; <a href="mailto:info@ghsalesllc.com">info@ghsalesllc.com</a></span></div></footer>
 <div id="gm" class="gm" hidden role="dialog" aria-modal="true" aria-labelledby="gm-t"><div class="gm-box"><button class="gm-x" type="button" aria-label="Close">&times;</button><div class="gm-media"><div class="gm-track"></div><span class="gm-count"></span><button class="gm-nav gm-prev" type="button" aria-label="Previous photo">&#8249;</button><button class="gm-nav gm-next" type="button" aria-label="Next photo">&#8250;</button><div class="gm-dots"></div><div class="gm-thumbs"></div></div><div class="gm-info"></div></div></div>
+<script>var ANCH={"wooden-buckets": "wooden-buckets-decor"};(function(){var h=location.hash.slice(1);if(ANCH[h])history.replaceState(null,'','#'+ANCH[h]);})();</script>
 <script>
 (function(){var av='all',q='',open={},sub={};
 var cats=[].slice.call(document.querySelectorAll('.cat'));
@@ -4753,7 +4831,7 @@ its.forEach(function(it){var m=(av==='all'||it.dataset.av.split(' ').indexOf(av)
 var g=it.classList.contains('gen');if(m){if(g)gm++;else n++;}var vis=m&&(g||n<=lim);it.classList.toggle('x',!vis);if(vis&&!g)shown++;});
 var so=c.querySelector('.sorow');if(so)so.style.display=so.querySelector('.item:not(.x)')?'':'none';
 c.style.display=(n||gm)?'':'none';any+=n;var b=c.querySelector('.showall');if(b){b.style.display=(n>shown)?'':'none';b.textContent='Show all '+n;}
-var j=document.querySelector('.jump a[href="#'+c.id+'"]');if(j){j.style.display=n?'':'none';j.querySelector('span').textContent=n;}});
+var j=document.querySelector('.jump a[href="#'+c.id+'"]');if(j){j.style.display=n?'':'none';j.querySelector('.jc').textContent=n;}});
 document.querySelector('.empty').style.display=any?'none':'block';}
 [].slice.call(document.querySelectorAll('.seg button')).forEach(function(b){b.onclick=function(){av=b.dataset.av;
 [].slice.call(document.querySelectorAll('.seg button')).forEach(function(o){o.classList.toggle('on',o===b)});apply();}});
@@ -4761,8 +4839,7 @@ var t;document.getElementById('q').oninput=function(e){clearTimeout(t);t=setTime
 cats.forEach(function(c){var b=c.querySelector('.showall');if(b)b.onclick=function(){open[c.id]=1;apply();};
 [].slice.call(c.querySelectorAll('.subf button')).forEach(function(sb){sb.onclick=function(){sub[c.id]=sb.dataset.sub;
 [].slice.call(c.querySelectorAll('.subf button')).forEach(function(o){o.classList.toggle('on',o===sb)});apply();}});});
-[].slice.call(document.querySelectorAll('.ph.vid')).forEach(function(w){var v=w.querySelector('video'),p=w.querySelector('.play');
-p.onclick=function(){[].slice.call(document.querySelectorAll('.ph.vid video')).forEach(function(o){if(o!==v)o.pause();});w.classList.add('on');v.controls=true;v.play();};});
+
 var gm=document.getElementById('gm'),gTrack=gm.querySelector('.gm-track'),gTh=gm.querySelector('.gm-thumbs'),gDots=gm.querySelector('.gm-dots'),gCnt=gm.querySelector('.gm-count'),gInfo=gm.querySelector('.gm-info'),gPrev=gm.querySelector('.gm-prev'),gNext=gm.querySelector('.gm-next'),gN=0,gCur=0,gPushed=false,gLast=null;
 function esc2(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
 function gSet(i,inst){if(!gN)return;i=Math.max(0,Math.min(gN-1,i));gCur=i;gCnt.textContent=(i+1)+' / '+gN;gCnt.style.display=gN>1?'':'none';gPrev.disabled=i===0;gNext.disabled=i===gN-1;gPrev.style.display=gNext.style.display=gN>1?'':'none';
@@ -4779,7 +4856,7 @@ gTrack.innerHTML=sl;gTh.innerHTML=th;gDots.innerHTML=dt;gN=ph.length+(v?1:0);gTh
 var tg=el.querySelector('.ph .tag'),pr=el.querySelector('.price'),qb=el.querySelector('.qb'),fu=el.querySelector('.full'),fb=el.querySelector('.b.fb'),t2=[].slice.call(el.querySelectorAll('.tag2')).map(function(x){return x.outerHTML.replace('class="tag2"','class="tag2" style="position:static;display:inline-block;margin:0 0 6px 6px"')}).join('');
 gInfo.innerHTML=(tg?'<div>'+tg.outerHTML+t2+'</div>':'')+'<h2 id="gm-t">'+esc2(el.querySelector('h3').textContent)+'</h2>'+(pr?'<div class="price">'+pr.innerHTML+'</div>':'')+(qb?qb.outerHTML:'')+'<p class="gm-ph">Call or text <a href="tel:+12086060899">208-606-0899</a></p><div class="acts gm-acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a>'+
 (fb?'<a class="b fb" href="'+fb.getAttribute('href')+'" target="_blank" rel="noopener">View on Facebook</a>':'')+'</div>'+
-'<p class="gm-hint">Stock changes often, so call or text to confirm before you come. 1113 N 39th St, Nampa, ID.</p>'+(fu?'<div class="full">'+fu.innerHTML+'</div>':'');
+'<p class="gm-hint">Stock changes often, so call or text to confirm before you come. 1113 N 39th St, Nampa, ID.</p>'+(fu?'<div class="full">'+fu.innerHTML+'</div>':(function(){var sp=el.querySelector('.gspecs'),gx=el.querySelector('.gx');return (sp?sp.outerHTML:'')+(gx?'<div class="full">'+gx.innerHTML+'</div>':'');})());
 gLast=document.activeElement;gm.hidden=false;document.body.classList.add('gm-on');gInfo.scrollTop=0;gm.querySelector('.gm-box').scrollTop=0;
 requestAnimationFrame(function(){gSet(start||0,'i');gm.querySelector('.gm-x').focus({preventScroll:true});});}
 function gHide(){if(gm.hidden)return;[].slice.call(gTrack.querySelectorAll('video')).forEach(function(v){v.pause();});gm.hidden=true;document.body.classList.remove('gm-on');gTrack.innerHTML='';if(gLast&&gLast.focus)gLast.focus({preventScroll:true});}
@@ -4788,8 +4865,10 @@ var gStart=0;
 function goHash(){var h=location.hash;if(h.indexOf('#item-')!==0){gHide();return;}var el=document.getElementById(h.slice(1));if(!el){gHide();return;}var c=el.closest('.cat');
 if(c){open[c.id]=1;sub[c.id]='all';[].slice.call(c.querySelectorAll('.subf button')).forEach(function(o){o.classList.toggle('on',o.dataset.sub==='all')});}
 if(av!=='all'){var a=document.querySelector('.seg button[data-av="all"]');if(a)a.click();}apply();el.scrollIntoView({block:'center'});gOpen(el,gStart);gStart=0;}
-document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#item-"],h3.gopen');if(!a||gm.contains(a))return;var it=a.closest('.item');if(!it||!it.id)return;e.preventDefault();
-gStart=parseInt(a.dataset.i||'0',10);if(location.hash==='#'+it.id){goHash();return;}gPushed=true;location.hash=it.id;});
+document.addEventListener('click',function(e){if(gm.contains(e.target))return;var it=e.target.closest('main .item');if(!it||!it.id)return;
+if(e.target.closest('.acts,select,input,button:not(.ph)'))return;var lk=e.target.closest('a');if(lk&&!/^#item-/.test(lk.getAttribute('href')||''))return;
+var a=lk||e.target;e.preventDefault();
+gStart=parseInt((a.dataset&&a.dataset.i)||'0',10);if(location.hash==='#'+it.id){goHash();return;}gPushed=true;location.hash=it.id;});
 gm.querySelector('.gm-x').onclick=gClose;gPrev.onclick=function(){gSet(gCur-1)};gNext.onclick=function(){gSet(gCur+1)};
 gm.addEventListener('click',function(e){if(e.target===gm||e.target.classList.contains('gm-slide'))gClose();});
 document.addEventListener('keydown',function(e){if(gm.hidden)return;if(e.key==='Escape')gClose();else if(e.key==='ArrowRight')gSet(gCur+1);else if(e.key==='ArrowLeft')gSet(gCur-1);});
@@ -4800,13 +4879,21 @@ var sg=sel.closest('.cat').querySelector('.sogrid'),soIts=sg?[].slice.call(sg.ch
 function rank(e,m){var k=e.dataset.q,r=(k==='so'||!k)?2:(k==='n'?1:0);if(m==='hl'&&r===2)r=-1;return r;}
 var TN=["LVP / SPC", "Hybrid Rigid Core / Laminate", "Engineered Hardwood", "Solid Hardwood", "Carpet"];
 sel.onchange=function(){var m=sel.value;[].slice.call(g.querySelectorAll('.tdiv')).forEach(function(d){d.remove();});var tt=m.charAt(0)==='t'?m.slice(1):null;
-function tr(e){var t=e.dataset.t||'9';return t===tt?0:+t;}
-var srt=(tt?its.concat(soIts):its).slice().sort(function(a,b){if(tt){var d0=tr(a)-tr(b);return d0||(a.dataset.o-b.dataset.o);}if(m==='f')return a.dataset.o-b.dataset.o;
+[].slice.call(document.querySelectorAll('#'+sel.closest('.cat').id+' .tclone')).forEach(function(d){d.remove();});
+function tl(e){return (e.dataset.t||'9').split(' ');}
+function tr(e){if(e.dataset.tt)return e.dataset.tt===tt?0:+e.dataset.tt;var l=tl(e);return l.indexOf(tt)>-1?0:+l[0];}
+var pool=tt?its.concat(soIts):its;
+if(tt){var cl=[];pool.forEach(function(e){var l=tl(e);if(l.length<2)return;var keep=l.indexOf(tt)>-1?tt:l[0];e.dataset.tt=keep;l.forEach(function(t){if(t===keep)return;var c=e.cloneNode(true);c.classList.add('tclone');c.id=e.id+'--t'+t;c.dataset.tt=t;cl.push(c);});});pool=pool.concat(cl);}
+else pool.forEach(function(e){delete e.dataset.tt;});
+var srt=pool.slice().sort(function(a,b){if(tt){var d0=tr(a)-tr(b);return d0||(a.dataset.o-b.dataset.o);}if(m==='f')return a.dataset.o-b.dataset.o;
 if(m==='pl'||m==='ph'){var pa=a.dataset.p?parseFloat(a.dataset.p):null,pb=b.dataset.p?parseFloat(b.dataset.p):null;if(pa===null&&pb===null)return a.dataset.o-b.dataset.o;if(pa===null)return 1;if(pb===null)return -1;var dd=m==='pl'?pa-pb:pb-pa;return dd||(a.dataset.o-b.dataset.o);}var ra=rank(a,m),rb=rank(b,m);if(ra!==rb)return ra-rb;
 if(ra===0){var d=parseFloat(a.dataset.q)-parseFloat(b.dataset.q);if(d)return m==='lh'?d:-d;}return a.dataset.o-b.dataset.o;});srt.forEach(function(e){g.appendChild(e);});if(!tt)soIts.forEach(function(e){sg.appendChild(e);});
-if(tt){var f1=srt.filter(function(e){return e.dataset.t===tt;})[0],f2=srt.filter(function(e){return e.dataset.t!==tt;})[0];
+if(tt){var f1=srt.filter(function(e){return tr(e)===0;})[0],f2=srt.filter(function(e){return tr(e)!==0;})[0];
 function dv(txt,bef){var d=document.createElement('div');d.className='tdiv';d.textContent=txt;g.insertBefore(d,bef);}
 if(f1)dv(TN[tt-1],f1);if(f2)dv('Other flooring',f2);}apply();};});
 var p=new URLSearchParams(location.search).get('show');if(p){var bb=document.querySelector('.seg button[data-av="'+p+'"]');if(bb)bb.click();}
+function alias(){var h=location.hash.slice(1);if(window.ANCH&&ANCH[h]){history.replaceState(null,'','#'+ANCH[h]);var e=document.getElementById(ANCH[h]);if(e)e.scrollIntoView({behavior:'instant'});}}window.addEventListener('hashchange',alias);
+setTimeout(function(){var e=document.getElementById(location.hash.slice(1));if(e&&e.classList.contains('cat'))e.scrollIntoView({behavior:'instant'});},60);
+function setCh(){var c=document.querySelector('.controls');if(c)document.documentElement.style.setProperty('--ch',c.offsetHeight+'px');}setCh();window.addEventListener('resize',setCh);
 apply();goHash();})();
 </script></body></html>
