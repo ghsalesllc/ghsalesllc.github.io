@@ -5027,20 +5027,28 @@ gInfo.innerHTML=(tg?'<div>'+tg.outerHTML+t2+'</div>':'')+'<h2 id="gm-t">'+esc2(e
 gLast=document.activeElement;gm.hidden=false;document.body.classList.add('gm-on');gInfo.scrollTop=0;gm.querySelector('.gm-box').scrollTop=0;
 requestAnimationFrame(function(){gSet(start||0,'i');gm.querySelector('.gm-x').focus({preventScroll:true});});}
 function gHide(){if(gm.hidden)return;[].slice.call(gTrack.querySelectorAll('video')).forEach(function(v){v.pause();});gm.hidden=true;document.body.classList.remove('gm-on');gTrack.innerHTML='';if(gLast&&gLast.focus)gLast.focus({preventScroll:true});}
-function gClose(){if(gm.hidden)return;if(gPushed){gPushed=false;history.back();}else{gHide();history.replaceState(null,'',location.pathname+location.search);}}
+var gY=null,gFrom=null;try{var fr=JSON.parse(sessionStorage.getItem('ghFrom')||'null');if(fr&&location.hash==='#item-'+fr.id&&Date.now()-fr.t<1800000)gFrom=fr;}catch(_){}
+function gRestore(){if(gY===null)return;var y=gY;gY=null;window.scrollTo(0,y);requestAnimationFrame(function(){window.scrollTo(0,y);});}
+function gClose(){if(gm.hidden)return;if(gPushed){gPushed=false;history.back();return;}
+if(gFrom){var f=gFrom;gFrom=null;f.ret=1;try{sessionStorage.setItem('ghFrom',JSON.stringify(f));}catch(_){}var ref=(document.referrer||'').split('#')[0];if(ref&&ref===f.u.split('#')[0]&&history.length>1)history.back();else location.href=f.u;return;}
+gHide();history.replaceState(null,'',location.pathname+location.search);gRestore();}
+function gOpenHere(el,st){if(!gm.hidden)return;gY=window.scrollY;gPushed=true;history.pushState({gm:el.id},'','#'+el.id);gOpen(el,st);}
 var gStart=0;
 function goHash(){var h=location.hash;if(h.indexOf('#item-')!==0){gHide();return;}var el=document.getElementById(h.slice(1));if(!el){gHide();return;}var c=el.closest('.cat');
 if(c){open[c.id]=1;sub[c.id]='all';[].slice.call(c.querySelectorAll('.subf button')).forEach(function(o){o.classList.toggle('on',o.dataset.sub==='all')});}
 if(av!=='all'){var a=document.querySelector('.seg button[data-av="all"]');if(a)a.click();}apply();el.scrollIntoView({block:'center'});gOpen(el,gStart);gStart=0;}
-document.addEventListener('click',function(e){if(gm.contains(e.target))return;var it=e.target.closest('main .item');if(!it||!it.id)return;
+document.addEventListener('click',function(e){if(gm.contains(e.target))return;var it=e.target.closest('main .item');
+var lk0=e.target.closest('a');if(lk0&&!it&&/^#item-/.test(lk0.getAttribute('href')||'')){var t0=document.getElementById(lk0.getAttribute('href').slice(1));if(t0){e.preventDefault();gOpenHere(t0,0);}return;}
+if(!it||!it.id)return;
 if(e.target.closest('.acts,select,input,button:not(.ph)'))return;var lk=e.target.closest('a');if(lk&&!/^#item-/.test(lk.getAttribute('href')||''))return;
 var a=lk||e.target;e.preventDefault();
-gStart=parseInt((a.dataset&&a.dataset.i)||'0',10);if(location.hash==='#'+it.id){goHash();return;}gPushed=true;location.hash=it.id;});
+gOpenHere(it,parseInt((a.dataset&&a.dataset.i)||'0',10));});
 gm.querySelector('.gm-x').onclick=gClose;gPrev.onclick=function(){gSet(gCur-1)};gNext.onclick=function(){gSet(gCur+1)};
 gm.addEventListener('click',function(e){if(e.target===gm||e.target.classList.contains('gm-slide'))gClose();});
 document.addEventListener('keydown',function(e){if(gm.hidden)return;if(e.key==='Escape')gClose();else if(e.key==='ArrowRight')gSet(gCur+1);else if(e.key==='ArrowLeft')gSet(gCur-1);});
 window.addEventListener('resize',function(){if(!gm.hidden)gSet(gCur,'i');});
-window.addEventListener('hashchange',function(){if(location.hash.indexOf('#item-')!==0)gPushed=false;goHash();});
+window.addEventListener('popstate',function(){if(location.hash.indexOf('#item-')===0){var el=document.getElementById(location.hash.slice(1));if(el&&gm.hidden){gY=window.scrollY;gPushed=false;gOpen(el,0);}return;}gPushed=false;gHide();gRestore();});
+window.addEventListener('hashchange',function(){if(location.hash.indexOf('#item-')!==0){gPushed=false;gHide();gRestore();return;}if(gm.hidden)goHash();});
 [].slice.call(document.querySelectorAll('select.sortq')).forEach(function(sel){var g=sel.closest('.cat').querySelector('.grid');var its=[].slice.call(g.children);its.forEach(function(e,i){e.dataset.o=i;});
 var sg=sel.closest('.cat').querySelector('.sogrid'),soIts=sg?[].slice.call(sg.children):[];soIts.forEach(function(e,i){e.dataset.o=1000+i;});
 function rank(e,m){var k=e.dataset.q,r=(k==='so'||!k)?2:(k==='n'?1:0);if(m==='hl'&&r===2)r=-1;return r;}

@@ -380,5 +380,7 @@ footer a{color:#fff}
   <a class="fb" href="catalog.html" style="background:var(--wood)">Inventory</a>
 </nav>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<!--nav:origin--><script>(function(){document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="catalog.html#item-"]');if(!a)return;var m=(a.getAttribute('href')||'').match(/#item-([\w-]+)/);if(!m)return;var r=a.closest('.feat-row');try{sessionStorage.setItem('ghFrom',JSON.stringify({u:location.href,y:window.scrollY,sl:r?r.scrollLeft:0,id:m[1],t:Date.now()}));}catch(_){}},true);
+window.addEventListener('pageshow',function(ev){try{var f=JSON.parse(sessionStorage.getItem('ghFrom')||'null');if(!f||f.u!==location.href)return;var n=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};if(!(f.ret||ev.persisted||n.type==='back_forward'))return;sessionStorage.removeItem('ghFrom');if(ev.persisted)return;var go=function(){window.scrollTo(0,f.y);var r=document.querySelector('.feat-row');if(r&&f.sl)r.scrollLeft=f.sl;};go();setTimeout(go,150);}catch(_){}});})();</script><!--/nav:origin-->
 </body>
 </html>
