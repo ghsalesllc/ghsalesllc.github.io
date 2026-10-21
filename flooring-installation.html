@@ -244,6 +244,10 @@ footer a{color:#fff}
 .btn-white{background:#fff;color:var(--teal-dark)}
 .foot-links{display:flex;gap:6px 16px;flex-wrap:wrap}
 .hours-label{max-width:420px;text-align:right;margin-right:-.08em}
+.hours-list li span:last-child,.hours-mini li span:last-child{font-weight:600}
+.hours-list li:nth-child(3) span:last-child,.hours-mini li:nth-child(3) span:last-child{position:relative;isolation:isolate}
+.hours-list li:nth-child(3) span:last-child::before,.hours-mini li:nth-child(3) span:last-child::before{content:"";position:absolute;top:-3px;bottom:-3px;left:-8px;right:-8px;background:#fff4dc;border-radius:6px;z-index:-1}
+.hours-list+.hours-note,.hours-mini+.hours-note{font-size:.8rem}
 .hours-mini{list-style:none;padding:0;margin:.4em 0}
 .hours-mini li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:5px 0;font-size:.95rem;max-width:420px}
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
@@ -466,7 +470,7 @@ footer a{color:#fff}
       <p class="area-line">Serving Nampa, Caldwell, Boise, Meridian, Kuna, Star, Middleton, Emmett and the surrounding Treasure Valley.</p>
       <div class="cta-row" style="justify-content:flex-start"><a class="btn btn-wood" href="tel:+12086060899">Call 208-606-0899</a><a class="btn btn-outline" href="sms:+12086060899">Text us</a><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=1113+N+39th+St%2C+Nampa%2C+ID" target="_blank" rel="noopener">Get directions</a></div>
     </div>
-    <div class="card"><p class="hours-lead">Our hours vary, so please call or text ahead if you're making a special trip. Some days we're out for part or all of the day picking up material.</p>
+    <div class="card"><p class="hours-lead">Our hours vary, so please call or text ahead if you're making a special trip. Some days we're out for part or all of the day in the course of business.</p>
 <div class="hours-label">Typically:</div>
 <ul class="hours-mini"><li><span>Monday</span><span>11 AM to 6 PM</span></li><li><span>Tuesday</span><span>11 AM to 6 PM</span></li><li><span>Wednesday</span><span>11 AM to 3 PM</span></li><li><span>Thursday</span><span>11 AM to 6 PM</span></li><li><span>Friday</span><span>11 AM to 5:30 PM</span></li><li><span>Saturday</span><span>Closed</span></li><li><span>Sunday</span><span>By appointment</span></li></ul>
 <p class="hours-note">Earlier or later times are available by appointment.</p></div>

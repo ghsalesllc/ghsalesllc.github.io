@@ -209,6 +209,10 @@ ul.specs li{margin:.25em 0}
 .hours-lead{font-weight:600;margin:.1em 0 .8em;line-height:1.45}
 .hours-label{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:4px}
 .hours-label{text-align:right;margin-right:-.08em}
+.hours-list li span:last-child,.hours-mini li span:last-child{font-weight:600}
+.hours-list li:nth-child(3) span:last-child,.hours-mini li:nth-child(3) span:last-child{position:relative;isolation:isolate}
+.hours-list li:nth-child(3) span:last-child::before,.hours-mini li:nth-child(3) span:last-child::before{content:"";position:absolute;top:-3px;bottom:-3px;left:-8px;right:-8px;background:#fff4dc;border-radius:6px;z-index:-1}
+.hours-list+.hours-note,.hours-mini+.hours-note{font-size:.8rem}
 .hours-list{list-style:none;padding:0;margin:0 0 .7em}
 .hours-list li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:.95rem}
 .hours-list li span:last-child{font-weight:600;text-align:right;white-space:nowrap}
@@ -350,7 +354,7 @@ footer a{color:#fff}
       </div>
       <div class="card c-hours">
         <h3>Hours</h3>
-        <p class="hours-lead">Our hours vary, so please call or text ahead if you're making a special trip. Some days we're out for part or all of the day picking up material.</p>
+        <p class="hours-lead">Our hours vary, so please call or text ahead if you're making a special trip. Some days we're out for part or all of the day in the course of business.</p>
         <div class="hours-label">Typically:</div>
         <ul class="hours-list">
           <li><span>Monday</span><span>11 AM to 6 PM</span></li>
