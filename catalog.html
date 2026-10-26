@@ -5617,14 +5617,15 @@ No damage, works great. A great way to fish wire through conduits, will not kink
 <div class="acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a><a class="b fb" href="https://www.facebook.com/marketplace/item/2096959005039946/" target="_blank" rel="noopener">View on Facebook</a></div>
 </div></article></div></div></section><p class="empty">Nothing matches that search. Call or text <a href="tel:+12086060899">208-606-0899</a> and we'll tell you what we have.</p>
 <div class="wrap"><div class="cta"><p><strong>Don't see what you need?</strong> Stock changes often, and flooring can be special ordered. Call or text 208-606-0899.</p><a class="b call" href="sms:+12086060899">Text 208-606-0899</a></div></div></main>
-<footer><div class="wrap"><span>&copy; 2026 GH Sales Lumber &amp; Flooring &middot; 1113 N 39th St, Nampa, ID<br><small>Serving Nampa, Caldwell, Boise, Meridian, Kuna, Star, Middleton, Emmett and the surrounding Treasure Valley. Delivery available, call for a quote.</small><br><small>Serving the Treasure Valley since 2022</small></span><span>Updated October 24, 2026 &middot; <a href="tel:+12086060899">208-606-0899</a> &middot; <a href="mailto:info@ghsalesllc.com">info@ghsalesllc.com</a></span></div></footer>
+<footer><div class="wrap"><span>&copy; 2026 GH Sales Lumber &amp; Flooring &middot; 1113 N 39th St, Nampa, ID<br><small>Serving Nampa, Caldwell, Boise, Meridian, Kuna, Star, Middleton, Emmett and the surrounding Treasure Valley. Delivery available, call for a quote.</small><br><small>Serving the Treasure Valley since 2022</small></span><span>Updated October 26, 2026 &middot; <a href="tel:+12086060899">208-606-0899</a> &middot; <a href="mailto:info@ghsalesllc.com">info@ghsalesllc.com</a></span></div></footer>
 <div id="gm" class="gm" hidden role="dialog" aria-modal="true" aria-labelledby="gm-t"><div class="gm-box"><button class="gm-x" type="button" aria-label="Close">&times;</button><div class="gm-media"><div class="gm-track"></div><span class="gm-count"></span><button class="gm-nav gm-prev" type="button" aria-label="Previous photo">&#8249;</button><button class="gm-nav gm-next" type="button" aria-label="Next photo">&#8250;</button><div class="gm-dots"></div><div class="gm-thumbs"></div></div><div class="gm-info"></div></div></div>
 <script>var ANCH={"wooden-buckets": "wooden-buckets-decor"};(function(){var h=location.hash.slice(1);if(ANCH[h])history.replaceState(null,'','#'+ANCH[h]);})();</script>
 <script>
 (function(){var av='all',q='',open={},sub={};
 var cats=[].slice.call(document.querySelectorAll('.cat'));
-function apply(){var any=0;cats.forEach(function(c){var its=[].slice.call(c.querySelectorAll('.item')),n=0,shown=0,gm=0,sf=sub[c.id]||'all',lim=(av==='all'&&!q&&!open[c.id])?1000000000:1e9;
+function apply(){var any=0,seen={};cats.forEach(function(c){var its=[].slice.call(c.querySelectorAll('.item')),n=0,shown=0,gm=0,sf=sub[c.id]||'all',lim=(av==='all'&&!q&&!open[c.id])?1000000000:1e9;
 its.forEach(function(it){var m=(av==='all'||it.dataset.av.split(' ').indexOf(av)>-1)&&(!q||q.split(' ').every(function(w){return it.dataset.s.indexOf(w)>-1}))&&(sf==='all'||!it.dataset.sub||it.dataset.sub===sf);
+if(m&&q){var dk=(it.id||'').split('--')[0];if(dk){if(seen[dk])m=false;else seen[dk]=1;}}
 var g=it.classList.contains('gen');if(m){if(g)gm++;else n++;}var vis=m&&(g||n<=lim);it.classList.toggle('x',!vis);if(vis&&!g)shown++;});
 var so=c.querySelector('.sorow');if(so)so.style.display=so.querySelector('.item:not(.x)')?'':'none';
 c.style.display=(n||gm)?'':'none';any+=n;var b=c.querySelector('.showall');if(b){b.style.display=(n>shown)?'':'none';b.textContent='Show all '+n;}
@@ -5632,7 +5633,7 @@ var j=document.querySelector('.jump a[href="#'+c.id+'"]');if(j){j.style.display=
 document.querySelector('.empty').style.display=any?'none':'block';}
 [].slice.call(document.querySelectorAll('.seg button')).forEach(function(b){b.onclick=function(){av=b.dataset.av;
 [].slice.call(document.querySelectorAll('.seg button')).forEach(function(o){o.classList.toggle('on',o===b)});apply();}});
-var t;document.getElementById('q').oninput=function(e){clearTimeout(t);t=setTimeout(function(){q=e.target.value.trim().toLowerCase().replace(/\s+/g,' ');apply();},150)};
+var t;document.getElementById('q').oninput=function(e){clearTimeout(t);t=setTimeout(function(){q=e.target.value.trim().toLowerCase().replace(/\s+/g,' ');apply();var u=new URLSearchParams(location.search);if(q)u.set('q',e.target.value.trim());else u.delete('q');var us=u.toString();history.replaceState(history.state,'',location.pathname+(us?'?'+us:'')+location.hash);},150)};
 cats.forEach(function(c){var b=c.querySelector('.showall');if(b)b.onclick=function(){open[c.id]=1;apply();};
 [].slice.call(c.querySelectorAll('.subf button')).forEach(function(sb){sb.onclick=function(){sub[c.id]=sb.dataset.sub;
 [].slice.call(c.querySelectorAll('.subf button')).forEach(function(o){o.classList.toggle('on',o===sb)});apply();}});});
@@ -5698,6 +5699,7 @@ function dv(txt,bef){var d=document.createElement('div');d.className='tdiv';d.te
 if(f1)dv(TN[tt-1],f1);if(f2)dv('Other flooring',f2);}
 if(av){var a1=srt.filter(function(e){return e.dataset.av===av;})[0],a2=srt.filter(function(e){return e.dataset.av!==av;})[0];function dv2(txt,bef){var d=document.createElement('div');d.className='tdiv';d.textContent=txt;g.insertBefore(d,bef);}
 if(a1)dv2(av==='in_stock'?'In stock':'Special order',a1);if(a2)dv2(av==='in_stock'?'Special order':'In stock',a2);}apply();};});
+var q0=new URLSearchParams(location.search).get('q');if(q0){document.getElementById('q').value=q0;q=q0.trim().toLowerCase().replace(/\s+/g,' ');apply();setTimeout(function(){var c=document.querySelector('.controls');if(c)c.scrollIntoView();},50);}
 var p=new URLSearchParams(location.search).get('show');if(p){var bb=document.querySelector('.seg button[data-av="'+p+'"]');if(bb)bb.click();}
 function alias(){var h=location.hash.slice(1);if(window.ANCH&&ANCH[h]){history.replaceState(null,'','#'+ANCH[h]);var e=document.getElementById(ANCH[h]);if(e)e.scrollIntoView({behavior:'instant'});}}window.addEventListener('hashchange',alias);
 setTimeout(function(){var e=document.getElementById(location.hash.slice(1));if(e&&e.classList.contains('cat'))e.scrollIntoView({behavior:'instant'});},60);
