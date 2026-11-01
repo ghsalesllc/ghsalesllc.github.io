@@ -4,7 +4,7 @@
 <title>GH Sales Lumber &amp; Flooring</title>
 <link>https://ghsalesllc.com/</link>
 <description>Lumber, flooring and building materials from GH Sales Lumber &amp; Flooring</description>
-<lastBuildDate>Sun, 01 Nov 2026 14:52:37 GMT</lastBuildDate>
+<lastBuildDate>Sun, 01 Nov 2026 16:27:31 GMT</lastBuildDate>
 <item>
 <g:id>1633672991743856</g:id>
 <g:title>"Worn Gray" Mohawk Founder’s Trace - 7″x48″ 6mm/20mil LVP – Waterproof Flooring</g:title>
@@ -2218,17 +2218,74 @@ $15.92 - 2x6x8</g:description>
 <g:product_type>Lumber Beams</g:product_type>
 </item>
 <item>
-<g:id>1039176305822303</g:id>
-<g:title>5/4x6x12 Redwood Decking Boards, True 1" x 5.5", 12ft (8ft &amp; 10ft coming soon)</g:title>
-<g:description>$1.69/lin ft, $20.28 ea 5/4x6x12  board
+<g:id>1039176305822303-8ft</g:id>
+<g:title>5/4x6x8 Redwood Decking Boards - 8 ft</g:title>
+<g:description>$1.69 per linear foot, $13.52 per 8 ft board. Sold by the piece.
 
-True 1" thick x 5.5" actual width
-8s and 10s will be in stock soon
+5/4x6 redwood decking boards, 8 ft long. True 1" thick x 5.5" actual width.
+Alpine Select redwood. S4SEE, eased edges. Unstained.
+Also available in 10 and 12 ft lengths.
 
-Alpine Select redwood. S4SEE, eased edges. Unstained. Sold by the piece.
+Bug and rot resistant like cedar, but stronger. Good for decks, benches and outdoor builds.</g:description>
+<g:link>https://ghsalesllc.com/catalog.html#item-1039176305822303-8ft--lumber-beams</g:link>
+<g:image_link>https://ghsalesllc.com/1039176305822303-1.jpg</g:image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-2.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-3.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-4.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-5.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-6.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-7.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-8.jpg</g:additional_image_link>
+<g:availability>in_stock</g:availability>
+<g:price>13.52 USD</g:price>
+<g:unit_pricing_measure>8ft</g:unit_pricing_measure>
+<g:unit_pricing_base_measure>1ft</g:unit_pricing_base_measure>
+<g:condition>new</g:condition>
+<g:brand>GH Sales Lumber &amp; Flooring</g:brand>
+<g:identifier_exists>no</g:identifier_exists>
+<g:google_product_category>125</g:google_product_category>
+<g:product_type>Lumber Beams</g:product_type>
+</item>
+<item>
+<g:id>1039176305822303-10ft</g:id>
+<g:title>5/4x6x10 Redwood Decking Boards - 10 ft</g:title>
+<g:description>$1.69 per linear foot, $16.90 per 10 ft board. Sold by the piece.
 
-Bug and rot resistant like Cedar, but stronger. Good for decks, benches and outdoor builds.</g:description>
-<g:link>https://ghsalesllc.com/catalog.html#item-1039176305822303--lumber-beams</g:link>
+5/4x6 redwood decking boards, 10 ft long. True 1" thick x 5.5" actual width.
+Alpine Select redwood. S4SEE, eased edges. Unstained.
+Also available in 8 and 12 ft lengths.
+
+Bug and rot resistant like cedar, but stronger. Good for decks, benches and outdoor builds.</g:description>
+<g:link>https://ghsalesllc.com/catalog.html#item-1039176305822303-10ft--lumber-beams</g:link>
+<g:image_link>https://ghsalesllc.com/1039176305822303-1.jpg</g:image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-2.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-3.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-4.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-5.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-6.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-7.jpg</g:additional_image_link>
+<g:additional_image_link>https://ghsalesllc.com/1039176305822303-8.jpg</g:additional_image_link>
+<g:availability>in_stock</g:availability>
+<g:price>16.90 USD</g:price>
+<g:unit_pricing_measure>10ft</g:unit_pricing_measure>
+<g:unit_pricing_base_measure>1ft</g:unit_pricing_base_measure>
+<g:condition>new</g:condition>
+<g:brand>GH Sales Lumber &amp; Flooring</g:brand>
+<g:identifier_exists>no</g:identifier_exists>
+<g:google_product_category>125</g:google_product_category>
+<g:product_type>Lumber Beams</g:product_type>
+</item>
+<item>
+<g:id>1039176305822303-12ft</g:id>
+<g:title>5/4x6x12 Redwood Decking Boards - 12 ft</g:title>
+<g:description>$1.69 per linear foot, $20.28 per 12 ft board. Sold by the piece.
+
+5/4x6 redwood decking boards, 12 ft long. True 1" thick x 5.5" actual width.
+Alpine Select redwood. S4SEE, eased edges. Unstained.
+Also available in 8 and 10 ft lengths.
+
+Bug and rot resistant like cedar, but stronger. Good for decks, benches and outdoor builds.</g:description>
+<g:link>https://ghsalesllc.com/catalog.html#item-1039176305822303-12ft--lumber-beams</g:link>
 <g:image_link>https://ghsalesllc.com/1039176305822303-1.jpg</g:image_link>
 <g:additional_image_link>https://ghsalesllc.com/1039176305822303-2.jpg</g:additional_image_link>
 <g:additional_image_link>https://ghsalesllc.com/1039176305822303-3.jpg</g:additional_image_link>
