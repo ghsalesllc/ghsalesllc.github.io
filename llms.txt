@@ -12,7 +12,7 @@ Key facts:
 
 ## Shop
 - [Full product catalog with prices](https://ghsalesllc.com/catalog.html): every item currently for sale, updated daily
-- [Flooring and carpet](https://ghsalesllc.com/flooring.html): LVP, laminate, hardwood and carpet with prices per square foot
+- [Flooring and carpet](https://ghsalesllc.com/flooring.html): LVP, waterproof laminate, hardwood and carpet with prices per square foot
 - [Japanese Sugi cedar](https://ghsalesllc.com/japanese-sugi-cedar.html): Sugi tongue and groove and boards
 - [Fencing](https://ghsalesllc.com/fencing.html): redwood fence pickets and cedar fence boards
 - [Lumber and beams](https://ghsalesllc.com/lumber-beams.html)
@@ -22,6 +22,7 @@ Key facts:
 ## Guides
 - [Flooring store guide](https://ghsalesllc.com/flooring-nampa-boise.html): flooring types carried and how to buy
 - [Flooring installation](https://ghsalesllc.com/flooring-installation.html): getting flooring and installation in one place
+- [Install help for your floor](https://ghsalesllc.com/install-help-for-your-floor.html): ChatGPT and Perplexity install links for each flooring product, or text GH Sales to install it
 - [Sugi cedar sauna wood](https://ghsalesllc.com/sugi-cedar-sauna-wood.html)
 - [Sauna wood calculator](https://ghsalesllc.com/sauna-wood-calculator.html)
 - [Sugi vs. western red cedar](https://ghsalesllc.com/sugi-vs-western-red-cedar.html)
