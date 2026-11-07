@@ -28,6 +28,9 @@ Allow: /
 User-agent: Claude-User
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
