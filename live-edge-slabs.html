@@ -1367,6 +1367,25 @@ Delivery available</div><div class="more"><a href="#item-1057785847036360" data-
 <div id="gm" class="gm" hidden role="dialog" aria-modal="true" aria-labelledby="gm-t"><div class="gm-box"><button class="gm-x" type="button" aria-label="Close">&times;</button><div class="gm-media"><div class="gm-track"></div><span class="gm-count"></span><button class="gm-nav gm-prev" type="button" aria-label="Previous photo">&#8249;</button><button class="gm-nav gm-next" type="button" aria-label="Next photo">&#8250;</button><div class="gm-dots"></div><div class="gm-thumbs"></div></div><div class="gm-info"></div></div></div>
 <script>
 (function(){var av='all',q='',open={},sub={};
+/* Greg t1014u 2026-11-10: persist sort/filter/search in the URL so a copied link restores the same view. Canonical stays clean (no params). */
+function syncUrl(){var u=new URLSearchParams(location.search),inp=document.getElementById('q'),qv=inp?inp.value.trim():'';
+if(qv)u.set('q',qv);else u.delete('q');
+if(av&&av!=='all')u.set('show',av);else u.delete('show');
+u.delete('sort');u.delete('type');
+var sel=document.querySelector('select.sortq');
+if(sel){var m=sel.value||'f';if(m.charAt(0)==='t'){var sl={1:'lvp-spc',2:'rigid-core',3:'engineered',4:'solid-hardwood',5:'carpet'}[+m.slice(1)];if(sl)u.set('type',sl);}else if(m!=='f'){u.set('sort',{lh:'sqft-asc',hl:'sqft-desc',pl:'price-asc',ph:'price-desc',ai:'in-stock',as:'special-order'}[m]||m);}}
+var sv=null;cats.forEach(function(c){if(sub[c.id]&&sub[c.id]!=='all')sv=sub[c.id];});if(sv)u.set('sub',sv);else u.delete('sub');
+var us=u.toString(),next=location.pathname+(us?'?'+us:'')+location.hash;
+if(location.pathname+location.search+location.hash!==next){try{history.replaceState(history.state,'',next);}catch(_){}}}
+function restoreUrl(){var u=new URLSearchParams(location.search),q0=u.get('q'),inp=document.getElementById('q');
+if(q0&&inp){inp.value=q0;q=q0.trim().toLowerCase().replace(/\s+/g,' ');apply();setTimeout(function(){var c=document.querySelector('.controls');if(c)c.scrollIntoView();},50);}
+var typ=(u.get('type')||'').toLowerCase(),srt=(u.get('sort')||'').toLowerCase(),sel=document.querySelector('select.sortq');
+var TM={'lvp-spc':'1','lvp':'1','spc':'1','vinyl':'1','1':'1','rigid-core':'2','rigid-hybrid':'2','hybrid':'2','hybrid-rigid-core':'2','hybrid-rigid':'2','rigid-core-laminate':'2','laminate':'2','2':'2','engineered':'3','engineered-hardwood':'3','3':'3','solid-hardwood':'4','hardwood':'4','solid':'4','4':'4','carpet':'5','5':'5'};
+var SM={'sqft-asc':'lh','lh':'lh','sqft-desc':'hl','hl':'hl','price-asc':'pl','pl':'pl','price-desc':'ph','ph':'ph','in-stock':'ai','ai':'ai','special-order':'as','as':'as','featured':'f','f':'f'};
+if(sel){var want=null;if(typ&&TM[typ])want='t'+TM[typ];else if(srt&&SM[srt])want=SM[srt];else if(srt.charAt(0)==='t'&&TM[srt.slice(1)])want='t'+TM[srt.slice(1)];
+if(want&&[].slice.call(sel.options).some(function(o){return o.value===want;})){sel.value=want;sel.dispatchEvent(new Event('change'));}}
+var p=u.get('show')||u.get('avail');if(p){var bb=document.querySelector('.seg button[data-av="'+p+'"]');if(bb)bb.click();}
+var sub0=u.get('sub');if(sub0){[].slice.call(document.querySelectorAll('.subf button')).forEach(function(b){if(b.dataset.sub===sub0)b.click();});}}
 var cats=[].slice.call(document.querySelectorAll('.cat'));
 function apply(){var any=0,seen={};cats.forEach(function(c){var its=[].slice.call(c.querySelectorAll('.item')),n=0,shown=0,gm=0,sf=sub[c.id]||'all',lim=(av==='all'&&!q&&!open[c.id])?1000000000:1e9;
 its.forEach(function(it){var m=(av==='all'||it.dataset.av.split(' ').indexOf(av)>-1)&&(!q||q.split(' ').every(function(w){return it.dataset.s.indexOf(w)>-1}))&&(sf==='all'||!it.dataset.sub||it.dataset.sub===sf);
@@ -1377,11 +1396,11 @@ c.style.display=(n||gm)?'':'none';any+=n;var b=c.querySelector('.showall');if(b)
 var j=document.querySelector('.jump a[href="#'+c.id+'"]');if(j){j.style.display=n?'':'none';j.querySelector('.jc').textContent=n;}});
 document.querySelector('.empty').style.display=any?'none':'block';}
 [].slice.call(document.querySelectorAll('.seg button')).forEach(function(b){b.onclick=function(){av=b.dataset.av;
-[].slice.call(document.querySelectorAll('.seg button')).forEach(function(o){o.classList.toggle('on',o===b)});apply();}});
-var t;document.getElementById('q').oninput=function(e){clearTimeout(t);t=setTimeout(function(){q=e.target.value.trim().toLowerCase().replace(/\s+/g,' ');apply();var u=new URLSearchParams(location.search);if(q)u.set('q',e.target.value.trim());else u.delete('q');var us=u.toString();history.replaceState(history.state,'',location.pathname+(us?'?'+us:'')+location.hash);},150)};
-cats.forEach(function(c){var b=c.querySelector('.showall');if(b)b.onclick=function(){open[c.id]=1;apply();};
+[].slice.call(document.querySelectorAll('.seg button')).forEach(function(o){o.classList.toggle('on',o===b)});apply();syncUrl();}});
+var t;document.getElementById('q').oninput=function(e){clearTimeout(t);t=setTimeout(function(){q=e.target.value.trim().toLowerCase().replace(/\s+/g,' ');apply();syncUrl();},150)};
+cats.forEach(function(c){var b=c.querySelector('.showall');if(b)b.onclick=function(){open[c.id]=1;apply();syncUrl();};
 [].slice.call(c.querySelectorAll('.subf button')).forEach(function(sb){sb.onclick=function(){sub[c.id]=sb.dataset.sub;
-[].slice.call(c.querySelectorAll('.subf button')).forEach(function(o){o.classList.toggle('on',o===sb)});apply();}});});
+[].slice.call(c.querySelectorAll('.subf button')).forEach(function(o){o.classList.toggle('on',o===sb)});apply();syncUrl();}});});
 
 var gm=document.getElementById('gm'),gTrack=gm.querySelector('.gm-track'),gTh=gm.querySelector('.gm-thumbs'),gDots=gm.querySelector('.gm-dots'),gCnt=gm.querySelector('.gm-count'),gInfo=gm.querySelector('.gm-info'),gPrev=gm.querySelector('.gm-prev'),gNext=gm.querySelector('.gm-next'),gN=0,gCur=0,gPushed=false,gLast=null;
 function esc2(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
@@ -1400,7 +1419,7 @@ var tg=el.querySelector('.ph .tag'),pr=el.querySelector('.price'),qb=el.querySel
 var ihq=el.dataset.ihQ||'',ih='';if(ihq){var enc=encodeURIComponent(ihq);ih='<details class="ih" open><summary>How do I install this?</summary><div class="ih-body"><div class="ih-links"><a class="ih-a" href="https://chatgpt.com/?q='+enc+'" target="_blank" rel="noopener">ChatGPT</a><a class="ih-a" href="https://grok.com/?q='+enc+'" target="_blank" rel="noopener">Ask Grok</a></div><p class="ih-pro">Prefer a pro? GH Sales installs it — text <a href="sms:+12086060899">(208) 606-0899</a>.</p></div></details>';}var ihcq=el.dataset.ihCq||'';if(ihcq){var enc2=encodeURIComponent(ihcq);ih+='<details class="ih" open><summary>How should I finish this cedar?</summary><div class="ih-body"><div class="ih-links"><a class="ih-a" href="https://chatgpt.com/?q='+enc2+'" target="_blank" rel="noopener">ChatGPT</a><a class="ih-a" href="https://grok.com/?q='+enc2+'" target="_blank" rel="noopener">Ask Grok</a></div><p class="ih-pro">Questions about finishing? Call or text <a href="sms:+12086060899">(208) 606-0899</a>.</p></div></details>';}
 gInfo.innerHTML=(tg?'<div>'+tg.outerHTML+t2+'</div>':'')+'<h2 id="gm-t">'+esc2(el.querySelector('h3').textContent)+'</h2>'+(pr?'<div class="price">'+pr.innerHTML+'</div>':'')+(qb?qb.outerHTML:'')+'<p class="gm-ph">Call or text <a href="tel:+12086060899">208-606-0899</a></p><div class="acts gm-acts"><a class="b call" href="tel:+12086060899">Call</a><a class="b txt" href="sms:+12086060899">Text</a>'+
 (fb?'<a class="b fb" href="'+fb.getAttribute('href')+'" target="_blank" rel="noopener">View on Facebook</a>':'')+'</div>'+ih+
-'<p class="gm-hint">Stock changes often, so call or text to confirm before you come. 1113 N 39th St, Nampa, ID.</p>'+(fu?'<div class="full">'+fu.innerHTML+'</div>':(function(){var sp=el.querySelector('.gspecs'),gx=el.querySelector('.gx');return (sp?sp.outerHTML:'')+(gx?'<div class="full">'+gx.innerHTML+'</div>':'');})());
+'<p class="gm-hint">Stock changes often, so call or text to confirm before you come. 1113 N 39th St, Nampa, ID.</p>'+(fu?'<div class="full">'+fu.innerHTML+'</div>':(function(){var sp=el.querySelector('.gspecs'),gx=el.querySelector('.gx');return (sp?sp.outerHTML:'')+(gx?'<div class="full">'+gx.innerHTML+'</div>':'');})())+(function(){var pl=el.querySelector('.pagelink');return pl?pl.outerHTML:'';})();
 gLast=document.activeElement;gm.hidden=false;document.body.classList.add('gm-on');gInfo.scrollTop=0;gm.querySelector('.gm-box').scrollTop=0;
 requestAnimationFrame(function(){gSet(start||0,'i');gm.querySelector('.gm-x').focus({preventScroll:true});});}
 function gHide(){if(gm.hidden)return;[].slice.call(gTrack.querySelectorAll('video')).forEach(function(v){v.pause();});gm.hidden=true;document.body.classList.remove('gm-on');gTrack.innerHTML='';if(gLast&&gLast.focus)gLast.focus({preventScroll:true});}
@@ -1444,10 +1463,9 @@ if(tt){var f1=srt.filter(function(e){return tr(e)===0;})[0],f2=srt.filter(functi
 function dv(txt,bef){var d=document.createElement('div');d.className='tdiv';d.textContent=txt;g.insertBefore(d,bef);}
 if(f1)dv(TN[tt-1],f1);if(f2)dv('Other flooring',f2);}
 if(av){var a1=srt.filter(function(e){return e.dataset.av===av;})[0],a2=srt.filter(function(e){return e.dataset.av!==av;})[0];function dv2(txt,bef){var d=document.createElement('div');d.className='tdiv';d.textContent=txt;g.insertBefore(d,bef);}
-if(a1)dv2(av==='in_stock'?'In stock':'Special order',a1);if(a2)dv2(av==='in_stock'?'Special order':'In stock',a2);}apply();};});
-var q0=new URLSearchParams(location.search).get('q');if(q0){document.getElementById('q').value=q0;q=q0.trim().toLowerCase().replace(/\s+/g,' ');apply();setTimeout(function(){var c=document.querySelector('.controls');if(c)c.scrollIntoView();},50);}
-var p=new URLSearchParams(location.search).get('show');if(p){var bb=document.querySelector('.seg button[data-av="'+p+'"]');if(bb)bb.click();}
-function alias(){var h=location.hash.slice(1),g=window.ANCHF?ANCHF(h):h;if(g!==h){history.replaceState(null,'','#'+g);var e=document.getElementById(g);if(e)e.scrollIntoView({behavior:'instant'});}}window.addEventListener('hashchange',alias);
+if(a1)dv2(av==='in_stock'?'In stock':'Special order',a1);if(a2)dv2(av==='in_stock'?'Special order':'In stock',a2);}apply();syncUrl();};});
+restoreUrl();
+function alias(){var h=location.hash.slice(1),g=window.ANCHF?ANCHF(h):h;if(g!==h){history.replaceState(null,'',location.pathname+location.search+'#'+g);var e=document.getElementById(g);if(e)e.scrollIntoView({behavior:'instant'});}}window.addEventListener('hashchange',alias);
 setTimeout(function(){var e=document.getElementById(location.hash.slice(1));if(e&&e.classList.contains('cat'))e.scrollIntoView({behavior:'instant'});},60);
 function setCh(){var c=document.querySelector('.controls');if(c)document.documentElement.style.setProperty('--ch',c.offsetHeight+'px');}setCh();window.addEventListener('resize',setCh);
 apply();goHash();})();
