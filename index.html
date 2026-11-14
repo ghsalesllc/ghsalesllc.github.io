@@ -150,7 +150,7 @@
   "@type": "MerchantReturnPolicy",
   "@id": "https://ghsalesllc.com/#return-policy",
   "name": "GH Sales Lumber & Flooring return policy",
-  "description": "All sales are final except flooring, tile, and butcher block, which allow returns within 14 days in original packaging with a 20% restocking fee. Special order and damaged items are non-returnable.",
+  "description": "All lumber and building material sales are final. Flooring returns are accepted within 14 days in original packaging with a 20% restocking fee. No returns on special order, sale or damaged items. Please inspect all items at loading.",
   "applicableCountry": "US",
   "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
   "merchantReturnLink": "https://ghsalesllc.com/#return-policy"
@@ -414,7 +414,37 @@ footer a{color:#fff}
 @media (max-width:640px){.topbar .wrap{justify-content:center;gap:6px 12px}.tb-info{width:100%;justify-content:center;gap:2px 14px;font-size:.82rem}.tb-sep{display:none}}
 @media (min-width:861px){.feat-row{grid-template-columns:repeat(4,1fr)}.fcard{grid-template-columns:1fr;grid-template-rows:150px auto;min-height:0}.fmedia{height:150px}}
 </style>
-</head>
+<script type="application/ld+json" id="ld-return-policies">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "MerchantReturnPolicy",
+   "@id": "https://ghsalesllc.com/#return-policy-flooring",
+   "applicableCountry": "US",
+   "returnPolicyCountry": "US",
+   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+   "merchantReturnDays": 14,
+   "returnMethod": "https://schema.org/ReturnInStore",
+   "returnFees": "https://schema.org/RestockingFees",
+   "restockingFee": {
+    "@type": "QuantitativeValue",
+    "value": 20,
+    "unitCode": "P1",
+    "unitText": "percent"
+   },
+   "description": "20% restocking fee. Flooring returns accepted within 14 days in original packaging. No returns on special order, sale or damaged items.",
+   "merchantReturnLink": "https://ghsalesllc.com/#return-policy"
+  },
+  {
+   "@type": "MerchantReturnPolicy",
+   "@id": "https://ghsalesllc.com/#return-policy-final",
+   "applicableCountry": "US",
+   "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+   "description": "All lumber and building material sales are final. No returns on special order, sale or damaged items.",
+   "merchantReturnLink": "https://ghsalesllc.com/#return-policy"
+  }
+ ]
+}</script></head>
 <body>
 
 <div class="topbar">
@@ -536,7 +566,7 @@ window.addEventListener('pageshow',function(ev){if(ev.persisted&&inp.value)run(i
     <span>&copy; <span id="yr">2026</span> GH Sales Lumber &amp; Flooring &middot; Nampa, Idaho<br><small>Serving the Treasure Valley since 2022</small></span>
     <span><a href="about.html">About</a> &middot; <a href="tel:+12086060899">208-606-0899</a> &middot; <a href="mailto:info@ghsalesllc.com">info@ghsalesllc.com</a></span>
   </div>
-  <!--seo:returns--><div class="wrap rpol" id="return-policy"><h2>Return Policy</h2><p>All sales are final except flooring, tile, and butcher block, which allow returns within 14 days in original packaging with a 20% restocking fee. Special order and damaged items are non-returnable.</p><p>Items are for pickup at 1113 N 39th St, Nampa, ID 83687. Delivery is available for an added fee.</p></div><!--/seo:returns-->
+  <!--seo:returns--><div class="wrap rpol" id="return-policy"><h2>Return Policy</h2><p>All lumber and building material sales are final. Flooring returns are accepted within 14 days in original packaging with a 20% restocking fee. No returns on special order, sale or damaged items. Please inspect all items at loading.</p><p>Items are for pickup at 1113 N 39th St, Nampa, ID 83687. Delivery is available for an added fee.</p></div><!--/seo:returns-->
 </footer>
 
 <nav class="mobilebar" aria-label="Quick contact">
