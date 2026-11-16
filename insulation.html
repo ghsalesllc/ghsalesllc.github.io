@@ -356,7 +356,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .sortbar select{font:inherit;font-size:.88rem;font-weight:600;color:var(--wood-dark);background:#fff;border:1.5px solid var(--wood-dark);border-radius:9px;padding:6px 28px 6px 10px;max-width:100%}
 @media (max-width:600px){.sortbar{justify-content:stretch}.sortbar select{flex:1;min-width:0;width:100%;font-size:16px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:40px;box-sizing:border-box;padding:8px 28px 8px 10px}}
 /* Greg t1064u 2026-11-12: custom sort menu replaces the phone's native picker (JS hides the select; it stays for logic + no-JS fallback) */
-.sortq.smx-native{position:absolute!important;width:1px!important;height:1px!important;opacity:0;pointer-events:none;overflow:hidden;clip:rect(0 0 0 0)}
+.sortq.smx-native,.sizeq.smx-native{position:absolute!important;width:1px!important;height:1px!important;opacity:0;pointer-events:none;overflow:hidden;clip:rect(0 0 0 0)}
 .smx{position:relative;flex:0 1 auto;min-width:0;max-width:100%}
 .smx-btn{display:flex;align-items:center;gap:8px;width:100%;min-width:220px;max-width:340px;box-sizing:border-box;min-height:40px;padding:7px 12px;font:inherit;font-size:15px;font-weight:600;line-height:1.2;color:var(--wood-dark);background:#fff;border:1.5px solid var(--wood-dark);border-radius:9px;cursor:pointer;text-align:left}
 .smx-btn:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
@@ -549,7 +549,7 @@ window.addEventListener('pageshow',function(ev){if(ev.persisted&&inp.value)run(i
 <p class="intro">Rigid foam board insulation and other insulation deals as they come in, ready to pick up in Nampa. Good for walls, shops, garages and basements across Boise and the Treasure Valley.</p>
 <p class="callrow">Call or text for current stock and availability. <a href="tel:+12086060899">208-606-0899</a> &middot; <a href="sms:+12086060899">Text us</a></p></div></header>
 <div class="controls"><div class="wrap"><input id="q" type="search" placeholder="Search Insulation" aria-label="Search Insulation"><div class="seg" role="group" aria-label="Availability"><button type="button" class="on" data-av="all">All</button><button type="button" data-av="in_stock">In stock</button><button type="button" data-av="special_order">Special order</button></div></div></div>
-<main><section class="cat" id="insulation"><div class="wrap"><div class="banner"><img src="cat-insulation-own.jpg" alt="" loading="lazy" width="800" height="600" data-wh><h2>Insulation inventory</h2></div><div class="grid"><article class="item" id="item-1737816820605192" data-av="in_stock" data-ph="1737816820605192-1.jpg,1737816820605192-2.jpg,1737816820605192-3.jpg,1737816820605192-4.jpg" data-pt="1" data-s="2in 4x4 polyiso rigid foam board insulation - fiberglass reinforced paper faced insulation $15 per 4x4 sheet
+<main><section class="cat" id="insulation"><div class="wrap"><div class="banner"><img src="cat-insulation-own.jpg" alt="" loading="lazy" width="800" height="600" data-wh><h2>Insulation inventory</h2></div><div class="grid"><article class="item" id="item-1737816820605192" data-av="in_stock" data-th="4" data-ph="1737816820605192-1.jpg,1737816820605192-2.jpg,1737816820605192-3.jpg,1737816820605192-4.jpg" data-pt="1" data-s="2in 4x4 polyiso rigid foam board insulation - fiberglass reinforced paper faced insulation $15 per 4x4 sheet
 
 2in thick fiberglass reinforced paper faced closed cell sheets
 r-value 11.4
@@ -595,6 +595,7 @@ if(av&&av!=='all')u.set('show',av);else u.delete('show');
 u.delete('sort');u.delete('type');
 var sel=document.querySelector('select.sortq');
 if(sel){var m=sel.value||'f';if(m.charAt(0)==='t'){var sl={1:'lvp-spc',2:'rigid-core',3:'engineered',4:'solid-hardwood',5:'carpet'}[+m.slice(1)];if(sl)u.set('type',sl);}else if(m!=='f'){u.set('sort',{lh:'sqft-asc',hl:'sqft-desc',pl:'price-asc',ph:'price-desc',ai:'in-stock',as:'special-order'}[m]||m);}}
+var sz=document.querySelector('select.sizeq');if(sz&&sz.value&&sz.value!=='all')u.set('size',sz.value);else u.delete('size');
 var sv=null;cats.forEach(function(c){if(sub[c.id]&&sub[c.id]!=='all')sv=sub[c.id];});if(sv)u.set('sub',sv);else u.delete('sub');
 var us=u.toString(),next=location.pathname+(us?'?'+us:'')+location.hash;
 if(location.pathname+location.search+location.hash!==next){try{history.replaceState(history.state,'',next);}catch(_){}}}
@@ -605,15 +606,18 @@ var TM={'lvp-spc':'1','lvp':'1','spc':'1','vinyl':'1','1':'1','rigid-core':'2','
 var SM={'sqft-asc':'lh','lh':'lh','sqft-desc':'hl','hl':'hl','price-asc':'pl','pl':'pl','price-desc':'ph','ph':'ph','in-stock':'ai','ai':'ai','special-order':'as','as':'as','featured':'f','f':'f'};
 if(sel){var want=null;if(typ&&TM[typ])want='t'+TM[typ];else if(srt&&SM[srt])want=SM[srt];else if(srt.charAt(0)==='t'&&TM[srt.slice(1)])want='t'+TM[srt.slice(1)];
 if(want&&[].slice.call(sel.options).some(function(o){return o.value===want;})){sel.value=want;sel.dispatchEvent(new Event('change'));}}
+var sz=document.querySelector('select.sizeq'),szv=(u.get('size')||'').toLowerCase().replace(/x.*$/,'').replace(/[^0-9.]/g,'');
+if(sz&&szv&&[].slice.call(sz.options).some(function(o){return o.value===szv;})){sz.value=szv;sz.dispatchEvent(new Event('change'));}
 var p=u.get('show')||u.get('avail');if(p){var bb=document.querySelector('.seg button[data-av="'+p+'"]');if(bb)bb.click();}
 var sub0=u.get('sub');if(sub0){[].slice.call(document.querySelectorAll('.subf button')).forEach(function(b){if(b.dataset.sub===sub0)b.click();});}}
 var cats=[].slice.call(document.querySelectorAll('.cat'));
 function apply(){var any=0,seen={};cats.forEach(function(c){var its=[].slice.call(c.querySelectorAll('.item')),n=0,shown=0,gm=0,sf=sub[c.id]||'all',lim=(av==='all'&&!q&&!open[c.id])?1000000000:1e9;
-its.forEach(function(it){var m=(av==='all'||it.dataset.av.split(' ').indexOf(av)>-1)&&(!q||q.split(' ').every(function(w){return it.dataset.s.indexOf(w)>-1}))&&(sf==='all'||!it.dataset.sub||it.dataset.sub===sf);
+var thSel=c.querySelector('select.sizeq'),thMin=(thSel&&thSel.value&&thSel.value!=='all')?parseFloat(thSel.value):0;
+its.forEach(function(it){var m=(av==='all'||it.dataset.av.split(' ').indexOf(av)>-1)&&(!q||q.split(' ').every(function(w){return it.dataset.s.indexOf(w)>-1}))&&(sf==='all'||!it.dataset.sub||it.dataset.sub===sf)&&(thMin===0||(it.dataset.th&&parseFloat(it.dataset.th)>=thMin));
 if(m&&q){var dk=(it.id||'').split('--')[0];if(dk){if(seen[dk])m=false;else seen[dk]=1;}}
 var g=it.classList.contains('gen');if(m){if(g)gm++;else n++;}var vis=m&&(g||n<=lim);it.classList.toggle('x',!vis);if(vis&&!g)shown++;});
 var so=c.querySelector('.sorow');if(so)so.style.display=so.querySelector('.item:not(.x)')?'':'none';
-c.style.display=(n||gm)?'':'none';any+=n;var b=c.querySelector('.showall');if(b){b.style.display=(n>shown)?'':'none';b.textContent='Show all '+n;}
+c.style.display=(n||gm||thMin)?'':'none';any+=n;var b=c.querySelector('.showall');if(b){b.style.display=(n>shown)?'':'none';b.textContent='Show all '+n;}
 var j=document.querySelector('.jump a[href="#'+c.id+'"]');if(j){j.style.display=n?'':'none';j.querySelector('.jc').textContent=n;}});
 document.querySelector('.empty').style.display=any?'none':'block';}
 [].slice.call(document.querySelectorAll('.seg button')).forEach(function(b){b.onclick=function(){av=b.dataset.av;
@@ -686,9 +690,10 @@ if(f1)dv(TN[tt-1],f1);if(f2)dv('Other flooring',f2);}
 if(av){var a1=srt.filter(function(e){return e.dataset.av===av;})[0],a2=srt.filter(function(e){return e.dataset.av!==av;})[0];function dv2(txt,bef){var d=document.createElement('div');d.className='tdiv';d.textContent=txt;g.insertBefore(d,bef);}
 if(a1)dv2(av==='in_stock'?'In stock':'Special order',a1);if(a2)dv2(av==='in_stock'?'Special order':'In stock',a2);}apply();syncUrl();};});
 /* Greg t1064u 2026-11-12: compact custom sort menu (button + listbox; bottom sheet on phones). The hidden select keeps driving sort + URL state. */
-[].slice.call(document.querySelectorAll('select.sortq')).forEach(function(sel,si){
+[].slice.call(document.querySelectorAll('select.sortq, select.sizeq')).forEach(function(sel,si){
 var w=document.createElement('div');w.className='smx';var bid='smx-b'+si,lid='smx-l'+si;
-w.innerHTML='<button type="button" class="smx-btn" id="'+bid+'" aria-haspopup="listbox" aria-expanded="false" aria-controls="'+lid+'"><span class="smx-cur"></span><span class="smx-car" aria-hidden="true"></span></button><div class="smx-bd" hidden></div><div class="smx-pop" hidden><div class="smx-hd"><span>Sort by</span><button type="button" class="smx-x">Done</button></div><div class="smx-ls" id="'+lid+'" role="listbox" tabindex="-1" aria-label="Sort flooring"></div></div>';
+var isSize=sel.classList.contains('sizeq'),hd=isSize?'Size':'Sort by',al=sel.getAttribute('aria-label')||(isSize?'Filter by size':'Sort flooring');
+w.innerHTML='<button type="button" class="smx-btn" id="'+bid+'" aria-haspopup="listbox" aria-expanded="false" aria-controls="'+lid+'"><span class="smx-cur"></span><span class="smx-car" aria-hidden="true"></span></button><div class="smx-bd" hidden></div><div class="smx-pop" hidden><div class="smx-hd"><span>'+hd+'</span><button type="button" class="smx-x">Done</button></div><div class="smx-ls" id="'+lid+'" role="listbox" tabindex="-1" aria-label="'+al+'"></div></div>';
 sel.parentNode.insertBefore(w,sel.nextSibling);sel.classList.add('smx-native');sel.setAttribute('tabindex','-1');sel.setAttribute('aria-hidden','true');
 var lb=sel.parentNode.querySelector('label[for="'+sel.id+'"]');if(lb){lb.htmlFor=bid;lb.id=bid+'-lab';}
 var btn=w.querySelector('.smx-btn'),cur=w.querySelector('.smx-cur'),pop=w.querySelector('.smx-pop'),bd=w.querySelector('.smx-bd'),ls=w.querySelector('.smx-ls'),opts=[];
@@ -713,6 +718,7 @@ w.querySelector('.smx-x').addEventListener('click',function(){closeM();});bd.add
 document.addEventListener('click',function(e){if(isOpen()&&!w.contains(e.target))closeM(false);},true);
 document.addEventListener('keydown',function(e){if(isOpen()&&e.key==='Escape')closeM();});
 sel.addEventListener('change',upd);upd();});
+[].slice.call(document.querySelectorAll('select.sizeq')).forEach(function(sel){sel.addEventListener('change',function(){apply();syncUrl();});});
 restoreUrl();
 function alias(){var h=location.hash.slice(1),g=window.ANCHF?ANCHF(h):h;if(g!==h){history.replaceState(null,'',location.pathname+location.search+'#'+g);var e=document.getElementById(g);if(e)e.scrollIntoView({behavior:'instant'});}}window.addEventListener('hashchange',alias);
 setTimeout(function(){var e=document.getElementById(location.hash.slice(1));if(e&&e.classList.contains('cat'))e.scrollIntoView({behavior:'instant'});},60);
