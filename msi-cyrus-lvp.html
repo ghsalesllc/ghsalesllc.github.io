@@ -218,6 +218,8 @@ footer a{color:#fff}
 .figrow figure{margin:0;border-radius:14px;overflow:hidden;background:#ddd}
 .figrow img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .figrow figcaption{background:#fff;font-size:.85rem;color:var(--muted);padding:8px 10px}
+.figrow a.lb{display:block;cursor:zoom-in}
+.lbx figcaption a{color:#f0c58f;font-weight:600;margin-left:.6em}
 .cmp{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
 .cmp th,.cmp td{vertical-align:top}
 .cmp th{background:#f1e3d1;color:var(--wood-dark)}
@@ -517,6 +519,37 @@ footer a{color:#fff}
 }</script>
 <script type="application/ld+json">{
  "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "MerchantReturnPolicy",
+   "@id": "https://ghsalesllc.com/#return-policy-flooring",
+   "applicableCountry": "US",
+   "returnPolicyCountry": "US",
+   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+   "merchantReturnDays": 14,
+   "returnMethod": "https://schema.org/ReturnInStore",
+   "returnFees": "https://schema.org/RestockingFees",
+   "restockingFee": {
+    "@type": "QuantitativeValue",
+    "value": 20,
+    "unitCode": "P1",
+    "unitText": "percent"
+   },
+   "description": "20% restocking fee. Flooring returns accepted within 14 days in original packaging. No returns on special order, sale or damaged items.",
+   "merchantReturnLink": "https://ghsalesllc.com/#return-policy"
+  },
+  {
+   "@type": "MerchantReturnPolicy",
+   "@id": "https://ghsalesllc.com/#return-policy-final",
+   "applicableCountry": "US",
+   "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+   "description": "All lumber and building material sales are final. No returns on special order, sale or damaged items.",
+   "merchantReturnLink": "https://ghsalesllc.com/#return-policy"
+  }
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
  "@type": "Product",
  "name": "MSI Cyrus SPC rigid core LVP",
  "description": "MSI Cyrus is a rigid-core luxury vinyl plank we special order for homes and rentals in Nampa, Boise and the Treasure Valley. It is 5 mm thick with a 12 mil wear layer and an attached pad, in 7\"x48\" planks or 9\"x60\" XL, with 40 wood-look colors — the same color names as MSI Prescott, in a thinner build.",
@@ -692,37 +725,7 @@ footer a{color:#fff}
   }
  ]
 }</script>
-<script type="application/ld+json" id="ld-return-policies">{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "MerchantReturnPolicy",
-   "@id": "https://ghsalesllc.com/#return-policy-flooring",
-   "applicableCountry": "US",
-   "returnPolicyCountry": "US",
-   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-   "merchantReturnDays": 14,
-   "returnMethod": "https://schema.org/ReturnInStore",
-   "returnFees": "https://schema.org/RestockingFees",
-   "restockingFee": {
-    "@type": "QuantitativeValue",
-    "value": 20,
-    "unitCode": "P1",
-    "unitText": "percent"
-   },
-   "description": "20% restocking fee. Flooring returns accepted within 14 days in original packaging. No returns on special order, sale or damaged items.",
-   "merchantReturnLink": "https://ghsalesllc.com/#return-policy"
-  },
-  {
-   "@type": "MerchantReturnPolicy",
-   "@id": "https://ghsalesllc.com/#return-policy-final",
-   "applicableCountry": "US",
-   "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-   "description": "All lumber and building material sales are final. No returns on special order, sale or damaged items.",
-   "merchantReturnLink": "https://ghsalesllc.com/#return-policy"
-  }
- ]
-}</script></head>
+</head>
 <body>
 <div class="topbar">
   <div class="wrap">
@@ -780,8 +783,8 @@ window.addEventListener('pageshow',function(ev){if(ev.persisted&&inp.value)run(i
   <p>Select LVP is in stock and ready to pick up when a color and quantity already on the floor fit the job. MSI Cyrus is ordered in the amount your project needs, with matching transitions, stair nosing and trim available. Installation is available.</p>
   <p>Our price for standard 7&quot;x48&quot; MSI Cyrus is <strong>$2.59 per sq ft</strong>. The 9&quot;x60&quot; XL size is <strong>$3.12 per sq ft</strong>. Every color is the same price. Call or text 208-606-0899 to see samples, confirm the color, and get a total for your square footage.</p>
   <div class="figrow two">
-   <figure><img src="gen-full-cyrus-lead.jpg" alt="MSI Cyrus SPC rigid core luxury vinyl plank" loading="lazy" width="1200" height="900"><figcaption>MSI Cyrus LVP</figcaption></figure>
-   <figure><img src="gen-full-cyrus-colors.jpg" alt="MSI Cyrus color samples" loading="lazy" width="1600" height="1200"><figcaption>40 color names, in 7&quot;x48&quot; and XL</figcaption></figure>
+   <figure><a class="lb" href="gen-full-cyrus-lead.jpg" data-cap="MSI Cyrus LVP"><img src="gen-full-cyrus-lead.jpg" alt="MSI Cyrus SPC rigid core luxury vinyl plank" loading="lazy" width="1200" height="900"></a><figcaption>MSI Cyrus LVP (tap to enlarge)</figcaption></figure>
+   <figure><a class="lb" href="gen-hi-cyrus-colors.jpg" data-cap="40 color names, in 7&quot;x48&quot; and XL"><img src="gen-full-cyrus-colors.jpg" alt="MSI Cyrus color samples" loading="lazy" width="1600" height="1200"></a><figcaption>40 color names, in 7&quot;x48&quot; and XL (tap to enlarge)</figcaption></figure>
   </div>
   <h2>Specs (standard / XL)</h2>
   <ul class="specs">
@@ -832,7 +835,13 @@ window.addEventListener('pageshow',function(ev){if(ev.persisted&&inp.value)run(i
   <a class="fb" href="catalog.html" style="background:var(--wood)">Inventory</a>
 </nav>
 
-
+<div id="lbx" class="lbx" hidden role="dialog" aria-modal="true" aria-label="Photo"><button type="button" class="lbx-x" aria-label="Close">&times;</button><button type="button" class="lbx-n lbx-p" aria-label="Previous photo">&#8249;</button><figure><img alt=""><figcaption></figcaption></figure><button type="button" class="lbx-n lbx-f" aria-label="Next photo">&#8250;</button></div>
+<script>(function(){var L=[].slice.call(document.querySelectorAll('a.lb'));if(!L.length)return;var b=document.getElementById('lbx'),im=b.querySelector('img'),fc=b.querySelector('figcaption'),i=0;
+function show(k){i=(k+L.length)%L.length;var a=L[i];im.src=a.getAttribute('href');im.alt=a.dataset.cap||'';fc.textContent='';if(a.dataset.cap)fc.appendChild(document.createTextNode(a.dataset.cap+' '));var u=document.createElement('a');u.href=a.getAttribute('href');u.target='_blank';u.rel='noopener';u.textContent='View full size';u.setAttribute('aria-label','Open full-size image in a new tab');fc.appendChild(u);}
+function close(){b.hidden=true;document.body.style.overflow='';}
+L.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();show(k);b.hidden=false;document.body.style.overflow='hidden';b.querySelector('.lbx-x').focus();});});
+b.querySelector('.lbx-x').onclick=close;b.querySelector('.lbx-p').onclick=function(){show(i-1)};b.querySelector('.lbx-f').onclick=function(){show(i+1)};
+b.addEventListener('click',function(e){if(e.target===b)close();});document.addEventListener('keydown',function(e){if(b.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(i+1);if(e.key==='ArrowLeft')show(i-1);});})();</script>
 <script>(function(){document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="catalog.html#item-"]');if(!a)return;var m=(a.getAttribute('href')||'').match(/#item-([\w-]+)/);if(!m)return;var r=a.closest('.feat-row');try{sessionStorage.setItem('ghFrom',JSON.stringify({u:location.href,y:window.scrollY,sl:r?r.scrollLeft:0,id:m[1],t:Date.now()}));}catch(_){}},true);
 window.addEventListener('pageshow',function(ev){try{var f=JSON.parse(sessionStorage.getItem('ghFrom')||'null');if(!f||f.u!==location.href)return;var n=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};if(!(f.ret||ev.persisted||n.type==='back_forward'))return;sessionStorage.removeItem('ghFrom');if(ev.persisted)return;var go=function(){window.scrollTo(0,f.y);var r=document.querySelector('.feat-row');if(r&&f.sl)r.scrollLeft=f.sl;};go();setTimeout(go,150);}catch(_){}});})();</script>
 <nav id="minibar" class="minibar" aria-label="Quick categories" inert><div class="mb"><a href="flooring.html">Flooring &amp; Carpet</a><a href="japanese-sugi-cedar.html">Sugi Cedar</a><a href="redwood-lumber-nampa-boise.html">Redwood</a><a href="lumber-beams.html">Lumber &amp; Beams</a><a href="paneling-siding-and-trim.html">Paneling, Siding, and Trim</a><a href="roofing.html">Roofing</a></div></nav><button id="btt" class="btt" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5l-7 7m7-7l7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><script>(function(){var d=document,h=d.documentElement,m=d.getElementById('minibar'),b=d.getElementById('btt'),t=d.querySelector('.topnav'),mb=d.querySelector('.mobilebar');
