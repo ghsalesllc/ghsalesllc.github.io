@@ -836,11 +836,13 @@ function esc2(t){var d=document.createElement('div');d.textContent=t;return d.in
 function gSet(i,inst){if(!gN)return;i=Math.max(0,Math.min(gN-1,i));gCur=i;gCnt.textContent=(i+1)+' / '+gN;gCnt.style.display=gN>1?'':'none';gPrev.disabled=i===0;gNext.disabled=i===gN-1;gPrev.style.display=gNext.style.display=gN>1?'':'none';
 [].slice.call(gTh.children).forEach(function(b,k){b.classList.toggle('on',k===i);if(k===i&&b.scrollIntoView)b.scrollIntoView({block:'nearest',inline:'nearest'});});[].slice.call(gDots.children).forEach(function(d,k){d.classList.toggle('on',k===i)});
 [].slice.call(gTrack.querySelectorAll('video')).forEach(function(v){v.pause();});
+var gSlide=gTrack.children[i],gVid=gSlide&&gSlide.querySelector('video');
+if(gVid){gVid.muted=true;var gP=gVid.play();if(gP&&gP.catch)gP.catch(function(){});}
 if(inst!==false)gTrack.scrollTo({left:i*gTrack.clientWidth,behavior:inst==='i'?'auto':'smooth'});}
 var gst;gTrack.addEventListener('scroll',function(){clearTimeout(gst);gst=setTimeout(function(){var i=Math.round(gTrack.scrollLeft/Math.max(1,gTrack.clientWidth));if(i!==gCur)gSet(i,false);},60);});
 function gOpen(el,start){var ph=el.dataset.ph?el.dataset.ph.split(','):[],v=el.dataset.v,sl='',th='',dt='',cp=[],tt0=el.querySelector('h3')?el.querySelector('h3').textContent:'';try{cp=el.dataset.caps?JSON.parse(el.dataset.caps):[];}catch(e){}
 ph.forEach(function(p,k){var c=cp[k]||'',al=esc2(c||(tt0+', photo '+(k+1))).replace(/"/g,'&quot;'),lz=(k>0?' loading="lazy"':''),tp=el.dataset.pt?p.replace(/\.jpg$/,'t.jpg'):p;sl+='<div class="gm-slide">'+(c?'<figure class="gm-fig"><img src="'+p+'" alt="'+al+'"'+lz+'><figcaption>'+esc2(c)+'</figcaption></figure>':'<img src="'+p+'" alt="'+al+'"'+lz+'>')+'</div>';th+='<button type="button" aria-label="Photo '+(k+1)+'"><img src="'+tp+'" alt="" loading="lazy"></button>';dt+='<i></i>';});
-if(v){sl+='<div class="gm-slide"><video src="'+v+'" controls muted playsinline preload="metadata"></video></div>';th+='<button type="button" class="tv" aria-label="Video">&#9654; Video</button>';dt+='<i></i>';}
+if(v){sl='<div class="gm-slide"><video src="'+v+'" controls muted autoplay playsinline preload="metadata"></video></div>'+sl;th='<button type="button" class="tv" aria-label="Video">&#9654; Video</button>'+th;dt='<i></i>'+dt;if(start)start=start+1;}
 if(!sl){sl='<div class="gm-slide" style="color:#cfd8dc">No photos yet. Call or text 208-606-0899 for pictures.</div>';}
 gTrack.innerHTML=sl;gTh.innerHTML=th;gDots.innerHTML=dt;gN=ph.length+(v?1:0);gTh.style.display=gN>1?'':'none';
 [].slice.call(gTh.children).forEach(function(b,k){b.onclick=function(){gSet(k);};});
